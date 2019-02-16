@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { WindowRef } from 'helpers/windowRef';
 
 import { AppComponent } from './app.component';
 import { RainyDayComponent } from './rainy-day/rainy-day.component';
@@ -19,7 +20,7 @@ import { BackRainDirective } from './rainy-day/back-rain.directive';
   imports: [
     BrowserModule
   ],
-  providers: [RaindropService],
+  providers: [RaindropService, WindowRef],
   entryComponents: [RaindropComponent],
   bootstrap: [AppComponent]
 })

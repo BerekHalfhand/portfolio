@@ -19,7 +19,5 @@ export class AppComponent implements OnInit {
   ngOnInit() {
     this.frontRaindrops = this.raindropService.getRaindrops('left');
     this.backRaindrops = this.raindropService.getRaindrops('right');
-    console.dir(this.frontRaindrops);
-    console.dir(this.backRaindrops);
   }
 }
