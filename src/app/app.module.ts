@@ -5,7 +5,7 @@ import { WindowRef } from 'helpers/windowRef';
 import { AppComponent } from './app.component';
 import { RainyDayComponent } from './rainy-day/rainy-day.component';
 import { RaindropComponent } from './raindrop/raindrop.component';
-import { RaindropService } from './raindrop/raindrop.service';
+import { RainyDayService } from './rainy-day/rainy-day.service';
 import { FrontRainDirective } from './rainy-day/front-rain.directive';
 import { BackRainDirective } from './rainy-day/back-rain.directive';
 
@@ -20,7 +20,7 @@ import { BackRainDirective } from './rainy-day/back-rain.directive';
   imports: [
     BrowserModule
   ],
-  providers: [RaindropService, WindowRef],
+  providers: [RainyDayService, WindowRef],
   entryComponents: [RaindropComponent],
   bootstrap: [AppComponent]
 })

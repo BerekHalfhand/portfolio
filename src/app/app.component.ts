@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { RaindropService } from './raindrop/raindrop.service';
+import { RainyDayService } from './rainy-day/rainy-day.service';
 import { RaindropItem } from './raindrop/raindrop.item';
 
 @Component({
@@ -14,10 +14,10 @@ export class AppComponent implements OnInit {
   backRaindrops: RaindropItem[];
   title: string = 'portfolio';
 
-  constructor(private raindropService: RaindropService) {}
+  constructor(private RainyDayService: RainyDayService) {}
 
   ngOnInit() {
-    this.frontRaindrops = this.raindropService.getRaindrops('left');
-    this.backRaindrops = this.raindropService.getRaindrops('right');
+    this.frontRaindrops = this.RainyDayService.getRaindrops('left');
+    this.backRaindrops = this.RainyDayService.getRaindrops('right');
   }
 }

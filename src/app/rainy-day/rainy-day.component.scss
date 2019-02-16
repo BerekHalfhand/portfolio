@@ -1,5 +1,9 @@
+$width:100%;
+$height:100vh;
+
 .rainy-day-container {
-  height: 100vh;
+  width:$width;
+  height:$height;
   margin: 0;
   overflow: hidden;
   // background: url(https://www.wallpapersin4k.org/wp-content/uploads/2017/04/Misty-Forest-Wallpaper-16.jpg);
@@ -27,6 +31,16 @@
   bottom: 30px;
   opacity: 0.5;
 }
+
+// .window{
+//   position:absolute;
+//   width:$width;
+//   height:$height;
+//   // background:url($image);
+//   background-size:cover;
+//   background-position:50%;
+//   filter:blur(10px);
+// }
 
 h1, h2 {
   color: #e7e6e6;

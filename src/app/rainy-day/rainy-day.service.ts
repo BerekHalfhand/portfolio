@@ -1,18 +1,17 @@
 import { Injectable } from '@angular/core';
-import { RaindropItem } from './raindrop.item';
-import { RaindropComponent } from './raindrop.component';
+import { RaindropItem } from '../raindrop/raindrop.item';
+import { RaindropComponent } from '../raindrop/raindrop.component';
 import { WindowRef } from 'helpers/windowRef';
 
 
-
 @Injectable()
-export class RaindropService {
-  viewport: WindowRef;
+export class RainyDayService {
+  viewportWidth: number;
 
   constructor(private winRef: WindowRef) {
       // getting the native window obj
-      this.viewport = winRef.nativeWindow;
-      // console.log('Native window obj', this.viewport);
+      this.viewportWidth = winRef.nativeWindow.innerWidth;
+      // console.log('Native window obj', this.viewportWidth);
   }
   getRaindrops(side: string) {
     // console.log('getRaindrops', side)
@@ -21,17 +20,17 @@ export class RaindropService {
     let dropStyle: object = {};
     let stemStyle: object = {};
 
-    while (increment < this.viewport.innerWidth / 10) {
+    while (increment < this.viewportWidth / 10) {
       // random number between 1 and 100
       let rand100 = Math.floor(Math.random() * 100 + 1);
 
       // console.log('rand100', rand100);
       // random number between 1 and 3
       let rand3 = Math.floor(Math.random() * 3 + 1);
-      console.log(side, increment / (this.viewport.innerWidth / 1000) + '%');
+      // console.log(side, increment / (this.viewport.innerWidth / 1000) + '%');
 
       dropStyle = {
-        [side]: (increment / (this.viewport.innerWidth / 1000)) - 1 + '%',
+        [side]: (increment / (this.viewportWidth / 1000)) - 1 + '%',
         'bottom': (rand3 - 1 + 100) + '%',
         'animation-delay': '0.' + rand100 + 's',
         'animation-duration': '0.5' + rand100 + 's'
