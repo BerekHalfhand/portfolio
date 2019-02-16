@@ -1,1 +1,32 @@
 /* You can add global styles to this file, and also import other style files */
+@font-face {
+  font-family: 'Raleway';
+  src: url("assets/fonts/Raleway/Raleway-Regular.ttf");
+}
+@font-face {
+  font-family: 'Raleway-semibold';
+  src: url("assets/fonts/Raleway/Raleway-SemiBold.ttf");
+}
+@font-face {
+  font-family: 'Raleway-bold';
+  src: url("assets/fonts/Raleway/Raleway-Bold.ttf");
+}
+
+body {
+  margin: 0;
+}
+
+h1, h2 {
+  color: #e7e6e6;
+  // line-height: 4vh;
+  font-family: Raleway,Yorkten,Arial,sans-serif;
+  margin: 10px;
+}
+
+h1 {
+  font-size: 10vh;
+}
+
+h2 {
+  font-size: 8vh;
+}
