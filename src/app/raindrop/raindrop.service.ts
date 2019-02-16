@@ -22,24 +22,24 @@ export class RaindropService {
     let stemStyle: object = {};
 
     while (increment < this.viewport.innerWidth / 10) {
-      // random number between 1 and 99
-      let rand99 = Math.floor(Math.random() * 99 + 1);
+      // random number between 1 and 100
+      let rand100 = Math.floor(Math.random() * 100 + 1);
 
-      // console.log('rand99', rand99);
+      // console.log('rand100', rand100);
       // random number between 1 and 3
       let rand3 = Math.floor(Math.random() * 3 + 1);
-      // console.log('rand3', rand3);
+      console.log(side, increment / (this.viewport.innerWidth / 1000) + '%');
 
       dropStyle = {
-        [side]: increment + '%',
+        [side]: (increment / (this.viewport.innerWidth / 1000)) - 1 + '%',
         'bottom': (rand3 - 1 + 100) + '%',
-        'animation-delay': '0.' + rand99 + 's',
-        'animation-duration': '0.5' + rand99 + 's'
+        'animation-delay': '0.' + rand100 + 's',
+        'animation-duration': '0.5' + rand100 + 's'
       };
 
       stemStyle = {
-        'animation-delay': '0.' + rand99 + 's',
-        'animation-duration': '0.5' + rand99 + 's'
+        'animation-delay': '0.' + rand100 + 's',
+        'animation-duration': '0.5' + rand100 + 's'
       };
 
       // increment
