@@ -12,7 +12,6 @@ import { RaindropItem } from './raindrop/raindrop.item';
 export class AppComponent implements OnInit {
   frontRaindrops: RaindropItem[];
   backRaindrops: RaindropItem[];
-  title: string = 'portfolio';
 
   constructor(private RainyDayService: RainyDayService) {}
 

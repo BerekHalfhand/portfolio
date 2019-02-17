@@ -19,7 +19,6 @@ export class RainyDayComponent implements OnInit {
   constructor(private componentFactoryResolver: ComponentFactoryResolver) { }
 
   ngOnInit() {
-    // this.makeItRain();
     this.makeItRain(this.frontRaindrops, this.frontRain);
     this.makeItRain(this.backRaindrops, this.backRain);
   }

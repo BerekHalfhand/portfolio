@@ -1,4 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
 @font-face {
   font-family: 'Raleway';
   src: url("assets/fonts/Raleway/Raleway-Regular.ttf");
@@ -11,6 +13,13 @@
   font-family: 'Raleway-bold';
   src: url("assets/fonts/Raleway/Raleway-Bold.ttf");
 }
+@font-face {
+  font-family: 'Cedarville';
+  src: url("assets/fonts/Cedarville/Cedarville-Cursive.ttf");
+}
+
+$width:100vw;
+$height:100vh;
 
 body {
   margin: 0;
@@ -27,5 +36,33 @@ body {
     background: linear-gradient(to right,#fc0b56,#08fdd8);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+  }
+
+  .pane {
+    position:relative;
+    width:$width;
+    height:$height;
+    overflow:hidden;
+  }
+
+  .flex-center {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+  }
+
+  .text-box-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .text-box {
+    padding: 5%;
+    background: rgba(240,230,220, .7);
+    margin: 10vw;
+    text-align: justify;
   }
 }

@@ -5,3 +5,13 @@ $height:100vh;
   width:$width;
   height:$height;
 }
+
+q {
+  quotes: "“" "”" "‘" "’";
+}
+q:before {
+    content: open-quote;
+}
+q:after {
+    content: close-quote;
+}

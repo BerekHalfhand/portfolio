@@ -7,11 +7,7 @@
   //http://vignette3.wikia.nocookie.net/animal-jam-clans-1/images/b/b7/Dark-Misty-Forest-beautiful-landscapes-37729157-1920-1080.jpg
   //https://i.imgur.com/4hsa8DJ.jpg
   // background: url(http://getbiggies.com/wp-content/uploads/2008/10/WM-MFT.jpg);
-  background: url('assets/pics/lg/header.jpg') center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  background: url('assets/pics/xl/header.jpg') top center;
 }
 
 .rain {
@@ -31,7 +27,6 @@
 
 h1, h2 {
   color: #e7e6e6;
-  // line-height: 4vh;
   font-family: Raleway,Yorkten,Arial,sans-serif;
   margin: 5px;
 }

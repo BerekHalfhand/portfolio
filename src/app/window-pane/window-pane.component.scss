@@ -16,15 +16,67 @@ $raindrops:75;
 $blur: 10px;
 
 .window-pane-container{
-  position:relative;
-  width:$width;
-  height:$height;
-  overflow:hidden;
   z-index: 5;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
 }
+
+.pics-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.polaroid {
+	position: relative;
+	background: #dbdbdb;
+	padding: 1vw;
+	text-align: center;
+  transform: translateX(-10%) translateY(-15%) rotate(3deg);
+	box-shadow: 1px 1px 3px #222;
+
+  span {
+    font-family: Cedarville,Yorkten,Arial,sans-serif;
+    font-size: 1.4vw;
+  }
+}
+.polaroid:last-of-type {
+  transform: translateX(-20%) translateY(25%) rotate(-8deg)
+}
+
+#tajikistan {
+  background-image: url('assets/pics/Photo_tajikistan.jpg');
+}
+
+#dominicana {
+  background-image: url('assets/pics/Photo_dominicana.jpg');
+}
+
+.photo {
+    background-size: cover;
+    background-position: 50% 50%;
+    width: 15vw;
+    height: 15vw;
+    box-shadow: inset 0 0 10px #000;
+
+}
+
+// img {
+//   position: absolute;
+//   top: 50%;
+//   left: 50%;
+//   // transform: translate(-50%, -50%);
+//   // transform: translateZ(.25px) scale(.75) translateX(-50%) translateY(-100%) rotate(2deg);
+//
+//   width: 40vw;
+//   transform: translateX(-50%) translateY(-75%) rotate(3deg);
+//   padding: 10px;
+//   border-radius: 5px;
+//   background: rgba(240,230,220, .7);
+//   box-shadow: 0 0 8px rgba(0, 0, 0, .7);
+// }
+//
+
+
 .window{
   position:absolute;
   width: calc(#{$width} + 4*#{$blur});
@@ -102,31 +154,4 @@ $blur: 10px;
 		width:$drop-width - 4;
 		height:$drop-height;
 	}
-}
-
-.text-box {
-  width: 30vw;
-  padding: 5%;
-  border-radius: 5px;
-  background: rgba(240,230,220, .7);
-  box-shadow: 0 0 8px rgba(0, 0, 0, .7);
-  z-index: 6;
-  margin-left: 10vw;
-  text-align: justify;
-}
-
-img {
-  position: absolute;
-  top: 50%;
-  right: 0;
-  width: 40vw;
-  transform: translateZ(.25px) scale(.75) translateX(-30%) translateY(-100%) rotate(2deg);
-  padding: 10px;
-  border-radius: 5px;
-  background: rgba(240,230,220, .7);
-  box-shadow: 0 0 8px rgba(0, 0, 0, .7);
-}
-
-img:last-of-type {
-  transform: translateZ(.4px) scale(.6) translateX(-55%) translateY(-40%) rotate(-5deg);
 }

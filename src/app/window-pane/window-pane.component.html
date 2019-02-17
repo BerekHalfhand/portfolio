@@ -8,26 +8,49 @@
       <div class="raindrop" *ngFor="let i of [].constructor(75)"></div>
     </div>
   </div>
-  <div class="text-box">
-    <h1>About</h1>
-    <p>I'm Yuri Drobkov, a digital nomad from Siberia, Russia. My path as a web
-        developer started when responsive design was an exciting new concept and
-        LAMP stack was considered a feasible option for building huge complex websites.
-        These days things are different, the industry is growing more vast and
-        complicated by the day, cool kids are using Angular,
-        React, Ruby on Rails, you name it...
-        And me? I'm just trying to keep up with the unvawering march of time and
-        maybe stay just ahead of the crowds.
-    </p>
-    <p>
-        The most recent commercial project I participated in was an internal
-        <a href="https://te.remote.team/">web portal</a> for the employees of
-        <a href="https://tile.expert/">Tile.Expert</a>, it was built on
-        Angular/Symfony/MongoDB stack. It was my first remote job, which gave me
-        tons of experience in developing and supporting a large real-world project.
-        Now I'm on the lookup for the next one, care to make a suggestion?
-    </p>
-  </div>
-  <img src="assets/pics/Photo_tajikistan.jpg"/>
-  <img src="assets/pics/Photo_dominicana.jpg"/>
+  <article fxLayout="column wrap" fxLayout.gt-md="row wrap" fxFlexFill>
+    <div fxFlex="50%" class="text-box-container">
+      <mat-card class="text-box">
+        <mat-card-title>About</mat-card-title>
+        <mat-card-content>
+          <p>
+            I'm Yuri Drobkov, a digital nomad from Siberia, Russia. My path as a web
+            developer started when responsive design was an exciting new concept and
+            LAMP stack was considered a feasible option for building huge complex websites.
+            These days things are different, the industry is growing more vast and
+            complicated by the day, cool kids are using Angular,
+            React, Ruby on Rails, you name it...
+            And me? I'm just trying to keep up with the unvawering march of time and
+            maybe stay just ahead of the crowds.
+          </p>
+          <p>
+            The most recent commercial project I participated in was an internal
+            <a href="https://te.remote.team/">web portal</a> for the employees of
+            <a href="https://tile.expert/">Tile.Expert</a>, it was built on
+            Angular/Symfony/MongoDB stack. It was my first remote job, which gave me
+            tons of experience in developing and supporting a large real-world project.
+            Now I'm on the lookup for the next one...
+          </p>
+          <p>Care to make a suggestion?</p>
+        </mat-card-content>
+      </mat-card>
+    </div>
+    <div fxFlex="50%" class="pics-container">
+      <!-- <div class="photo">
+        <div class="polaroid"></div>
+      </div> -->
+      <!-- <img src="assets/pics/Photo_tajikistan.jpg"/>
+      <img src="assets/pics/Photo_dominicana.jpg"/> -->
+      <div class="polaroid">
+        <!-- <img src="assets/pics/Photo_tajikistan.jpg" title="Tajikistan" alt="Tajikistan" /> -->
+        <div id="tajikistan" class="photo"></div>
+        <span>Tajikistan ’17</span>
+      </div>
+      <div class="polaroid">
+        <!-- <img src="assets/pics/Photo_tajikistan.jpg" title="Tajikistan" alt="Tajikistan" /> -->
+        <div id="dominicana" class="photo"></div>
+        <span>República Dominicana ’18</span>
+      </div>
+    </div>
+  </article>
 </div>
