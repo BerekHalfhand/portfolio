@@ -9,7 +9,7 @@ import { trigger, state, style, animate, transition, group } from '@angular/anim
     trigger('one', [
       transition(':enter', [
         style({transform: 'translateY(50%) translateX(200%)'}),
-        animate('400ms ease-in', style({transform: 'translateX(-20%) translateY(-25%) rotate(5deg)'}))
+        animate('400ms ease-in', style({transform: 'translateX(-60%) translateY(-25%) rotate(5deg)'}))
       ]),
       transition(':leave', [
         animate('200ms ease-in', style({transform: 'translateY(-100%)'}))
@@ -18,7 +18,7 @@ import { trigger, state, style, animate, transition, group } from '@angular/anim
     trigger('two', [
       transition(':enter', [
         style({transform: 'translateY(25%) translateX(200%)'}),
-        animate('400ms ease-in', style({transform: 'translateX(50%) translateY(5%) rotate(-5deg)'}))
+        animate('400ms ease-in', style({transform: 'translateX(20%) translateY(5%) rotate(-5deg)'}))
       ]),
       transition(':leave', [
         animate('200ms ease-in', style({transform: 'translateY(-100%)'}))

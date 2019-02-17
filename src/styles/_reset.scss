@@ -1,0 +1,15 @@
+html,
+body,
+ul,
+ol {
+  margin:  0;
+  padding: 0;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.mat-card-content, .mat-card-subtitle {
+  font-size: inherit !important;
+}
