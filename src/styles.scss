@@ -1,4 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
+@import 'src/styles/variables';
+
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
 
 @font-face {
@@ -17,9 +19,6 @@
   font-family: 'Cedarville';
   src: url("assets/fonts/Cedarville/Cedarville-Cursive.ttf");
 }
-
-$width:100vw;
-$height:100vh;
 
 body {
   margin: 0;
@@ -41,7 +40,7 @@ body {
   .pane {
     position:relative;
     width:$width;
-    height:$height;
+    min-height:$height;
     overflow:hidden;
   }
 

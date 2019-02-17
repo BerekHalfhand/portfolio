@@ -1,19 +1,9 @@
-// our background image.
-// will be used for the window as well as
-// the raindrops themselves
+@import 'src/styles/variables';
 // $image: 'https://i.imgur.com/xQdYC7x.jpg';
 $image: 'http://vignette3.wikia.nocookie.net/animal-jam-clans-1/images/b/b7/Dark-Misty-Forest-beautiful-landscapes-37729157-1920-1080.jpg';
 
-
-// container width and height.
-// 100vw/vh so it fills the entire window
-$width:100vw;
-$height:100vh;
-
 //number of raindrops
 $raindrops:75;
-
-$blur: 10px;
 
 .window-pane-container{
   z-index: 5;
@@ -26,61 +16,18 @@ $blur: 10px;
   align-items: center;
 }
 
-.polaroid {
-	position: relative;
-	background: #dbdbdb;
-	padding: 1vw;
-	text-align: center;
-  transform: translateX(-10%) translateY(-15%) rotate(3deg);
-	box-shadow: 1px 1px 3px #222;
-
-  span {
-    font-family: Cedarville,Yorkten,Arial,sans-serif;
-    font-size: 1.4vw;
-  }
-}
-.polaroid:last-of-type {
-  transform: translateX(-20%) translateY(25%) rotate(-8deg)
+#photo1 {
+  transform: translateX(-20%) translateY(-25%) rotate(5deg);
 }
 
-#tajikistan {
-  background-image: url('assets/pics/Photo_tajikistan.jpg');
+#photo2 {
+  transform: translateX(-35%) translateY(5%) rotate(-5deg);
 }
-
-#dominicana {
-  background-image: url('assets/pics/Photo_dominicana.jpg');
-}
-
-.photo {
-    background-size: cover;
-    background-position: 50% 50%;
-    width: 15vw;
-    height: 15vw;
-    box-shadow: inset 0 0 10px #000;
-
-}
-
-// img {
-//   position: absolute;
-//   top: 50%;
-//   left: 50%;
-//   // transform: translate(-50%, -50%);
-//   // transform: translateZ(.25px) scale(.75) translateX(-50%) translateY(-100%) rotate(2deg);
-//
-//   width: 40vw;
-//   transform: translateX(-50%) translateY(-75%) rotate(3deg);
-//   padding: 10px;
-//   border-radius: 5px;
-//   background: rgba(240,230,220, .7);
-//   box-shadow: 0 0 8px rgba(0, 0, 0, .7);
-// }
-//
-
 
 .window{
   position:absolute;
   width: calc(#{$width} + 4*#{$blur});
-  height: calc(#{$height} + 4*#{$blur});
+  height: calc(100% + 4*#{$blur});
   background:url($image);
   background-size:cover;
   background-position:50%;

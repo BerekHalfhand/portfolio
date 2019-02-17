@@ -36,20 +36,11 @@
       </mat-card>
     </div>
     <div fxFlex="50%" class="pics-container">
-      <!-- <div class="photo">
-        <div class="polaroid"></div>
-      </div> -->
-      <!-- <img src="assets/pics/Photo_tajikistan.jpg"/>
-      <img src="assets/pics/Photo_dominicana.jpg"/> -->
-      <div class="polaroid">
-        <!-- <img src="assets/pics/Photo_tajikistan.jpg" title="Tajikistan" alt="Tajikistan" /> -->
-        <div id="tajikistan" class="photo"></div>
-        <span>Tajikistan ’17</span>
+      <div id="photo1" @one>
+        <app-polaroid caption="Tajikistan ’17" url="assets/pics/Photo_tajikistan.jpg"></app-polaroid>
       </div>
-      <div class="polaroid">
-        <!-- <img src="assets/pics/Photo_tajikistan.jpg" title="Tajikistan" alt="Tajikistan" /> -->
-        <div id="dominicana" class="photo"></div>
-        <span>República Dominicana ’18</span>
+      <div id="photo2" @two>
+      <app-polaroid caption="República Dominicana ’18" url="assets/pics/Photo_dominicana.jpg"></app-polaroid>
       </div>
     </div>
   </article>

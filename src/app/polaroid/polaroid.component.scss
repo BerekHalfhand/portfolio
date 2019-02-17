@@ -1,0 +1,19 @@
+.polaroid {
+	position: relative;
+	background: #dbdbdb;
+	padding: 1vmin;
+	text-align: center;
+	box-shadow: 1px 1px 3px #222;
+
+  span {
+    font-family: Cedarville,Yorkten,Arial,sans-serif;
+    font-size: 2.5vmin;
+  }
+}
+.photo {
+  background-size: cover;
+  background-position: 50% 50%;
+  width: 30vmin;
+  height: 30vmin;
+  box-shadow: inset 0 0 10px #000;
+}

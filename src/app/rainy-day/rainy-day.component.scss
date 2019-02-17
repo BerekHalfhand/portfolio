@@ -1,13 +1,15 @@
+@import 'src/styles/variables';
+
 .rainy-day-container {
-  width: 100%;
-  height: 100%;
+  width: $width;
+  height: $height;
   margin: 0;
   overflow: hidden;
   // background: url(https://www.wallpapersin4k.org/wp-content/uploads/2017/04/Misty-Forest-Wallpaper-16.jpg);
   //http://vignette3.wikia.nocookie.net/animal-jam-clans-1/images/b/b7/Dark-Misty-Forest-beautiful-landscapes-37729157-1920-1080.jpg
   //https://i.imgur.com/4hsa8DJ.jpg
   // background: url(http://getbiggies.com/wp-content/uploads/2008/10/WM-MFT.jpg);
-  background: url('assets/pics/xl/header.jpg') top center;
+  background: url('assets/pics/xl/header.jpg') center center;
 }
 
 .rain {

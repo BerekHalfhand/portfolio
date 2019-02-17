@@ -6,7 +6,7 @@ import {  MatButtonModule,
           MatCardModule,
           MatGridListModule
       } from '@angular/material';
-import { ParallaxScrollModule } from 'ng2-parallaxscroll';
+// import { ParallaxScrollModule } from 'ng2-parallaxscroll';
 import { FlexLayoutModule } from '@angular/flex-layout';
 
 import { WindowRef } from 'helpers/windowRef';
@@ -17,10 +17,11 @@ import { RaindropComponent } from './raindrop/raindrop.component';
 import { WindowPaneComponent } from './window-pane/window-pane.component';
 
 import { RainyDayService } from './rainy-day/rainy-day.service';
-import { FrontRainDirective } from './rainy-day/front-rain.directive';
+import { FrontRainDirective } from 'app/directives/front-rain.directive';
+import { BackRainDirective } from 'app/directives/back-rain.directive';
 
-import { BackRainDirective } from './rainy-day/back-rain.directive';
 import { SkillsPaneComponent } from './skills-pane/skills-pane.component';
+import { PolaroidComponent } from './polaroid/polaroid.component';
 
 @NgModule({
   declarations: [
@@ -30,14 +31,15 @@ import { SkillsPaneComponent } from './skills-pane/skills-pane.component';
     FrontRainDirective,
     BackRainDirective,
     WindowPaneComponent,
-    SkillsPaneComponent
+    SkillsPaneComponent,
+    PolaroidComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     MatButtonModule,
     MatCheckboxModule,
-    ParallaxScrollModule,
+    // ParallaxScrollModule,
     MatCardModule,
     MatGridListModule,
     FlexLayoutModule

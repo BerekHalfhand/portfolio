@@ -1,6 +1,4 @@
-$width:100vw;
-$height:100vh;
-$blur: 10px;
+@import 'src/styles/variables';
 $image: 'https://d.ibtimes.co.uk/en/full/1397606/coding-curriculum-classroom-world.jpg';
 
 .blurred {
@@ -12,31 +10,4 @@ $image: 'https://d.ibtimes.co.uk/en/full/1397606/coding-curriculum-classroom-wor
   background-position:50%;
   filter:blur($blur);
   margin: calc(-2*#{$blur});
-}
-
-.parallax {
-  perspective: 1px;
-  height: 100vh;
-  overflow-x: hidden;
-  overflow-y: auto;
-  perspective-origin-x: 100%;
-}
-.parallax__group {
-  position: relative;
-  height: 100vh;
-  transform-style: preserve-3d;
-}
-.parallax__layer {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  transform-origin-x: 100%;
-}
-.parallax__layer--base {
-  transform: translateZ(0);
-}
-.parallax__layer--back {
-  transform: translateZ(-1px) scale(2);
 }
