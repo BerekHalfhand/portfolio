@@ -14,4 +14,18 @@
 
 body {
   margin: 0;
+  overflow-x: hidden;
+
+  a {
+    text-decoration: none;
+    color: #fc0b56;
+  }
+  a:visited {
+    color: gray;
+  }
+  a:active {
+    background: linear-gradient(to right,#fc0b56,#08fdd8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
 }

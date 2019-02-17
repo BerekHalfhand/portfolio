@@ -1,0 +1,132 @@
+// our background image.
+// will be used for the window as well as
+// the raindrops themselves
+// $image: 'https://i.imgur.com/xQdYC7x.jpg';
+$image: 'http://vignette3.wikia.nocookie.net/animal-jam-clans-1/images/b/b7/Dark-Misty-Forest-beautiful-landscapes-37729157-1920-1080.jpg';
+
+
+// container width and height.
+// 100vw/vh so it fills the entire window
+$width:100vw;
+$height:100vh;
+
+//number of raindrops
+$raindrops:75;
+
+$blur: 10px;
+
+.window-pane-container{
+  position:relative;
+  width:$width;
+  height:$height;
+  overflow:hidden;
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.window{
+  position:absolute;
+  width: calc(#{$width} + 4*#{$blur});
+  height: calc(#{$height} + 4*#{$blur});
+  background:url($image);
+  background-size:cover;
+  background-position:50%;
+  filter:blur($blur);
+  margin: calc(-2*#{$blur});
+}
+// set all the containers to
+// position:absolute, since
+// they will overlap
+.raindrops,
+.borders,
+.drops{
+  position:absolute;
+}
+
+.raindrops {
+  top: 0;
+}
+
+// little brightness filter so our raindrops look shiny
+.drops{
+  filter:brightness(1.2);
+}
+
+// general settings for all the
+// raindrops and borders
+.raindrop{
+	position:absolute;
+  border-radius:100%;
+	background-image:url($image);
+	background-size:$width*0.05 $height*0.05;
+  background-position:50%;
+	transform:rotate(180deg) rotateY(0);
+}
+.border{
+	position:absolute;
+	margin-left:2px;
+	margin-top:1px;
+	border-radius:100%;
+	box-shadow:0 0 0 2px rgba(0,0,0,0.5);
+  transform:rotateY(0);
+}
+
+// looping through each one of them
+@for $i from 1 through $raindrops{
+
+  // generates a random number from 0 to 1, for the positioning
+  $x:random();
+  $y:random();
+
+  // Random raindrop size and stretching.
+  // Since each raindrop has different sizes, we'll do our sizing calculations here instead of on the main .raindrop selector
+ 	$drop-width:5px+random(11);
+ 	$drop-stretch:0.7+(random()*0.5);
+	$drop-height:$drop-width*$drop-stretch;
+	.raindrop:nth-child(#{$i}){
+		// multiply the random position value by the container's size
+		left:$x * $width;
+		top:$y * $height;
+
+		width:$drop-width;
+		height:$drop-height;
+    background-position:percentage($x) percentage($y);
+	}
+
+	.border:nth-child(#{$i}){
+		// we'll do the same positioning for the drop's border
+		left:$x * $width;
+		top:$y * $height;
+
+		width:$drop-width - 4;
+		height:$drop-height;
+	}
+}
+
+.text-box {
+  width: 30vw;
+  padding: 5%;
+  border-radius: 5px;
+  background: rgba(240,230,220, .7);
+  box-shadow: 0 0 8px rgba(0, 0, 0, .7);
+  z-index: 6;
+  margin-left: 10vw;
+  text-align: justify;
+}
+
+img {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  width: 40vw;
+  transform: translateZ(.25px) scale(.75) translateX(-30%) translateY(-100%) rotate(2deg);
+  padding: 10px;
+  border-radius: 5px;
+  background: rgba(240,230,220, .7);
+  box-shadow: 0 0 8px rgba(0, 0, 0, .7);
+}
+
+img:last-of-type {
+  transform: translateZ(.4px) scale(.6) translateX(-55%) translateY(-40%) rotate(-5deg);
+}

@@ -8,6 +8,8 @@ import { RaindropComponent } from './raindrop/raindrop.component';
 import { RainyDayService } from './rainy-day/rainy-day.service';
 import { FrontRainDirective } from './rainy-day/front-rain.directive';
 import { BackRainDirective } from './rainy-day/back-rain.directive';
+import { ParallaxScrollModule } from 'ng2-parallaxscroll';
+import { WindowPaneComponent } from './window-pane/window-pane.component';
 
 @NgModule({
   declarations: [
@@ -15,10 +17,12 @@ import { BackRainDirective } from './rainy-day/back-rain.directive';
     RainyDayComponent,
     RaindropComponent,
     FrontRainDirective,
-    BackRainDirective
+    BackRainDirective,
+    WindowPaneComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    ParallaxScrollModule
   ],
   providers: [RainyDayService, WindowRef],
   entryComponents: [RaindropComponent],

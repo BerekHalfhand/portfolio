@@ -1,16 +1,13 @@
-$width:100%;
-$height:100vh;
-
 .rainy-day-container {
-  width:$width;
-  height:$height;
+  width: 100%;
+  height: 100%;
   margin: 0;
   overflow: hidden;
   // background: url(https://www.wallpapersin4k.org/wp-content/uploads/2017/04/Misty-Forest-Wallpaper-16.jpg);
-  //http://vignette3.wikia.nocookie.net/animal-jam-clans-1/images/b/b7/Dark-Misty-Forest-beautiful-landscapes-37729157-1920-1080.jpg/revision/latest?cb=20151228140610
+  //http://vignette3.wikia.nocookie.net/animal-jam-clans-1/images/b/b7/Dark-Misty-Forest-beautiful-landscapes-37729157-1920-1080.jpg
   //https://i.imgur.com/4hsa8DJ.jpg
   // background: url(http://getbiggies.com/wp-content/uploads/2008/10/WM-MFT.jpg);
-  background: url(https://i.imgur.com/4hsa8DJ.jpg);
+  background: url('assets/pics/lg/header.jpg') center;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -32,16 +29,6 @@ $height:100vh;
   opacity: 0.5;
 }
 
-// .window{
-//   position:absolute;
-//   width:$width;
-//   height:$height;
-//   // background:url($image);
-//   background-size:cover;
-//   background-position:50%;
-//   filter:blur(10px);
-// }
-
 h1, h2 {
   color: #e7e6e6;
   // line-height: 4vh;
@@ -57,7 +44,7 @@ h2 {
   font-size: 14px;
 }
 
-@media all and (min-width: 768px) {
+@media screen and (min-width: 768px) {
   h1, h2 {margin: 10px;}
   h1 {
     font-size: 3vw;
@@ -66,4 +53,29 @@ h2 {
   h2 {
     font-size: 2vw;
   }
+
 }
+
+// @media screen and (min-width: 992px) {
+//   .rainy-day-container {
+//     background: url('assets/pics/md/header.jpg') !important;
+//   }
+// }
+//
+// @media screen and (min-width: 1200px) {
+//   .rainy-day-container {
+//     background: url('assets/pics/lg/header.jpg') !important;
+//   }
+// }
+//
+// @media screen and (min-width: 1900px) {
+//   .rainy-day-container {
+//     background: url('assets/pics/xl/header.jpg') !important;
+//   }
+// }
+//
+// @media screen and (min-width: 2560px) {
+//   .rainy-day-container {
+//     background: url('assets/pics/header.jpg') !important;
+//   }
+// }
