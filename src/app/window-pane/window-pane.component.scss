@@ -14,6 +14,11 @@ $raindrops:75;
   display: flex;
   justify-content: center;
   align-items: center;
+  min-height: 50vh;
+}
+
+.photo-container {
+  position: absolute;
 }
 
 #photo1 {
@@ -21,7 +26,7 @@ $raindrops:75;
 }
 
 #photo2 {
-  transform: translateX(-35%) translateY(5%) rotate(-5deg);
+  transform: translateX(50%) translateY(5%) rotate(-5deg);
 }
 
 .window{

@@ -1,7 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
-@import 'src/styles/variables';
 
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+@import 'src/styles/variables';
+@import 'src/styles/mixins';
+
 
 @font-face {
   font-family: 'Raleway';
@@ -63,5 +66,11 @@ body {
     background: rgba(240,230,220, .7);
     margin: 10vw;
     text-align: justify;
+    @include responsive-font(2.5vw, 10px, 18px);
   }
+
+  .mat-card-content, .mat-card-subtitle {
+    font-size: inherit !important;
+  }
+
 }
