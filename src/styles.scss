@@ -1,6 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~normalize.css/normalize.css";
-@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import "~@angular/material/prebuilt-themes/deeppurple-amber.css";
 
 @import 'src/styles/reset';
 @import 'src/styles/variables';
@@ -27,16 +27,16 @@
 body {
   a {
     text-decoration: none;
-    color: #fc0b56;
+    color: #ff6600;
   }
   a:visited {
     color: gray;
   }
-  a:active {
-    background: linear-gradient(to right,#fc0b56,#08fdd8);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
+  // a:active {
+  //   background: linear-gradient(to right,#fc0b56,#08fdd8);
+  //   -webkit-background-clip: text;
+  //   -webkit-text-fill-color: transparent;
+  // }
 
   .pane {
     position:relative;
