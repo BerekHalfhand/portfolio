@@ -1,0 +1,42 @@
+@import 'src/styles/variables';
+$margin: 1vmin;
+
+header {
+  position: fixed;
+  height: $menu-size;
+  width: 100%;
+  z-index: 100;
+  background: $menu-color;
+}
+
+#logo {
+  width: calc(#{$menu-size} - #{$margin});
+  height: calc(#{$menu-size} - #{$margin});
+  background: url('assets/pics/logo.svg') no-repeat center;
+  background-size:contain;
+  margin: $margin;
+  opacity: 0.5;
+  box-shadow: 0 0 $margin gray;
+  border-radius: $menu-size / 2;
+}
+
+
+#links {
+  min-width: $menu-size;
+  min-height: $menu-size;
+}
+
+a {
+  color: gray;
+}
+a:active, a:hover, a:focus {
+  color: orange;
+}
+
+@media screen and (min-width: 600px) {
+  header {
+    position: fixed;
+    width: $menu-size;
+    height: 100%;
+  }
+}

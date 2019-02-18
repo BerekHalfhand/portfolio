@@ -4,7 +4,8 @@ import { NgModule } from '@angular/core';
 import {  MatButtonModule,
           MatCheckboxModule,
           MatCardModule,
-          MatGridListModule
+          MatGridListModule,
+          MatIconModule
       } from '@angular/material';
 // import { ParallaxScrollModule } from 'ng2-parallaxscroll';
 import { FlexLayoutModule } from '@angular/flex-layout';
@@ -22,6 +23,7 @@ import { BackRainDirective } from 'app/directives/back-rain.directive';
 
 import { SkillsPaneComponent } from './skills-pane/skills-pane.component';
 import { PolaroidComponent } from './polaroid/polaroid.component';
+import { MenuComponent } from './menu/menu.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +34,8 @@ import { PolaroidComponent } from './polaroid/polaroid.component';
     BackRainDirective,
     WindowPaneComponent,
     SkillsPaneComponent,
-    PolaroidComponent
+    PolaroidComponent,
+    MenuComponent
   ],
   imports: [
     BrowserModule,
@@ -42,6 +45,7 @@ import { PolaroidComponent } from './polaroid/polaroid.component';
     // ParallaxScrollModule,
     MatCardModule,
     MatGridListModule,
+    MatIconModule,
     FlexLayoutModule
   ],
   providers: [RainyDayService, WindowRef],
