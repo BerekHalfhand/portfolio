@@ -1,11 +1,23 @@
 @import 'src/styles/variables';
 
+.background-container {
+  background: orange;
+  width: 100%;
+  height: calc(100vh + 2* #{$slope-offset} + 2*#{$slope-border});
+  position: absolute;
+  -webkit-clip-path: polygon(0 0, 100% 10%, 100% 90%, 0 100%);;
+  clip-path: polygon(0 0, 100% 10%, 100% 90%, 0 100%);
+  margin-top: -$slope-offset;
+  z-index: 24;
+}
+
 .background {
   background: #333333;
-  width: 110%;
-  height: 150%;
-  position: absolute;
-  clip-path: polygon(0 0, 100% 10%, 100% 80%, 0 90%);
-  margin-top: -$slope-offset;
+  width: 100%;
+  height: calc(100vh + 2* #{$slope-offset});
+  // position: absolute;
+  -webkit-clip-path: polygon(0 0, 100% 10%, 100% 90%, 0 100%);;
+  clip-path: polygon(0 0, 100% 10%, 100% 90%, 0 100%);
+  margin-top: $slope-border;
   z-index: 25;
 }
