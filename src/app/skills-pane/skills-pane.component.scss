@@ -1,13 +1,10 @@
 @import 'src/styles/variables';
-$image: 'https://d.ibtimes.co.uk/en/full/1397606/coding-curriculum-classroom-world.jpg';
 
-.blurred {
+.background {
+  background: #333333;
+  width: 110%;
+  height: 150%;
   position: absolute;
-  width: calc(#{$width} + 4*#{$blur});
-  height: calc(100% + 4*#{$blur});
-  background:url($image);
-  background-size:cover;
-  background-position:50%;
-  filter:blur($blur);
-  margin: calc(-2*#{$blur});
+  clip-path: polygon(0 0, 100% 10%, 100% 80%, 0 90%);
+  margin-top: -$slope-offset;
 }
