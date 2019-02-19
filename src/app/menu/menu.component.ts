@@ -13,4 +13,11 @@ export class MenuComponent implements OnInit {
   ngOnInit() {
   }
 
+  scrollToElement(e, selector): void {
+    e.preventDefault()
+    const element = document.querySelector(selector);
+    if (element)
+      element.scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
+  }
+
 }
