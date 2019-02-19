@@ -1,3 +1,13 @@
+@import 'src/styles/variables';
+
+pane {
+  display: block;
+  position:relative;
+  width:$width;
+  min-height:$height;
+  overflow:hidden;
+}
+
 q {
   quotes: "“" "”" "‘" "’";
 }

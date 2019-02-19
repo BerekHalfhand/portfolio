@@ -20,6 +20,22 @@ header {
   border-radius: $menu-size / 2;
 }
 
+nav {
+  a {
+    height: $menu-size;
+    width: $menu-size;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .active {
+    border-right: none;
+    border-left: none;
+    border-bottom: solid orange;
+    border-top: solid transparent;
+  }
+}
 
 #links {
   min-width: $menu-size;
@@ -38,5 +54,12 @@ a:active, a:hover, a:focus {
     position: fixed;
     width: $menu-size;
     height: 100%;
+  }
+
+  nav .active {
+    border-right: solid orange;
+    border-left: solid transparent;
+    border-bottom: none;
+    border-top: none;
   }
 }

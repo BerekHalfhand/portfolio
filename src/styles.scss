@@ -38,13 +38,6 @@ body {
   //   -webkit-text-fill-color: transparent;
   // }
 
-  .pane {
-    position:relative;
-    width:$width;
-    min-height:$height;
-    overflow:hidden;
-  }
-
   %flex-column {
     display: flex;
     flex-direction: column;
