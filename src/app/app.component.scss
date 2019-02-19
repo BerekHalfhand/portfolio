@@ -18,6 +18,9 @@ q:after {
     content: close-quote;
 }
 
+#pane2 {
+  min-height: calc(100vh + 1.1*#{$slope-offset});
+}
 #pane3 {
   position: inherit;
 }

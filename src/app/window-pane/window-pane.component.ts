@@ -1,5 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { trigger, state, style, animate, transition, group } from '@angular/animations';
+import { TextAnimation } from 'ngx-teximate';
+import { fadeInDown } from 'ng-animate';
 
 @Component({
   selector: 'app-window-pane',
@@ -9,21 +11,30 @@ import { trigger, state, style, animate, transition, group } from '@angular/anim
     trigger('one', [
       transition(':enter', [
         style({transform: 'translateY(50%) translateX(200%)'}),
-        animate('400ms ease-in', style({transform: 'translateX(-60%) translateY(-25%) rotate(5deg)'}))
-      ]),
-      transition(':leave', [
-        animate('200ms ease-in', style({transform: 'translateY(-30%)'}))
+        animate('500ms ease-in', style({transform: 'translateX(-60%) translateY(-25%) rotate(5deg)'}))
       ])
+      // transition(':leave', [
+      //   animate('200ms ease-in', style({transform: 'translateY(-30%)'}))
+      // ])
     ]),
     trigger('two', [
       transition(':enter', [
         style({transform: 'translateY(25%) translateX(200%)'}),
-        animate('400ms ease-in', style({transform: 'translateX(20%) translateY(5%) rotate(-5deg)'}))
-      ]),
-      transition(':leave', [
-        animate('200ms ease-in', style({transform: 'translateY(-30%)'}))
+        animate('500ms ease-in', style({transform: 'translateX(20%) translateY(5%) rotate(-5deg)'}))
       ])
     ]),
+    trigger('textbox', [
+      transition(':enter', [
+        style({
+          transform: 'translateX(-100%)',
+          opacity: 0
+        }),
+        animate('600ms ease-in', style({
+          transform: 'translateX(0%)',
+          opacity: 1
+        }))
+      ])
+    ])
     // trigger('one', [
     //   // :ENTER TRANSITION
     //   // Transition Styles
@@ -92,6 +103,12 @@ import { trigger, state, style, animate, transition, group } from '@angular/anim
 })
 export class WindowPaneComponent implements OnInit {
   @Input() showContent: boolean;
+
+  enterAnimation: TextAnimation = {
+    animation: fadeInDown,
+    delay: 50,
+    type: 'letter'
+  };
 
   constructor() { }
 

@@ -1,6 +1,7 @@
 @import 'src/styles/variables';
 // $image: 'https://i.imgur.com/xQdYC7x.jpg';
-$image: 'http://vignette3.wikia.nocookie.net/animal-jam-clans-1/images/b/b7/Dark-Misty-Forest-beautiful-landscapes-37729157-1920-1080.jpg';
+// $image: 'http://vignette3.wikia.nocookie.net/animal-jam-clans-1/images/b/b7/Dark-Misty-Forest-beautiful-landscapes-37729157-1920-1080.jpg';
+$image: 'https://oregonag.org/wp-content/uploads/2017/08/stained-glass-background.png';
 
 //number of raindrops
 $raindrops:75;
@@ -41,7 +42,7 @@ $raindrops:75;
   height: calc(100% + 4*#{$blur});
   background:url($image);
   background-size:cover;
-  background-position:50%;
+  background-position:top;
   filter:blur($blur);
   margin: calc(-2*#{$blur});
 }

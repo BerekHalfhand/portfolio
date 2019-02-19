@@ -28,6 +28,7 @@ import { PolaroidComponent } from './polaroid/polaroid.component';
 import { MenuComponent } from './menu/menu.component';
 import { ContactPaneComponent } from './contact-pane/contact-pane.component';
 import { ScrollButtonComponent } from './scroll-button/scroll-button.component';
+import { TeximateModule } from 'ngx-teximate';
 
 @NgModule({
   declarations: [
@@ -53,7 +54,8 @@ import { ScrollButtonComponent } from './scroll-button/scroll-button.component';
     MatCardModule,
     MatGridListModule,
     MatIconModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    TeximateModule
   ],
   providers: [RainyDayService, WINDOW_PROVIDERS],
   entryComponents: [RaindropComponent],
