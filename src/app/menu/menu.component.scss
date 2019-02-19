@@ -1,5 +1,5 @@
 @import 'src/styles/variables';
-$margin: 1vmin;
+$margin: 0.5vmin;
 
 header {
   position: fixed;
@@ -10,14 +10,14 @@ header {
 }
 
 #logo {
-  width: calc(#{$menu-size} - #{$margin});
-  height: calc(#{$menu-size} - #{$margin});
-  background: url('assets/pics/logo.svg') no-repeat center;
-  background-size:contain;
+  width: calc(#{$menu-size} - 2*#{$margin});
+  height: calc(#{$menu-size} - 2*#{$margin});
   margin: $margin;
   opacity: 0.5;
   box-shadow: 0 0 $margin gray;
   border-radius: $menu-size / 2;
+
+  img { width: 100%; }
 }
 
 nav {

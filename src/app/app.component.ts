@@ -1,6 +1,6 @@
 import {  Component,
           OnInit,
-          AfterViewInit,
+          // AfterViewInit,
           HostListener,
           Inject,
           Directive,
@@ -19,6 +19,7 @@ import { RaindropItem } from './raindrop/raindrop.item';
 @Directive({selector: 'pane'})
 export class Pane {
   @Input() id: string;
+  nativeElement: any;
 }
 
 @Component({
@@ -27,7 +28,7 @@ export class Pane {
   styleUrls: ['./app.component.scss']
 })
 
-export class AppComponent implements OnInit, AfterViewInit {
+export class AppComponent implements OnInit {
   frontRaindrops: RaindropItem[];
   backRaindrops: RaindropItem[];
   // @ViewChild("pane1", {read: ElementRef}) pane1: ElementRef;
@@ -59,11 +60,11 @@ export class AppComponent implements OnInit, AfterViewInit {
     let scrollPosition = this.window.pageYOffset || this.document.documentElement.scrollTop || this.document.body.scrollTop || 0;
 
     this.panes.map(p => {
-      let position = p.nativeElement.offsetTop;
-      let middle = p.nativeElement.offsetHeight / 2;
-      if (scrollPosition > position - middle) this.activePane = p.nativeElement.id;
+      if (p && p.nativeElement) {
+        let position = p.nativeElement.offsetTop;
+        let middle = p.nativeElement.offsetHeight / 2;
+        if (scrollPosition > position - middle) this.activePane = p.nativeElement.id;
+      }
     });
-
-    // console.log(this.activePane);
   }
 }
