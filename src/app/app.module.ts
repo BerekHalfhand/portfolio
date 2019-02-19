@@ -10,9 +10,9 @@ import {  MatButtonModule,
 // import { ParallaxScrollModule } from 'ng2-parallaxscroll';
 import { FlexLayoutModule } from '@angular/flex-layout';
 
-import { WindowRef } from 'helpers/windowRef';
+import { WINDOW_PROVIDERS } from 'helpers/windowRef';
 
-import { AppComponent } from './app.component';
+import { AppComponent, Pane } from './app.component';
 import { RainyDayComponent } from './rainy-day/rainy-day.component';
 import { RaindropComponent } from './raindrop/raindrop.component';
 import { WindowPaneComponent } from './window-pane/window-pane.component';
@@ -35,6 +35,7 @@ import { MenuComponent } from './menu/menu.component';
     WindowPaneComponent,
     SkillsPaneComponent,
     PolaroidComponent,
+    Pane,
     MenuComponent
   ],
   imports: [
@@ -48,7 +49,7 @@ import { MenuComponent } from './menu/menu.component';
     MatIconModule,
     FlexLayoutModule
   ],
-  providers: [RainyDayService, WindowRef],
+  providers: [RainyDayService, WINDOW_PROVIDERS],
   entryComponents: [RaindropComponent],
   bootstrap: [AppComponent]
 })

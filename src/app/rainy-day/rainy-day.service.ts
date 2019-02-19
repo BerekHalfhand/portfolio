@@ -1,16 +1,14 @@
-import { Injectable } from '@angular/core';
+import { Inject } from '@angular/core';
 import { RaindropItem } from '../raindrop/raindrop.item';
 import { RaindropComponent } from '../raindrop/raindrop.component';
-import { WindowRef } from 'helpers/windowRef';
+import { WINDOW } from 'helpers/windowRef';
 
-
-@Injectable()
 export class RainyDayService {
   viewportWidth: number;
 
-  constructor(private winRef: WindowRef) {
+  constructor(@Inject(WINDOW) private window: Window) {
       // getting the native window obj
-      this.viewportWidth = winRef.nativeWindow.innerWidth;
+      this.viewportWidth = window.innerWidth;
       // console.log('Native window obj', this.viewportWidth);
   }
   getRaindrops(side: string) {

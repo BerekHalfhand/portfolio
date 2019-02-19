@@ -1,14 +1,14 @@
 <section id="app-container">
-  <app-menu></app-menu>
+  <app-menu [activePane]="activePane"></app-menu>
   <section id="content-container">
-    <article id="pane1" class="pane">
+    <pane id="pane1">
       <app-rainy-day [frontRaindrops]="frontRaindrops" [backRaindrops]="backRaindrops"></app-rainy-day>
-    </article>
-    <article id="pane2" class="pane">
+    </pane>
+    <pane id="pane2">
       <app-window-pane></app-window-pane>
-    </article>
-    <article id="pane3" class="pane">
+    </pane>
+    <pane id="pane3">
       <app-skills-pane></app-skills-pane>
-    </article>
+    </pane>
   <section>
 <section>
