@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { trigger, state, style, animate, transition, group } from '@angular/animations';
 
 @Component({
@@ -12,7 +12,7 @@ import { trigger, state, style, animate, transition, group } from '@angular/anim
         animate('400ms ease-in', style({transform: 'translateX(-60%) translateY(-25%) rotate(5deg)'}))
       ]),
       transition(':leave', [
-        animate('200ms ease-in', style({transform: 'translateY(-100%)'}))
+        animate('200ms ease-in', style({transform: 'translateY(-30%)'}))
       ])
     ]),
     trigger('two', [
@@ -21,7 +21,7 @@ import { trigger, state, style, animate, transition, group } from '@angular/anim
         animate('400ms ease-in', style({transform: 'translateX(20%) translateY(5%) rotate(-5deg)'}))
       ]),
       transition(':leave', [
-        animate('200ms ease-in', style({transform: 'translateY(-100%)'}))
+        animate('200ms ease-in', style({transform: 'translateY(-30%)'}))
       ])
     ]),
     // trigger('one', [
@@ -91,6 +91,7 @@ import { trigger, state, style, animate, transition, group } from '@angular/anim
   ]
 })
 export class WindowPaneComponent implements OnInit {
+  @Input() showContent: boolean;
 
   constructor() { }
 

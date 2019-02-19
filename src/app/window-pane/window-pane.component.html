@@ -35,12 +35,14 @@
         </mat-card-content>
       </mat-card>
     </div>
-    <div fxFlex="50%" class="pics-container">
-      <div id="photo1" @one class="photo-container">
-        <app-polaroid caption="Tajikistan ’17" url="assets/pics/Photo_tajikistan.jpg"></app-polaroid>
-      </div>
-      <div id="photo2" @two class="photo-container">
-      <app-polaroid caption="República Dominicana ’18" url="assets/pics/Photo_dominicana.jpg"></app-polaroid>
+    <div fxFlex="50%">
+      <div *ngIf="showContent" class="pics-container">
+        <div id="photo1" @one class="photo-container">
+          <app-polaroid caption="Tajikistan ’17" url="assets/pics/Photo_tajikistan.jpg"></app-polaroid>
+        </div>
+        <div id="photo2" @two class="photo-container">
+        <app-polaroid caption="República Dominicana ’18" url="assets/pics/Photo_dominicana.jpg"></app-polaroid>
+        </div>
       </div>
     </div>
   </article>

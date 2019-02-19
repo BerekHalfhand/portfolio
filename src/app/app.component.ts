@@ -35,6 +35,7 @@ export class AppComponent implements OnInit {
 
   @ViewChildren(Pane, {read: ElementRef}) panes: QueryList<Pane>;
   activePane: string = 'pane1';
+  showContent: boolean[] = [];
 
   constructor(
     private RainyDayService: RainyDayService,
@@ -64,6 +65,7 @@ export class AppComponent implements OnInit {
         let position = p.nativeElement.offsetTop;
         let middle = p.nativeElement.offsetHeight / 2;
         if (scrollPosition > position - middle) this.activePane = p.nativeElement.id;
+        this.showContent[this.activePane] = true;
       }
     });
   }
