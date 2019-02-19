@@ -24,6 +24,7 @@ import { BackRainDirective } from 'app/directives/back-rain.directive';
 import { SkillsPaneComponent } from './skills-pane/skills-pane.component';
 import { PolaroidComponent } from './polaroid/polaroid.component';
 import { MenuComponent } from './menu/menu.component';
+import { ContactPaneComponent } from './contact-pane/contact-pane.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { MenuComponent } from './menu/menu.component';
     SkillsPaneComponent,
     PolaroidComponent,
     Pane,
-    MenuComponent
+    MenuComponent,
+    ContactPaneComponent
   ],
   imports: [
     BrowserModule,

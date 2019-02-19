@@ -7,4 +7,5 @@
   position: absolute;
   clip-path: polygon(0 0, 100% 10%, 100% 80%, 0 90%);
   margin-top: -$slope-offset;
+  z-index: 25;
 }
