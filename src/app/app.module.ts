@@ -18,6 +18,8 @@ import { RaindropComponent } from './raindrop/raindrop.component';
 import { WindowPaneComponent } from './window-pane/window-pane.component';
 
 import { RainyDayService } from './rainy-day/rainy-day.service';
+import { ScrollService } from 'app/scroll.service';
+
 import { FrontRainDirective } from 'app/directives/front-rain.directive';
 import { BackRainDirective } from 'app/directives/back-rain.directive';
 
@@ -25,6 +27,7 @@ import { SkillsPaneComponent } from './skills-pane/skills-pane.component';
 import { PolaroidComponent } from './polaroid/polaroid.component';
 import { MenuComponent } from './menu/menu.component';
 import { ContactPaneComponent } from './contact-pane/contact-pane.component';
+import { ScrollButtonComponent } from './scroll-button/scroll-button.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +41,8 @@ import { ContactPaneComponent } from './contact-pane/contact-pane.component';
     PolaroidComponent,
     Pane,
     MenuComponent,
-    ContactPaneComponent
+    ContactPaneComponent,
+    ScrollButtonComponent
   ],
   imports: [
     BrowserModule,

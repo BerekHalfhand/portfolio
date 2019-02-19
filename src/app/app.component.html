@@ -1,11 +1,11 @@
 <section id="app-container">
-  <app-menu [activePane]="activePane"></app-menu>
+  <app-menu></app-menu>
   <section id="content-container">
     <pane id="pane1">
       <app-rainy-day [frontRaindrops]="frontRaindrops" [backRaindrops]="backRaindrops"></app-rainy-day>
     </pane>
     <pane id="pane2">
-      <app-window-pane [showContent]="showContent['pane2']"></app-window-pane>
+      <app-window-pane [showContent]="scrollService.showContent['pane2']"></app-window-pane>
     </pane>
     <pane id="pane3">
       <app-skills-pane></app-skills-pane>

@@ -6,7 +6,7 @@ $image: 'http://vignette3.wikia.nocookie.net/animal-jam-clans-1/images/b/b7/Dark
 $raindrops:75;
 
 .window-pane-container{
-  z-index: 5;
+  padding-bottom: $slope-offset;
 }
 
 .pics-container {
@@ -28,6 +28,11 @@ $raindrops:75;
 
 #photo2 {
   transform: translateX(20%) translateY(5%) rotate(-5deg);
+}
+
+.mouse-container {
+  min-height: 75px;
+  position: relative;
 }
 
 .window{

@@ -2,11 +2,12 @@ import { Component, OnInit, Input } from '@angular/core';
 import { ScrollService } from 'app/scroll.service';
 
 @Component({
-  selector: 'app-menu',
-  templateUrl: './menu.component.html',
-  styleUrls: ['./menu.component.scss']
+  selector: 'app-scroll-button',
+  templateUrl: './scroll-button.component.html',
+  styleUrls: ['./scroll-button.component.scss']
 })
-export class MenuComponent implements OnInit {
+export class ScrollButtonComponent implements OnInit {
+  @Input() targetPane: string;
   activePane: string = 'pane1';
 
   constructor(private scrollService: ScrollService) {

@@ -32,12 +32,7 @@ body {
   a:visited {
     color: gray;
   }
-  // a:active {
-  //   background: linear-gradient(to right,#fc0b56,#08fdd8);
-  //   -webkit-background-clip: text;
-  //   -webkit-text-fill-color: transparent;
-  // }
-
+  
   %flex-column {
     display: flex;
     flex-direction: column;
@@ -62,4 +57,5 @@ body {
     z-index: 28;
     @include responsive-font(2.5vw, 10px, 18px);
   }
+
 }
