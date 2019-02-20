@@ -1,6 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~normalize.css/normalize.css";
-@import "~@angular/material/prebuilt-themes/deeppurple-amber.css";
+// @import "~@angular/material/prebuilt-themes/deeppurple-amber.css";
 
 @import 'src/styles/reset';
 @import 'src/styles/variables';
@@ -57,7 +57,7 @@ body {
 
   .text-box {
     padding: 5%;
-    background: rgba(240,230,220, .7);
+    background: rgba(240,230,220, .7) !important;
     margin: 10vw;
     text-align: justify;
     z-index: 28;

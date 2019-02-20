@@ -8,7 +8,7 @@ import { Component, OnInit, Input } from '@angular/core';
 export class ProjectComponent implements OnInit {
   @Input() img: string;
   @Input() url: string;
-  @Input() title: string;
+  @Input() name: string;
   @Input() stack: string;
   @Input() description: string;
 

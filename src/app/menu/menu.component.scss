@@ -32,7 +32,7 @@ nav {
   .active {
     border-right: none;
     border-left: none;
-    border-bottom: solid $primary-color;
+    border-bottom: solid mat-color($app-primary, 500);
     border-top: solid transparent;
   }
 }
@@ -46,7 +46,7 @@ a {
   color: gray;
 }
 a:active, a:hover {
-  color: $primary-color;
+  color: mat-color($app-primary, 400);;
 }
 
 @media screen and (min-width: 600px) {
@@ -57,7 +57,7 @@ a:active, a:hover {
   }
 
   nav .active {
-    border-right: solid $primary-color;
+    border-right: solid mat-color($app-primary, 500);;
     border-left: solid transparent;
     border-bottom: none;
     border-top: none;

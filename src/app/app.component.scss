@@ -3,8 +3,8 @@
 pane {
   display: block;
   position:relative;
-  width:$width;
-  min-height:$height;
+  width: 100%;
+  min-height: $height;
 }
 
 q {
@@ -16,21 +16,20 @@ q:before {
 q:after {
     content: close-quote;
 }
-// #app-container {
-//   overflow-x: hidden;
-// }
-#pane1 {
+#app-container{
+  width: 100%;
+  overflow-x: hidden;
+}
+#pane1, #pane2, #pane5 {
   overflow:hidden;
 }
 #pane2 {
-  border-top: solid $pane-border $primary-color;
-  min-height: calc(100vh + 1.1*#{$slope-offset});
-  overflow:hidden;
+  border-top: solid $pane-border mat-color($app-primary, 500);
 }
-// #pane3 {
-//   position: inherit;
-//   overflow: inherit;
-// }
-// #pane4 {
-//   padding-top: 2*$slope-offset;
-// }
+
+@media screen and (min-width: 600px) {
+  #content-container {
+    margin-left: $menu-size;
+    max-width: calc(100vw - #{$menu-size});
+  }
+}

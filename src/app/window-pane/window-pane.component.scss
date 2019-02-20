@@ -31,11 +31,6 @@ $raindrops:75;
   transform: translateX(20%) translateY(5%) rotate(-5deg);
 }
 
-.mouse-container {
-  min-height: 75px;
-  position: relative;
-}
-
 .window{
   position:absolute;
   width: calc(#{$width} + 4*#{$blur});

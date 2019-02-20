@@ -1,11 +1,13 @@
 <article fxLayout="row" fxLayoutGap="1vw">
-  <div fxFlex="200px" class="cover">
+  <div fxFlex="200px" title="{{name}}" class="cover">
     <a href="{{url}}">
-      <img src="{{img}}" alt="Cover">
+      <img src="{{img}}" alt="{{name}}">
     </a>
   </div>
   <div class="description">
-    <h4>{{title}}</h4>
+    <h4>
+      <a href="{{url}}">{{name}}</a>
+    </h4>
     <div>Stack: {{stack}}</div>
     <div>Description: {{description}}</div>
   </div>
