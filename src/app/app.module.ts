@@ -29,6 +29,7 @@ import { MenuComponent } from './menu/menu.component';
 import { ContactPaneComponent } from './contact-pane/contact-pane.component';
 import { ScrollButtonComponent } from './scroll-button/scroll-button.component';
 import { TeximateModule } from 'ngx-teximate';
+import { ProjectsPaneComponent } from './projects-pane/projects-pane.component';
 
 @NgModule({
   declarations: [
@@ -43,7 +44,8 @@ import { TeximateModule } from 'ngx-teximate';
     Pane,
     MenuComponent,
     ContactPaneComponent,
-    ScrollButtonComponent
+    ScrollButtonComponent,
+    ProjectsPaneComponent
   ],
   imports: [
     BrowserModule,

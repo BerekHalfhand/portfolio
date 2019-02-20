@@ -25,7 +25,12 @@
     </a>
     <a [class]="activePane == 'pane4' ? 'active' : ''"
         (click)="scrollService.scrollToElement($event, '#pane4')"
-        href="#pane4" title="Contact">
+        href="#pane4" title="Projects">
+      <mat-icon>work</mat-icon>
+    </a>
+    <a [class]="activePane == 'pane5' ? 'active' : ''"
+        (click)="scrollService.scrollToElement($event, '#pane5')"
+        href="#pane5" title="Contact">
       <mat-icon>email</mat-icon>
     </a>
   </nav>

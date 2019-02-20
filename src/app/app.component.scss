@@ -5,7 +5,6 @@ pane {
   position:relative;
   width:$width;
   min-height:$height;
-  overflow:hidden;
 }
 
 q {
@@ -17,15 +16,21 @@ q:before {
 q:after {
     content: close-quote;
 }
-
+// #app-container {
+//   overflow-x: hidden;
+// }
+#pane1 {
+  overflow:hidden;
+}
 #pane2 {
   border-top: solid $pane-border $primary-color;
   min-height: calc(100vh + 1.1*#{$slope-offset});
+  overflow:hidden;
 }
-#pane3 {
-  position: inherit;
-  overflow: inherit;
-}
+// #pane3 {
+//   position: inherit;
+//   overflow: inherit;
+// }
 // #pane4 {
 //   padding-top: 2*$slope-offset;
 // }
