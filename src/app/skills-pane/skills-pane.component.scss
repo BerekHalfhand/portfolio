@@ -15,15 +15,12 @@
   width: 100%;
   margin: $pane-border 0 $pane-border 0;
   z-index: 25;
+  padding-bottom: $slope-offset;
 }
 
 .bars-container {
   z-index: 24;
   padding: 10vw;
-}
-
-.mouse-container {
-  min-height: 150px;
 }
 
 .bar {
