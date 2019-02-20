@@ -1,0 +1,22 @@
+@import 'src/styles/variables';
+
+article {
+  margin: 0 3% 1% 0;
+  padding: 1%;
+  background: rgba(0,0,0, .5);
+  border-radius: 4px;
+  color: white;
+}
+
+.cover {
+  width: $project-img;
+  height: $project-img;
+
+  img {
+    max-width: 100%;
+  }
+}
+
+.description {
+  padding-right: 2vw;
+}

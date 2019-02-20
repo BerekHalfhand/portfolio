@@ -5,7 +5,9 @@ import {  MatButtonModule,
           MatCheckboxModule,
           MatCardModule,
           MatGridListModule,
-          MatIconModule
+          MatIconModule,
+          MatFormFieldModule,
+          MatInputModule
       } from '@angular/material';
 // import { ParallaxScrollModule } from 'ng2-parallaxscroll';
 import { FlexLayoutModule } from '@angular/flex-layout';
@@ -30,6 +32,7 @@ import { ContactPaneComponent } from './contact-pane/contact-pane.component';
 import { ScrollButtonComponent } from './scroll-button/scroll-button.component';
 import { TeximateModule } from 'ngx-teximate';
 import { ProjectsPaneComponent } from './projects-pane/projects-pane.component';
+import { ProjectComponent } from './project/project.component';
 
 @NgModule({
   declarations: [
@@ -45,7 +48,8 @@ import { ProjectsPaneComponent } from './projects-pane/projects-pane.component';
     MenuComponent,
     ContactPaneComponent,
     ScrollButtonComponent,
-    ProjectsPaneComponent
+    ProjectsPaneComponent,
+    ProjectComponent
   ],
   imports: [
     BrowserModule,
@@ -56,6 +60,8 @@ import { ProjectsPaneComponent } from './projects-pane/projects-pane.component';
     MatCardModule,
     MatGridListModule,
     MatIconModule,
+    MatFormFieldModule,
+    MatInputModule,
     FlexLayoutModule,
     TeximateModule
   ],

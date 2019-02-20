@@ -20,4 +20,10 @@
 .contact-pane-container {
   min-height: 100vh;
   padding-top: $slope-offset;
+  color: white;
+}
+
+.form-container {
+  max-width: 50vh !important;
+  width: 100%;
 }

@@ -1,8 +1,20 @@
 <div class="background-container angle--top-right">
   <div class="background angle--top-right">
     <div class="contact-pane-container" fxLayout="column">
-      <article fxLayout="column wrap" fxLayout.gt-md="row wrap" fxFlexFill>
-        lalala
+      <article fxLayout="column wrap" fxLayoutAlign="center center" fxFlexFill>
+        <h1>Contact</h1>
+        <div class="form-container" fxLayout="column" fxLayoutAlign="start stretch">
+          <mat-form-field>
+            <input matInput placeholder="Name">
+          </mat-form-field>
+          <mat-form-field>
+            <input matInput placeholder="Email">
+          </mat-form-field>
+          <mat-form-field>
+            <textarea matInput placeholder="Message"></textarea>
+          </mat-form-field>
+          <button fxFlexAlign="center" mat-stroked-button color="warn">Send</button>
+        </div>
       </article>
       <div class="mouse-container">
         <!-- <app-scroll-button targetPane='pane5'></app-scroll-button> -->
