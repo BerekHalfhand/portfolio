@@ -31,4 +31,14 @@ export class ScrollButtonComponent implements OnInit {
   ngOnInit() {
   }
 
+  isVisible() {
+    let activePane = this.activePane.replace(/[^0-9.]/g, '');
+    let targetPane = this.targetPane.replace(/[^0-9.]/g, '');
+    
+    if (parseInt(activePane) === parseInt(targetPane) - 1)
+      return true;
+
+    return false;
+  }
+
 }

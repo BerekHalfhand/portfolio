@@ -6,10 +6,6 @@
   background: $primary-color;
   width: 100%;
   height: 100%;
-  // min-height: calc(100vh + 2* #{$slope-offset} + 2*#{$pane-border});
-  // position: absolute;
-  // -webkit-clip-path: polygon(0 0, 100% 10%, 100% 90%, 0 100%);;
-  // clip-path: polygon(0 0, 100% 10%, 100% 90%, 0 100%);
   margin: (-$slope-offset) 0 2*(-$slope-offset) 0;
   z-index: 24;
 }
@@ -17,10 +13,6 @@
 .background {
   background: #333333;
   width: 100%;
-  // min-height: calc(100vh + 2* #{$slope-offset});
-  // position: absolute;
-  // -webkit-clip-path: polygon(0 0, 100% 10%, 100% 90%, 0 100%);;
-  // clip-path: polygon(0 0, 100% 10%, 100% 90%, 0 100%);
   margin: $pane-border 0 $pane-border 0;
   z-index: 25;
 }
@@ -79,8 +71,4 @@
       margin-right: 2px;
     }
   }
-
-  // div:nth-of-type(2n) {
-  //   margin-left: 5px;
-  // }
 }

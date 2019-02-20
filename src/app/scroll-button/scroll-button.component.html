@@ -1,4 +1,4 @@
-<a *ngIf="activePane != targetPane" @fade (click)="scrollService.scrollToElement($event, '#'+targetPane)"
+<a *ngIf="isVisible()" @fade (click)="scrollService.scrollToElement($event, '#'+targetPane)"
     class="scroll-link" [href]="'#'+targetPane">
   <svg class="mouse" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 76 130" preserveAspectRatio="xMidYMid meet">
     <g fill="none" fill-rule="evenodd">
