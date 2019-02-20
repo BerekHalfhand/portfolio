@@ -1,23 +1,86 @@
 @import 'src/styles/variables';
+@import 'src/styles/angled-edges';
+@import 'src/styles/mixins';
 
 .background-container {
-  background: orange;
+  background: $primary-color;
   width: 100%;
-  height: calc(100vh + 2* #{$slope-offset} + 2*#{$slope-border});
-  position: absolute;
-  -webkit-clip-path: polygon(0 0, 100% 10%, 100% 90%, 0 100%);;
-  clip-path: polygon(0 0, 100% 10%, 100% 90%, 0 100%);
-  margin-top: -$slope-offset;
+  height: 100%;
+  // min-height: calc(100vh + 2* #{$slope-offset} + 2*#{$pane-border});
+  // position: absolute;
+  // -webkit-clip-path: polygon(0 0, 100% 10%, 100% 90%, 0 100%);;
+  // clip-path: polygon(0 0, 100% 10%, 100% 90%, 0 100%);
+  margin: (-$slope-offset) 0 2*(-$slope-offset) 0;
   z-index: 24;
 }
 
 .background {
   background: #333333;
   width: 100%;
-  height: calc(100vh + 2* #{$slope-offset});
+  // min-height: calc(100vh + 2* #{$slope-offset});
   // position: absolute;
-  -webkit-clip-path: polygon(0 0, 100% 10%, 100% 90%, 0 100%);;
-  clip-path: polygon(0 0, 100% 10%, 100% 90%, 0 100%);
-  margin-top: $slope-border;
+  // -webkit-clip-path: polygon(0 0, 100% 10%, 100% 90%, 0 100%);;
+  // clip-path: polygon(0 0, 100% 10%, 100% 90%, 0 100%);
+  margin: $pane-border 0 $pane-border 0;
   z-index: 25;
+}
+
+.bars-container {
+  z-index: 24;
+  padding: 10vw;
+}
+
+.mouse-container {
+  min-height: 150px;
+}
+
+.bar {
+  width: 100%;
+  margin: 0 0 15px 0;
+  background-color: #555;
+  height: 30px;
+  cursor: default;
+}
+
+.fill-wrap {
+  width: 100%;
+}
+
+.fill {
+  background-color: $primary-color;
+  height: 100%;
+}
+
+.caption {
+  background-color: lighten( $primary-color, 10% );
+  height: 100%;
+  width: 115px;
+}
+
+.percentage {
+  background-color: darken( $primary-color, 10% );
+  webkit-clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+  clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+  margin-right: -10px;
+  padding: 1px;
+}
+
+.text-box {
+  h2 {
+    @include responsive-font(3rem, 10px, 16px);
+  }
+  ul {
+    list-style-type: none;
+    @include responsive-font(1rem, 8px, 14px);
+
+    li:before {
+      color: darken($primary-color, 20%);
+      content: " — ";
+      margin-right: 2px;
+    }
+  }
+
+  // div:nth-of-type(2n) {
+  //   margin-left: 5px;
+  // }
 }

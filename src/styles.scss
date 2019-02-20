@@ -32,7 +32,7 @@ body {
   a:visited {
     color: gray;
   }
-  
+
   %flex-column {
     display: flex;
     flex-direction: column;
@@ -56,6 +56,13 @@ body {
     text-align: justify;
     z-index: 28;
     @include responsive-font(2.5vw, 10px, 18px);
+  }
+
+  .mouse-container {
+    min-height: 75px;
+    height: 75px;
+    width: 100%;
+    position: relative;
   }
 
 }

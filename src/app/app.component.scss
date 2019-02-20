@@ -19,8 +19,13 @@ q:after {
 }
 
 #pane2 {
+  border-top: solid $pane-border $primary-color;
   min-height: calc(100vh + 1.1*#{$slope-offset});
 }
 #pane3 {
   position: inherit;
+  overflow: inherit;
 }
+// #pane4 {
+//   padding-top: 2*$slope-offset;
+// }

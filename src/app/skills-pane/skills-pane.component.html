@@ -1,34 +1,159 @@
-<div class="background-container">
-  <div class="background"></div>
-</div>
-<div class="skills-pane-container">
-  <article fxLayout="column wrap" fxLayout.gt-md="row wrap" fxFlexFill>
-  <div fxFlex="50%" class="pics-container">
-  </div>
-    <div fxFlex="50%" class="text-box-container">
-      <mat-card class="text-box">
-        <mat-card-title>Skillz</mat-card-title>
-        <mat-card-content>
-          <p>
+<div class="background-container angle--both-right-right">
+  <div class="background angle--both-right-right">
+    <div class="skills-pane-container" fxLayout="column">
+      <article fxLayout="column wrap" fxLayout.gt-md="row wrap" fxFlexFill>
+        <div fxFlex="50%" fxLayout="column" class="bars-container">
+          <div class="bar" fxLayout="row" fxLayoutAlign="start">
+            <div class="caption flex-center">Javascript</div>
+            <div class="fill-wrap" @widen>
+              <div id="skill-js" class="bar fill" style="width: 75%"></div>
+            </div>
+            <span class="percentage flex-center">75%</span>
+          </div>
 
-          </p>
-          <p>
-            Front End:
-            * Javascript: ES6, Angular, React, Redux, Vue, Typescript, ...
-            * HTML/CSS: SASS, LESS, Responsive/Adaptive Design,
-            Back End:
-            * NodeJS: ExpressJS, SailsJS, Meteor,
-            * PHP: Symfony2, Bitrix, MODX,
-            * Ruby: Ruby on Rails,
-            * DBs: MongoDB, MySQL, PostgreSQL,
+          <div class="bar" fxLayout="row" fxLayoutAlign="start">
+            <div class="caption flex-center">Angular</div>
+            <div class="fill-wrap" @widen>
+              <div id="skill-js" class="bar fill" style="width: 60%"></div>
+            </div>
+            <span class="percentage flex-center">60%</span>
+          </div>
 
-            Unit Tests:
-            * RSpec, Jest, Chai, Enzyme,
-            Other:
-            * AWS, Heroku, Linux, Git, Webpack, Grunt, C++, Lisp, Python, ...
-          </p>
-        </mat-card-content>
-      </mat-card>
+          <div class="bar" fxLayout="row" fxLayoutAlign="start">
+            <div class="caption flex-center">React</div>
+            <div class="fill-wrap" @widen>
+              <div id="skill-js" class="bar fill" style="width: 50%"></div>
+            </div>
+            <span class="percentage flex-center">50%</span>
+          </div>
+
+          <div class="bar" fxLayout="row" fxLayoutAlign="start">
+            <div class="caption flex-center">Vue</div>
+            <div class="fill-wrap" @widen>
+              <div id="skill-js" class="bar fill" style="width: 25%"></div>
+            </div>
+            <span class="percentage flex-center">25%</span>
+          </div>
+
+          <div class="bar" fxLayout="row" fxLayoutAlign="start">
+            <div class="caption flex-center">Typescript</div>
+            <div class="fill-wrap" @widen>
+              <div id="skill-js" class="bar fill" style="width: 40%"></div>
+            </div>
+            <span class="percentage flex-center">40%</span>
+          </div>
+
+          <div class="bar" fxLayout="row" fxLayoutAlign="start">
+            <div class="caption flex-center">NodeJS</div>
+            <div class="fill-wrap" @widen>
+              <div id="skill-js" class="bar fill" style="width: 25%"></div>
+            </div>
+            <span class="percentage flex-center">25%</span>
+          </div>
+
+          <div class="bar" fxLayout="row" fxLayoutAlign="start">
+            <div class="caption flex-center">PHP</div>
+            <div class="fill-wrap" @widen>
+              <div id="skill-js" class="bar fill" style="width: 70%"></div>
+            </div>
+            <span class="percentage flex-center">70%</span>
+          </div>
+
+          <div class="bar" fxLayout="row" fxLayoutAlign="start">
+            <div class="caption flex-center">Rails</div>
+            <div class="fill-wrap" @widen>
+              <div id="skill-js" class="bar fill" style="width: 35%"></div>
+            </div>
+            <span class="percentage flex-center">35%</span>
+          </div>
+
+          <div class="bar" fxLayout="row" fxLayoutAlign="start">
+            <div class="caption flex-center">MongoDB</div>
+            <div class="fill-wrap" @widen>
+              <div id="skill-js" class="bar fill" style="width: 60%"></div>
+            </div>
+            <span class="percentage flex-center">60%</span>
+          </div>
+
+          <div class="bar" fxLayout="row" fxLayoutAlign="start">
+            <div class="caption flex-center">MySQL</div>
+            <div class="fill-wrap" @widen>
+              <div id="skill-js" class="bar fill" style="width: 45%"></div>
+            </div>
+            <span class="percentage flex-center">45%</span>
+          </div>
+
+          <div class="bar" fxLayout="row" fxLayoutAlign="start">
+            <div class="caption flex-center">Unit Testing</div>
+            <div class="fill-wrap" @widen>
+              <div id="skill-js" class="bar fill" style="width: 35%"></div>
+            </div>
+            <span class="percentage flex-center">35%</span>
+          </div>
+        </div>
+        <div fxFlex="50%" class="text-box-container">
+          <mat-card class="text-box">
+            <mat-card-title>Skills</mat-card-title>
+            <mat-card-content fxLayout="row wrap" fxLayoutAlign="space-between">
+              <div fxFlex="45%">
+                <h2>Languages</h2>
+                <ul>
+                  <li>Javascript (ES6)</li>
+                  <li>Typescript</li>
+                  <li>Ruby</li>
+                  <li>C (C++, C#)</li>
+                  <li>Python</li>
+                  <li>Lisp</li>
+                </ul>
+              </div>
+              <div fxFlex="45%">
+                <h2>Methods & Tools</h2>
+                <ul>
+                  <li>Linux</li>
+                  <li>Git</li>
+                  <li>AWS</li>
+                  <li>Heroku</li>
+                  <li>Redux</li>
+                  <li>SASS</li>
+                  <li>LESS</li>
+                  <li>Adaptive Design</li>
+                  <li>Webpack</li>
+                  <li>Grunt</li>
+                </ul>
+              </div>
+              <div fxFlex="45%">
+                <h2>Frameworks & Libs</h2>
+                <ul>
+                  <li>Angular</li>
+                  <li>React</li>
+                  <li>Vue</li>
+                  <li>Symfony2</li>
+                  <li>Ruby on Rails</li>
+                  <li>NodeJS</li>
+                  <li>ExpressJS</li>
+                  <li>Meteor</li>
+                </ul>
+              </div>
+              <div fxFlex="45%">
+                <h2>DBs & Unit Tests</h2>
+                <p>
+                  <ul>
+                    <li>MongoDB</li>
+                    <li>MySQL</li>
+                    <li>PostgreSQL</li>
+                    <li>RSpec</li>
+                    <li>Jest</li>
+                    <li>Chai</li>
+                    <li>Enzyme</li>
+                  </ul>
+              </div>
+            </mat-card-content>
+          </mat-card>
+        </div>
+      </article>
+      <div class="mouse-container">
+        <app-scroll-button targetPane='pane4'></app-scroll-button>
+      </div>
     </div>
-  </article>
+  </div>
 </div>
