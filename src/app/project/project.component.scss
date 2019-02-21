@@ -8,6 +8,10 @@ article {
   color: white;
 }
 
+h4 {
+  font-family: $title-font;
+}
+
 .cover {
   width: $project-img-size;
   height: $project-img-size;
