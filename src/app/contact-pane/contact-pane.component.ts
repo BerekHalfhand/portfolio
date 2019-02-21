@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { ScrollService } from 'app/scroll.service';
 import { trigger, style, animate, transition } from '@angular/animations';
 
+declare var require: any;
+declare var particlesJS: any;
 @Component({
   selector: 'app-contact-pane',
   templateUrl: './contact-pane.component.html',
