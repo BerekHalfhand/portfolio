@@ -33,6 +33,7 @@ import { ScrollButtonComponent } from './scroll-button/scroll-button.component';
 import { TeximateModule } from 'ngx-teximate';
 import { ProjectsPaneComponent } from './projects-pane/projects-pane.component';
 import { ProjectComponent } from './project/project.component';
+import { SkillBarComponent } from './skill-bar/skill-bar.component';
 
 @NgModule({
   declarations: [
@@ -49,7 +50,8 @@ import { ProjectComponent } from './project/project.component';
     ContactPaneComponent,
     ScrollButtonComponent,
     ProjectsPaneComponent,
-    ProjectComponent
+    ProjectComponent,
+    SkillBarComponent
   ],
   imports: [
     BrowserModule,

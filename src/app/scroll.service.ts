@@ -30,11 +30,16 @@ export class ScrollService {
                       || this.document.body.scrollTop
                       || 0;
 
+    // TODO: sync offset w/ sass variable
+
+    let offset = window.innerHeight / 100 * 15;
+
     panes.map(p => {
       if (p && p.nativeElement) {
         let position = p.nativeElement.offsetTop;
         let middle = p.nativeElement.offsetHeight / 2;
-        if (scrollPosition > position - middle)
+
+        if (scrollPosition > position - middle + offset)
           this.activePane = p.nativeElement.id;
 
         this.showContent[this.activePane] = true;

@@ -2,57 +2,22 @@
 @import 'src/styles/angled-edges';
 @import 'src/styles/mixins';
 
-.background-container {
-  background: mat-color($app-primary, 500);
-  width: 100%;
-  height: 100%;
+.slope-background-container {
   margin: (-$slope-offset) 0 (-$slope-offset) 0;
-  z-index: 24;
 }
 
-.background {
-  background: $background-2;
-  width: 100%;
-  margin: $pane-border 0 $pane-border 0;
-  z-index: 25;
-  padding-bottom: $slope-offset;
+.slope-background {
+  background: $background-1;
+}
+
+.skills-pane-container {
+  min-height: 100vh;
+  padding-top: $slope-offset;
 }
 
 .bars-container {
   z-index: 24;
   padding: 10vw 10vw 0 10vw;
-}
-
-.bar {
-  width: 100%;
-  margin: 0 0 15px 0;
-  background-color: $background-3;
-  height: 30px;
-  cursor: default;
-}
-
-.fill-wrap {
-  width: 100%;
-}
-
-.fill {
-  background-color: mat-color($app-primary, 500);
-  height: 100%;
-}
-
-.caption {
-  background-color: mat-color($app-primary, 300);
-  height: 100%;
-  width: 115px;
-  @include responsive-font(0.9rem, 10px, 16px);
-}
-
-.percentage {
-  background-color: mat-color($app-primary, 700);
-  webkit-clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
-  clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
-  margin-right: -10px;
-  padding: 1px;
 }
 
 .text-box {

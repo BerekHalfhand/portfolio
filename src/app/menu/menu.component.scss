@@ -4,6 +4,7 @@ $margin: 0.5vmin;
 header {
   position: fixed;
   height: $menu-size;
+  max-height: $max-menu-size;
   width: 100%;
   z-index: 100;
   background: $menu-color;
@@ -11,7 +12,9 @@ header {
 
 #logo {
   width: calc(#{$menu-size} - 2*#{$margin});
+  max-width: calc(#{$max-menu-size} - 2*#{$margin});
   height: calc(#{$menu-size} - 2*#{$margin});
+  max-height: calc(#{$max-menu-size} - 2*#{$margin});
   margin: $margin;
   opacity: 0.5;
   box-shadow: 0 0 $margin gray;
@@ -32,6 +35,8 @@ nav {
   a {
     height: $menu-size;
     width: $menu-size;
+    max-height: $max-menu-size;
+    max-width: $max-menu-size;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -46,8 +51,10 @@ nav {
 }
 
 #links {
-  min-width: $menu-size;
-  min-height: $menu-size;
+  height: $menu-size;
+  width: $menu-size;
+  max-height: $max-menu-size;
+  max-width: $max-menu-size;
 }
 
 
@@ -55,6 +62,8 @@ nav {
   header {
     position: fixed;
     width: $menu-size;
+    max-width: $max-menu-size;
+    max-height: inherit;
     height: 100%;
   }
 

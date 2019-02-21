@@ -29,7 +29,7 @@ q:after {
 
 @media screen and (min-width: $menu-breakpoint) {
   #content-container {
-    margin-left: $menu-size;
-    max-width: calc(100vw - #{$menu-size});
+    margin-left: $max-menu-size;
+    max-width: calc(100vw - #{$max-menu-size});
   }
 }

@@ -9,13 +9,13 @@ article {
 }
 
 .cover {
-  width: $project-img;
-  height: $project-img;
+  width: $project-img-size;
+  height: $project-img-size;
 
   img {
-    max-width: 100%;
-    width: $project-img;
-    height: $project-img;
+    max-width: $max-project-img-size;
+    min-width: $project-img-size;
+    height: $project-img-size;
   }
 }
 
@@ -24,7 +24,7 @@ article {
 }
 
 .description {
-  padding-right: 2vw;
+  padding-right: 3vw;
   text-align: justify;
   @include responsive-font(.9rem, 10px, 16px);
 }

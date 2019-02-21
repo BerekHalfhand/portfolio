@@ -1,10 +1,12 @@
 @import 'material-orange';
 
-$menu-size: 50px;
+$menu-size: 12vmin;
+$max-menu-size: 50px;
 $menu-color: #181818;
-$background-1: #333;
-$background-2: #444;
-$background-3: #555;
+$background-1: #222;
+$background-2: #333;
+$background-3: #444;
+$background-4: #555;
 
 $menu-breakpoint: 600px;
 $flex-breakpoint: 1280px;
@@ -18,4 +20,5 @@ $pane-border: 4px;
 
 $mouse-width: 2.5rem;
 
-$project-img: 200px;
+$project-img-size: 15vmin;
+$max-project-img-size: 200px;

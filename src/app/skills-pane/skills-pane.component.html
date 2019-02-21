@@ -1,95 +1,21 @@
-<div class="background-container angle--top-right">
-  <div class="background angle--top-right">
+<div class="slope-background-container angle--top-right">
+  <div class="slope-background angle--top-right">
     <div class="skills-pane-container" fxLayout="column">
       <article fxLayout="column wrap" fxLayout.gt-md="row wrap" fxFlexFill>
         <div fxFlex="50%" fxLayout="column" class="bars-container">
-          <div class="bar" fxLayout="row" fxLayoutAlign="start">
-            <div class="caption flex-center">Javascript</div>
-            <div class="fill-wrap" @widen>
-              <div id="skill-js" class="bar fill" style="width: 75%"></div>
-            </div>
-            <span class="percentage flex-center">75%</span>
-          </div>
 
-          <div class="bar" fxLayout="row" fxLayoutAlign="start">
-            <div class="caption flex-center">Angular</div>
-            <div class="fill-wrap" @widen>
-              <div id="skill-js" class="bar fill" style="width: 60%"></div>
-            </div>
-            <span class="percentage flex-center">60%</span>
-          </div>
+          <app-skill-bar skill="Javascript" percentage="75"></app-skill-bar>
+          <app-skill-bar skill="Angular" percentage="60"></app-skill-bar>
+          <app-skill-bar skill="React" percentage="50"></app-skill-bar>
+          <app-skill-bar skill="Vue" percentage="25"></app-skill-bar>
+          <app-skill-bar skill="Typescript" percentage="40"></app-skill-bar>
+          <app-skill-bar skill="NodeJS" percentage="25"></app-skill-bar>
+          <app-skill-bar skill="PHP" percentage="70"></app-skill-bar>
+          <app-skill-bar skill="Rails" percentage="35"></app-skill-bar>
+          <app-skill-bar skill="MongoDB" percentage="60"></app-skill-bar>
+          <app-skill-bar skill="MySQL" percentage="45"></app-skill-bar>
+          <app-skill-bar skill="Unit Testing" percentage="35"></app-skill-bar>
 
-          <div class="bar" fxLayout="row" fxLayoutAlign="start">
-            <div class="caption flex-center">React</div>
-            <div class="fill-wrap" @widen>
-              <div id="skill-js" class="bar fill" style="width: 50%"></div>
-            </div>
-            <span class="percentage flex-center">50%</span>
-          </div>
-
-          <div class="bar" fxLayout="row" fxLayoutAlign="start">
-            <div class="caption flex-center">Vue</div>
-            <div class="fill-wrap" @widen>
-              <div id="skill-js" class="bar fill" style="width: 25%"></div>
-            </div>
-            <span class="percentage flex-center">25%</span>
-          </div>
-
-          <div class="bar" fxLayout="row" fxLayoutAlign="start">
-            <div class="caption flex-center">Typescript</div>
-            <div class="fill-wrap" @widen>
-              <div id="skill-js" class="bar fill" style="width: 40%"></div>
-            </div>
-            <span class="percentage flex-center">40%</span>
-          </div>
-
-          <div class="bar" fxLayout="row" fxLayoutAlign="start">
-            <div class="caption flex-center">NodeJS</div>
-            <div class="fill-wrap" @widen>
-              <div id="skill-js" class="bar fill" style="width: 25%"></div>
-            </div>
-            <span class="percentage flex-center">25%</span>
-          </div>
-
-          <div class="bar" fxLayout="row" fxLayoutAlign="start">
-            <div class="caption flex-center">PHP</div>
-            <div class="fill-wrap" @widen>
-              <div id="skill-js" class="bar fill" style="width: 70%"></div>
-            </div>
-            <span class="percentage flex-center">70%</span>
-          </div>
-
-          <div class="bar" fxLayout="row" fxLayoutAlign="start">
-            <div class="caption flex-center">Rails</div>
-            <div class="fill-wrap" @widen>
-              <div id="skill-js" class="bar fill" style="width: 35%"></div>
-            </div>
-            <span class="percentage flex-center">35%</span>
-          </div>
-
-          <div class="bar" fxLayout="row" fxLayoutAlign="start">
-            <div class="caption flex-center">MongoDB</div>
-            <div class="fill-wrap" @widen>
-              <div id="skill-js" class="bar fill" style="width: 60%"></div>
-            </div>
-            <span class="percentage flex-center">60%</span>
-          </div>
-
-          <div class="bar" fxLayout="row" fxLayoutAlign="start">
-            <div class="caption flex-center">MySQL</div>
-            <div class="fill-wrap" @widen>
-              <div id="skill-js" class="bar fill" style="width: 45%"></div>
-            </div>
-            <span class="percentage flex-center">45%</span>
-          </div>
-
-          <div class="bar" fxLayout="row" fxLayoutAlign="start">
-            <div class="caption flex-center">Unit Testing</div>
-            <div class="fill-wrap" @widen>
-              <div id="skill-js" class="bar fill" style="width: 35%"></div>
-            </div>
-            <span class="percentage flex-center">35%</span>
-          </div>
         </div>
         <div fxFlex="50%" class="text-box-container">
           <mat-card class="text-box">

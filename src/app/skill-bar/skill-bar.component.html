@@ -1,0 +1,7 @@
+<div class="bar" fxLayout="row" fxLayoutAlign="start">
+  <div class="caption flex-center">{{skill}}</div>
+  <div class="fill-wrap" @widen>
+    <div id="skill-js" class="bar fill" [style.width]="percentage+'%'"></div>
+  </div>
+  <span class="percentage flex-center">{{percentage}}%</span>
+</div>

@@ -1,0 +1,45 @@
+@import 'src/styles/variables';
+@import 'src/styles/mixins';
+
+$size: 3vh;
+$percentage-padding: 0.1vh;
+
+.bars-container {
+  z-index: 24;
+  padding: 10vw 10vw 0 10vw;
+}
+
+.bar {
+  width: 100%;
+  margin: 0 0 ($size / 2) 0;
+  background-color: $background-3;
+  height: $size;
+  cursor: default;
+}
+
+.fill-wrap {
+  width: 100%;
+}
+
+.fill {
+  background-color: mat-color($app-primary, 500);
+  height: 100%;
+}
+
+.caption {
+  background-color: mat-color($app-primary, 300);
+  height: 100%;
+  width: 115px;
+  @include responsive-font(0.9rem, 10px, 16px);
+}
+
+.percentage {
+  height: calc(#{$size} - 2*#{$percentage-padding});
+  min-width: calc(#{$size} - 2*#{$percentage-padding});
+  background-color: mat-color($app-primary, 700);
+  webkit-clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+  clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+  margin-right: -($size / 3);
+  padding: $percentage-padding;
+  @include responsive-font(0.8rem, 9px, 14px);
+}

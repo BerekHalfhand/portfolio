@@ -2,20 +2,8 @@
 @import 'src/styles/angled-edges';
 @import 'src/styles/mixins';
 
-.background-container {
-  background: mat-color($app-primary, 500);
-  width: 100%;
-  height: 100%;
-  margin: 0 0 (-$slope-offset) 0;
-  z-index: 24;
-}
-
-.background {
-  background: $background-1;
-  width: 100%;
-  margin: $pane-border 0 $pane-border 0;
-  z-index: 25;
-  padding-bottom: $slope-offset;
+.slope-background {
+  background: $background-2;
 }
 
 .projects-pane-container {
@@ -25,4 +13,10 @@
 
 .text-box p{
   @include responsive-font(1rem, 10px, 16px);
+}
+
+@media screen and (max-width: $flex-breakpoint) {
+  .projects-container {
+    margin-bottom: 10vh;
+  }
 }
