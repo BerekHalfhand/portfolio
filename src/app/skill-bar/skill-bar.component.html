@@ -1,7 +1,8 @@
-<div class="bar" fxLayout="row" fxLayoutAlign="start">
+<div class="bar" fxLayout="row" fxLayoutAlign="space-between">
   <div class="caption flex-center">{{skill}}</div>
-  <div class="fill-wrap" @widen>
-    <div id="skill-js" class="bar fill" [style.width]="percentage+'%'"></div>
+  <div class="fill-wrap">
+    <div id="skill-js" [@widen]="{value: ':enter', params: {percentage: percentage, delay: delay}}"
+        class="bar fill" [style.width]="percentage+'%'"></div>
   </div>
   <span class="percentage flex-center">{{percentage}}%</span>
 </div>
