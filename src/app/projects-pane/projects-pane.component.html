@@ -3,7 +3,7 @@
     <div class="projects-pane-container" fxLayout="column">
       <article fxLayout="column wrap" fxLayout.gt-md="row wrap" fxFlexFill>
         <div fxFlex="50%" class="text-box-container">
-          <mat-card class="text-box">
+          <mat-card *ngIf="showContent" class="text-box">
             <mat-card-title>Projects</mat-card-title>
             <mat-card-content fxLayout="row wrap" fxLayoutAlign="space-between">
               <p>
@@ -24,37 +24,16 @@
                 up to date, such as React, Vue and Ruby on Rails. Now I'm hoping to put
                 the new skills to good use, but good ol' Angular is fine, too.
               </p>
-              <p>
-                Unfortunately, as life would have it, I now do not access to any of those
-                real-world projects that I participated in, even the portal is behind an auth wall.
-                I do, however, hold its source code and can demonstrate it, as well as my own skills.
-              </p>
             </mat-card-content>
           </mat-card>
         </div>
 
         <div fxFlex="50%" fxLayout="column" fxLayoutAlign="center" class="projects-container">
-          <app-project  img="assets/pics/projects/ror_react.png"
-                        url="https://te.remote.team/#/"
-                        name="Tile.Expert Portal"
-                        stack="AngularJS, Symfony2, MongoDB"
-                        description="The internal web-portal for Tile.Expert employees,
-combining many features from a rich forum functionality to the complex task scheduling
-system, as well as cross-site data flow, statistics, notifications and much more.">
-          </app-project>
-          <app-project  img="assets/pics/projects/ror_react.png"
-                        url="https://safe-lowlands-72747.herokuapp.com/spreadsheet"
-                        name="Ruby on Rails + React"
-                        stack="Ruby on Rails, MongoDB, React, Redux, Bootstrap 4"
-                        description="Test project, a single-page app able to store, dinamically
-add, modify and filter a table of custom data with custom typed columns.">
-          </app-project>
-          <app-project  img="assets/pics/projects/vue_store.png"
-                        url="http://vue-store.com.s3-website.us-east-2.amazonaws.com/"
-                        name="Web Store on NuxtJS"
-                        stack="Vue, NodeJS, Bootstrap 4"
-                        description="Test project, a single-page app imitating an online store.">
-          </app-project>
+          <div *ngIf="showContent">
+            <app-project *ngFor="let project of projects; let i=index"
+            [img]="project.img" [name]="project.name" [url]="project.url" [stack]="project.stack"
+            [description]="project.description" [delay]="i*100"></app-project>
+          </div>
         </div>
 
       </article>

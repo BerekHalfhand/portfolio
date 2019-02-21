@@ -45,7 +45,10 @@ export class ScrollService {
         this.showContent[this.activePane] = true;
       }
     });
-    this.dataChangeObserver.next(this.activePane);
+    this.dataChangeObserver.next({
+      activePane: this.activePane,
+      showContent: this.showContent
+    });
   }
 
   scrollToElement(e, selector): void {

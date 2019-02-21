@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { trigger, state, style, animate, transition, group, keyframes } from '@angular/animations';
+import { trigger, state, style, animate, transition, group, query, animateChild } from '@angular/animations';
 
 @Component({
   selector: 'app-skill-bar',
@@ -9,8 +9,25 @@ import { trigger, state, style, animate, transition, group, keyframes } from '@a
     trigger('widen', [
       transition(':enter', [
         style({width: 0}),
-          animate("0.5s {{delay}}ms ease-in", style({width: "{{percentage}}%"}))
-      ], {params : { percentage: "50", delay: 0 }})
+          animate('0.5s {{delay}}ms ease-in', style({width: '{{percentage}}%'}))
+      ], {params : { percentage: '50', delay: 0 }})
+    ]),
+    trigger('flyIn', [
+      transition(':enter', [
+        style({
+          transform: 'translateX(-100%)',
+          opacity: 0
+        }),
+        group([
+          animate('0.25s {{delay}}ms ease-in', style({
+            transform: 'translateX(0%)',
+            opacity: 1
+          })),
+          query('@widen', [
+            animateChild()
+          ])
+        ])
+      ], {params : { delay: 0 }})
     ])
   ]
 })

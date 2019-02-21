@@ -1,13 +1,70 @@
 import { Component, OnInit } from '@angular/core';
+import { ScrollService } from 'app/scroll.service';
+import { trigger, style, animate, transition } from '@angular/animations';
 
 @Component({
   selector: 'app-contact-pane',
   templateUrl: './contact-pane.component.html',
-  styleUrls: ['./contact-pane.component.scss']
+  styleUrls: ['./contact-pane.component.scss'],
+  animations: [
+    trigger('arrow', [
+      transition(':enter', [
+        style({
+          transform: 'translateY(50%)',
+          opacity: 0
+        }),
+        animate('500ms 1s ease-in', style({
+          transform: 'translateY(0%)',
+          opacity: 1
+        }))
+      ])
+    ]),
+    trigger('fadeIn', [
+      transition(':enter', [
+        style({
+          transform: 'scale(0.5)',
+          opacity: 0
+        }),
+        animate('500ms ease-in', style({
+          transform: 'scale(1)',
+          opacity: 1
+        }))
+      ])
+    ]),
+    trigger('fadeInDown', [
+      transition(':enter', [
+        style({
+          transform: 'translateY(-50%) scale(0.5)',
+          opacity: 0
+        }),
+        animate('500ms ease-in', style({
+          transform: 'translateY(0) scale(1)',
+          opacity: 1
+        }))
+      ])
+    ]),
+    trigger('fadeInUp', [
+      transition(':enter', [
+        style({
+          transform: 'translateY(50%) scale(0.5)',
+          opacity: 0
+        }),
+        animate('500ms ease-in', style({
+          transform: 'translateY(0) scale(1)',
+          opacity: 1
+        }))
+      ])
+    ])
+  ]
 })
 export class ContactPaneComponent implements OnInit {
+  showContent: boolean;
 
-  constructor() { }
+  constructor(private scrollService: ScrollService) {
+    this.scrollService.dataChange.subscribe((data) => {
+      this.showContent = data.showContent['pane5'];
+    });
+  }
 
   ngOnInit() {
   }

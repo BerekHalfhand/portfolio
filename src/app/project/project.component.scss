@@ -11,12 +11,11 @@ article {
 .cover {
   width: $project-img-size;
   height: $project-img-size;
+  max-width: $max-project-img-size;
+  max-height: $max-project-img-size;
+  background-position: center;
+  background-size: cover;
 
-  img {
-    max-width: $max-project-img-size;
-    min-width: $project-img-size;
-    height: $project-img-size;
-  }
 }
 
 .stack {

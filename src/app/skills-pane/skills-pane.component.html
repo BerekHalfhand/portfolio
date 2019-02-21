@@ -3,11 +3,13 @@
     <div class="skills-pane-container" fxLayout="column">
       <article fxLayout="column wrap" fxLayout.gt-md="row wrap" fxFlexFill>
         <div fxFlex="50%" fxLayout="column" class="bars-container">
-          <app-skill-bar *ngFor="let skill of skillset; let i=index" [delay]="i*50"
-          [skill]="skill.name" [percentage]="skill.proficiency"></app-skill-bar>
+          <div *ngIf="showContent">
+            <app-skill-bar *ngFor="let skill of skillset; let i=index" [delay]="i*50"
+            [skill]="skill.name" [percentage]="skill.proficiency"></app-skill-bar>
+          </div>
         </div>
         <div fxFlex="50%" class="text-box-container">
-          <mat-card class="text-box">
+          <mat-card *ngIf="showContent" @textbox class="text-box">
             <mat-card-title>Skills & Experience</mat-card-title>
             <mat-card-content fxLayout="row wrap" fxLayoutAlign="space-between">
               <div fxFlex="45%">

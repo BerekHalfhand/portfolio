@@ -1,4 +1,5 @@
-<div class="bar" fxLayout="row" fxLayoutAlign="space-between">
+<div [@flyIn]="{value: ':enter', params: {delay: delay}}"
+  class="bar" fxLayout="row" fxLayoutAlign="space-between">
   <div class="caption flex-center">{{skill}}</div>
   <div class="fill-wrap">
     <div id="skill-js" [@widen]="{value: ':enter', params: {percentage: percentage, delay: delay}}"

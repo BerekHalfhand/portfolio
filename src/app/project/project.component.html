@@ -1,9 +1,8 @@
-<article fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="1vw">
-  <div title="{{name}}" class="cover">
-    <a href="{{url}}">
-      <img src="{{img}}" alt="{{name}}">
-    </a>
-  </div>
+<article  [@flyIn]="{value: ':enter', params: {delay: delay}}"
+          fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="1vw">
+  <a href="{{url}}">
+    <div title="{{name}}" class="cover" [style.background-image]="'url('+img+')'"></div>
+  </a>
   <div fxFlexAlign="stretch" class="description">
     <h4>
       <a href="{{url}}">{{name}}</a>

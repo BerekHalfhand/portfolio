@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { trigger, state, style, animate, transition, group } from '@angular/animations';
+import { ScrollService } from 'app/scroll.service';
 // import { TextAnimation } from 'ngx-teximate';
 // import { fadeInDown } from 'ng-animate';
 
@@ -102,15 +103,13 @@ import { trigger, state, style, animate, transition, group } from '@angular/anim
   ]
 })
 export class WindowPaneComponent implements OnInit {
-  @Input() showContent: boolean;
+  showContent: boolean;
 
-  // enterAnimation: TextAnimation = {
-  //   animation: fadeInDown,
-  //   delay: 50,
-  //   type: 'letter'
-  // };
-
-  constructor() { }
+  constructor(private scrollService: ScrollService) {
+    this.scrollService.dataChange.subscribe((data) => {
+      this.showContent = data.showContent['pane2'];
+    });
+  }
 
   ngOnInit() {
   }
