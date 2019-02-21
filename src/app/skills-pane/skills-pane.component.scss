@@ -10,14 +10,9 @@
   background: $background-1;
 }
 
-.skills-pane-container {
-  min-height: 100vh;
-  padding-top: $slope-offset;
-}
-
 .bars-container {
   z-index: 24;
-  padding: 10vw 10vw 0 10vw;
+  padding: 5vw;
 }
 
 .text-box {
@@ -33,11 +28,5 @@
       content: " — ";
       margin-right: 2px;
     }
-  }
-}
-
-@media screen and (min-width: $flex-breakpoint) {
-  .text-box {
-    margin: 10vw 10vw 5vw 0;
   }
 }

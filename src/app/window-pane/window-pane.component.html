@@ -1,4 +1,4 @@
-<article class="window-pane-container" fxLayout="column" fxFlexFill>
+<article class="window-pane-container" fxLayout="column" fxLayoutAlign="space-between">
   <div>
     <div class="window"></div>
     <div class="raindrops">
@@ -9,7 +9,7 @@
         <div class="raindrop" *ngFor="let i of [].constructor(75)"></div>
       </div>
     </div>
-    <article fxLayout="column wrap" fxLayout.gt-md="row wrap" fxFlexFill>
+    <article fxLayout="column wrap" fxLayout.gt-md="row wrap" class="content-container">
       <div fxFlex="50%" class="text-box-container">
         <mat-card *ngIf="showContent" @textbox class="text-box">
           <mat-card-title>About</mat-card-title>
@@ -17,17 +17,17 @@
             <p>
               I'm Yuri Drobkov, a digital nomad from Siberia, Russia. My path as a web
               developer started in the university, as I got hired part-time by another
-              university to help them compete a narrowly specialized analytical web app.
+              university to help them complete a narrowly specialized analytical web app.
             </p>
             <p>
-              After graduation I was employed by <a href="https://tile.expert/">Tile.Expert</a>,
+              After graduation, I was employed by <a href="https://tile.expert/">Tile.Expert</a>,
               working remotely and traveling the world at the same time. I'm never sitting
               in an office again, the remote way proved to be far superior.
             </p>
             <p>
               These days I'm living on the evergreen hills of Colombia and I'm open for hire,
               the only condition that is set in stone is that the position must be remote.
-              The schedule, the rate and other aspects are negotiable.
+              The schedule, the rate, and other aspects are negotiable.
             </p>
             <!-- <teximate class="text" text="Care to make a suggestion?" [enter]="enterAnimation"></teximate> -->
           </mat-card-content>

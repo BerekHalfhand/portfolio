@@ -6,14 +6,9 @@
   background: $background-3;
 }
 
-.contact-pane-container {
-  min-height: 100vh;
-  padding-top: $slope-offset;
-  color: mat-color($app-primary, 400);
-}
-
 .content-container {
   min-height: calc(75vh - #{$slope-offset});
+  color: mat-color($app-primary, 400);
 }
 
 .social {

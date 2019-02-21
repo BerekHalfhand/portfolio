@@ -55,7 +55,7 @@ body {
   .text-box {
     padding: 5%;
     background: rgba(240,230,220, .7) !important;
-    margin: 10vw;
+    margin: 5vw;
     text-align: justify;
     z-index: 28;
     @include responsive-font(1rem, 10px, 18px);
@@ -86,6 +86,11 @@ body {
     width: 100%;
     margin: $pane-border 0 $pane-border 0;
     padding-bottom: $slope-offset;
+  }
+
+  .slope-pane-container {
+    min-height: 100vh;
+    padding-top: $slope-offset;
   }
 
 }

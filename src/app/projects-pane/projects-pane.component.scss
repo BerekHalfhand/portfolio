@@ -6,17 +6,6 @@
   background: $background-2;
 }
 
-.projects-pane-container {
-  min-height: 100vh;
-  padding-top: $slope-offset;
-}
-
 .text-box p{
   @include responsive-font(1rem, 10px, 16px);
-}
-
-@media screen and (max-width: $flex-breakpoint) {
-  .projects-container {
-    margin-bottom: 10vh;
-  }
 }

@@ -4,6 +4,11 @@ $image: 'https://oregonag.org/wp-content/uploads/2017/08/stained-glass-backgroun
 
 .window-pane-container{
   padding-bottom: $slope-offset;
+  min-height: calc(100vh + #{$slope-offset});
+}
+
+.content-container {
+  min-height: calc(100vh - #{$slope-offset});
 }
 
 .pics-container {
