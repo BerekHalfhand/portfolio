@@ -28,6 +28,7 @@
     "ng2-parallaxscroll": "^1.1.2",
     "ngx-teximate": "^0.3.0",
     "normalize.css": "^8.0.1",
+    "particles.js": "^2.0.0",
     "rxjs": "^6.3.3",
     "tslib": "^1.9.0",
     "zone.js": "~0.8.26"

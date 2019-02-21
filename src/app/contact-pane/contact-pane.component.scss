@@ -2,12 +2,22 @@
 @import 'src/styles/angled-edges';
 @import 'src/styles/mixins';
 
+#particles {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
 .slope-background {
   background: $background-3;
 }
 
 .content-container {
-  min-height: calc(75vh - #{$slope-offset});
+  z-index: 20;
+  min-height: calc(50vh - #{$slope-offset});
+  margin: auto;
+  min-width: 33vw;
   color: mat-color($app-primary, 400);
 }
 
@@ -20,11 +30,12 @@
 }
 
 .form-container {
-  max-width: 50vh !important;
+  max-width: 33vw !important;
   width: 100%;
   margin: 1vmin;
 }
 
 .mouse-container {
   height: 100px;
+  z-index: 10;
 }

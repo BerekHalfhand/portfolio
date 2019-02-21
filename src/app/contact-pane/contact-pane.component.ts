@@ -67,6 +67,11 @@ export class ContactPaneComponent implements OnInit {
   }
 
   ngOnInit() {
+    require('particles.js');
+    /* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
+    particlesJS.load('particles', 'assets/particles.json', () => {
+      console.log('callback - particles.js config loaded');
+    });
   }
 
 }
