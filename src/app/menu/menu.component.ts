@@ -9,7 +9,7 @@ import { ScrollService } from 'app/scroll.service';
 export class MenuComponent implements OnInit {
   activePane: string = 'pane1';
 
-  constructor(private scrollService: ScrollService) {
+  constructor(public scrollService: ScrollService) {
     this.scrollService.dataChange.subscribe((data) => {
       this.activePane = data.activePane;
     });

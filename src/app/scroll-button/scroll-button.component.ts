@@ -23,7 +23,7 @@ export class ScrollButtonComponent implements OnInit {
   @Input() isArrow: boolean = false;
   activePane: string = 'pane1';
 
-  constructor(private scrollService: ScrollService) {
+  constructor(public scrollService: ScrollService) {
     this.scrollService.dataChange.subscribe((data) => {
       this.activePane = data.activePane;
     });
