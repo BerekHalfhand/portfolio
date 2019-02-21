@@ -7,23 +7,33 @@
             <mat-card-title>Projects</mat-card-title>
             <mat-card-content fxLayout="row wrap" fxLayoutAlign="space-between">
               <p>
-              I completed my first commercial project when I was still a student,
-              it was a real-time monitoring system for a gold mine in Siberia.
-              The system received data about energy comsumption from the industrial
-              pumps, processed, stored and displayed it via web-interface.
-              After that I did some part-time freelance at times, being busy graduating.
+                My first commercial project worth mentioning I completed when I was still a student,
+                it was a real-time monitoring system for a gold mine in Siberia.
+                The system received data about energy comsumption from the industrial
+                pumps, processed, stored and displayed it via web-interface.
+                After that I did some part-time freelance at times, being busy graduating.
               </p>
               <p>
-              Having finished that I got employed by Tile.Expert. There I built
-              an internal web portal for the company’s employees, it was built on
-              Angular / Symfony / MongoDB stack. The project was hard by many reasons,
-              and it gave me tons of experience developing and supporting a large real-world project.
+                Having finished that I got employed by Tile.Expert. There I built
+                an internal <a href="https://te.remote.team/#/">web portal</a> for the company’s employees,
+                it was built on Angular / Symfony / MongoDB stack. The project was hard by many reasons,
+                and it gave me tons of experience developing and supporting a large real-world project.
+              </p>
+              <p>
+                In the meantime I explored new technologies and methods to keep my skills
+                up to date, such as React, Vue and Ruby on Rails. Now I'm hoping to put
+                the new skills to good use, but good ol' Angular is fine, too.
+              </p>
+              <p>
+                Unfortunately, as life would have it, I now do not access to any of those
+                real-world projects that I participated in, even the portal is behind an auth wall.
+                I do, however, hold its source code and can demonstrate it, as well as my own skills.
               </p>
             </mat-card-content>
           </mat-card>
         </div>
 
-        <div fxFlex="50%" fxLayout="column" class="projects-container">
+        <div fxFlex="50%" fxLayout="column" fxLayoutAlign="center" class="projects-container">
           <app-project  img="assets/pics/projects/ror_react.png"
                         url="https://te.remote.team/#/"
                         name="Tile.Expert Portal"
@@ -35,14 +45,15 @@ system, as well as cross-site data flow, statistics, notifications and much more
           <app-project  img="assets/pics/projects/ror_react.png"
                         url="https://safe-lowlands-72747.herokuapp.com/spreadsheet"
                         name="Ruby on Rails + React"
-                        stack="Ruby on Rails, React, MongoDB"
-                        description="Test project">
+                        stack="Ruby on Rails, MongoDB, React, Redux, Bootstrap 4"
+                        description="Test project, a single-page app able to store, dinamically
+add, modify and filter a table of custom data with custom typed columns.">
           </app-project>
           <app-project  img="assets/pics/projects/vue_store.png"
                         url="http://vue-store.com.s3-website.us-east-2.amazonaws.com/"
                         name="Web Store on NuxtJS"
                         stack="Vue, NodeJS, Bootstrap 4"
-                        description="Test project">
+                        description="Test project, a single-page app imitating an online store.">
           </app-project>
         </div>
 

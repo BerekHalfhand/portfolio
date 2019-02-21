@@ -1,7 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { trigger, state, style, animate, transition, group } from '@angular/animations';
-import { TextAnimation } from 'ngx-teximate';
-import { fadeInDown } from 'ng-animate';
+// import { TextAnimation } from 'ngx-teximate';
+// import { fadeInDown } from 'ng-animate';
 
 @Component({
   selector: 'app-window-pane',
@@ -104,11 +104,11 @@ import { fadeInDown } from 'ng-animate';
 export class WindowPaneComponent implements OnInit {
   @Input() showContent: boolean;
 
-  enterAnimation: TextAnimation = {
-    animation: fadeInDown,
-    delay: 50,
-    type: 'letter'
-  };
+  // enterAnimation: TextAnimation = {
+  //   animation: fadeInDown,
+  //   delay: 50,
+  //   type: 'letter'
+  // };
 
   constructor() { }
 

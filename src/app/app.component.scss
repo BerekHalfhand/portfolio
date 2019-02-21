@@ -27,7 +27,7 @@ q:after {
   border-top: solid $pane-border mat-color($app-primary, 500);
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: $menu-breakpoint) {
   #content-container {
     margin-left: $menu-size;
     max-width: calc(100vw - #{$menu-size});

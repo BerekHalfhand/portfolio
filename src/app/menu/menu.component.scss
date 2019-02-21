@@ -20,6 +20,14 @@ header {
   img { width: 100%; }
 }
 
+header a {
+  color: gray;
+}
+header a:active, a:hover {
+  color: mat-color($app-primary, 400) !important;
+}
+
+
 nav {
   a {
     height: $menu-size;
@@ -42,14 +50,8 @@ nav {
   min-height: $menu-size;
 }
 
-a {
-  color: gray;
-}
-a:active, a:hover {
-  color: mat-color($app-primary, 400);;
-}
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: $menu-breakpoint) {
   header {
     position: fixed;
     width: $menu-size;

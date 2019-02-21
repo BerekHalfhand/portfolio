@@ -1,4 +1,5 @@
 @import 'src/styles/variables';
+@import 'src/styles/mixins';
 
 article {
   margin: 0 -3% 1% 0;
@@ -18,6 +19,12 @@ article {
   }
 }
 
+.stack {
+  margin-bottom: 2vh;
+}
+
 .description {
   padding-right: 2vw;
+  text-align: justify;
+  @include responsive-font(.9rem, 10px, 16px);
 }

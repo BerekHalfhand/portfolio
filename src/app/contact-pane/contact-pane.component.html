@@ -1,24 +1,39 @@
-<div class="background-container angle--top-right">
+<article class="background-container angle--top-right">
   <div class="background angle--top-right">
-    <div class="contact-pane-container" fxLayout="column">
-      <article fxLayout="column wrap" fxLayoutAlign="center center" fxFlexFill>
-        <h1>Contact me</h1>
-        <div class="form-container" fxLayout="column" fxLayoutAlign="start stretch">
-          <mat-form-field>
-            <input matInput placeholder="Name">
-          </mat-form-field>
-          <mat-form-field>
-            <input matInput placeholder="Email">
-          </mat-form-field>
-          <mat-form-field>
-            <textarea matInput placeholder="Message"></textarea>
-          </mat-form-field>
-          <button fxFlexAlign="center" mat-stroked-button color="primary">Send</button>
+    <div fxLayout="column"  fxLayoutAlign="space-between" class="contact-pane-container">
+      <article fxLayout="column" fxLayoutAlign="space-evenly center" class="content-container" >
+
+        <div><h1>Contact me</h1></div>
+        <div class="form-container">
+          <form action="https://formspree.io/moorindal@ymail.com" method="POST" fxLayout="column" fxLayoutAlign="start stretch">
+            <mat-form-field>
+              <input type="text" name="name" matInput placeholder="Name">
+            </mat-form-field>
+            <mat-form-field>
+              <input type="email" name="_replyto" matInput placeholder="Email">
+            </mat-form-field>
+            <mat-form-field>
+              <textarea type="text" name="message" matInput placeholder="Message"></textarea>
+            </mat-form-field>
+            <button type="submit" fxFlexAlign="center" mat-stroked-button color="primary">Send</button>
+          </form>
         </div>
+        <div class="social">
+          <a href="https://www.linkedin.com/in/yuri-drobkov-4219b1167/" title="LinkedIn">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="https://www.instagram.com/nameless_berk/" title="Instagram">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="mailto:moorindal@ymail.com?subject=feedback" title="Direct email">
+            <i class="fas fa-envelope"></i>
+          </a>
+        </div>
+
       </article>
-      <div class="mouse-container">
-        <!-- <app-scroll-button targetPane='pane5'></app-scroll-button> -->
+      <div class="mouse-container flex-center">
+        <app-scroll-button targetPane='pane1' [isArrow]="true"></app-scroll-button>
       </div>
     </div>
   </div>
-</div>
+</article>

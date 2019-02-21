@@ -20,6 +20,7 @@ import { trigger, state, style, animate, transition, group } from '@angular/anim
 })
 export class ScrollButtonComponent implements OnInit {
   @Input() targetPane: string;
+  @Input() isArrow: boolean = false;
   activePane: string = 'pane1';
 
   constructor(private scrollService: ScrollService) {
@@ -34,7 +35,7 @@ export class ScrollButtonComponent implements OnInit {
   isVisible() {
     let activePane = this.activePane.replace(/[^0-9.]/g, '');
     let targetPane = this.targetPane.replace(/[^0-9.]/g, '');
-    
+
     if (parseInt(activePane) === parseInt(targetPane) - 1)
       return true;
 

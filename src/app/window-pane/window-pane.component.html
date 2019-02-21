@@ -16,30 +16,27 @@
           <mat-card-content>
             <p>
               I'm Yuri Drobkov, a digital nomad from Siberia, Russia. My path as a web
-              developer started when responsive design was an exciting new concept and
-              LAMP stack was considered a feasible option for building huge complex websites.
-              These days things are different, the industry is growing more vast and
-              complicated by the day, cool kids are using Angular,
-              React, Ruby on Rails, you name it...
-              And me? I'm just trying to keep up with the unvawering march of time and
-              maybe stay just ahead of the crowds.
+              developer started in the university, as I got hired part-time by another
+              university to help them compete a narrowly specialized analytical web app.
             </p>
             <p>
-              The most recent commercial project I participated in was an internal
-              <a href="https://te.remote.team/">web portal</a> for the employees of
-              <a href="https://tile.expert/">Tile.Expert</a>, it was built on
-              Angular / Symfony / MongoDB stack. It was my first remote job, which gave me
-              tons of experience in developing and supporting a large real-world project.
-              Now I'm on the lookup for the next one...
+              After graduation I was employed by <a href="https://tile.expert/">Tile.Expert</a>,
+              working remotely and traveling the world at the same time. I'm never sitting
+              in an office again, the remote way proved to be far superior.
             </p>
-            <teximate text="Care to make a suggestion?" [enter]="enterAnimation"></teximate>
+            <p>
+              These days I'm living on the evergreen hills of Colombia and I'm open for hire,
+              the only condition that is set in stone is that the position must be remote.
+              The schedule, the rate and other aspects are negotiable.
+            </p>
+            <!-- <teximate class="text" text="Care to make a suggestion?" [enter]="enterAnimation"></teximate> -->
           </mat-card-content>
         </mat-card>
       </div>
       <div fxFlex="50%">
         <div *ngIf="showContent" class="pics-container">
           <div id="photo1" @one class="photo-container">
-            <app-polaroid caption="Tajikistan ’17" url="assets/pics/Photo_tajikistan.jpg"></app-polaroid>
+            <app-polaroid caption="Tajikistan, Pamirs ’17" url="assets/pics/Photo_tajikistan.jpg"></app-polaroid>
           </div>
           <div id="photo2" @two class="photo-container">
           <app-polaroid caption="República Dominicana ’18" url="assets/pics/Photo_dominicana.jpg"></app-polaroid>

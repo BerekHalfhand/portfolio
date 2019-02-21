@@ -11,7 +11,7 @@
 }
 
 .background {
-  background: $background-2;
+  background: $background-1;
   width: 100%;
   margin: $pane-border 0 $pane-border 0;
   z-index: 25;
@@ -21,4 +21,8 @@
 .projects-pane-container {
   min-height: 100vh;
   padding-top: $slope-offset;
+}
+
+.text-box p{
+  @include responsive-font(1rem, 10px, 16px);
 }

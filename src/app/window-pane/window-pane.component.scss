@@ -1,10 +1,6 @@
 @import 'src/styles/variables';
-// $image: 'https://i.imgur.com/xQdYC7x.jpg';
-// $image: 'http://vignette3.wikia.nocookie.net/animal-jam-clans-1/images/b/b7/Dark-Misty-Forest-beautiful-landscapes-37729157-1920-1080.jpg';
+@import 'src/styles/mixins';
 $image: 'https://oregonag.org/wp-content/uploads/2017/08/stained-glass-background.png';
-
-//number of raindrops
-$raindrops:75;
 
 .window-pane-container{
   padding-bottom: $slope-offset;
@@ -21,6 +17,10 @@ $raindrops:75;
 
 .photo-container {
   position: absolute;
+}
+
+.text-box p{
+  @include responsive-font(1rem, 10px, 16px);
 }
 
 #photo1 {
@@ -41,6 +41,11 @@ $raindrops:75;
   filter:blur($blur);
   margin: calc(-2*#{$blur});
 }
+
+// RAINDROPS
+
+//number of raindrops
+$raindrops:75;
 // set all the containers to
 // position:absolute, since
 // they will overlap

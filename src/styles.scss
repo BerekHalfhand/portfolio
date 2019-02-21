@@ -1,9 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
+@import 'src/styles/variables';
 @import "~normalize.css/normalize.css";
 // @import "~@angular/material/prebuilt-themes/deeppurple-amber.css";
 
 @import 'src/styles/reset';
-@import 'src/styles/variables';
 @import 'src/styles/mixins';
 
 
@@ -33,10 +33,7 @@ body {
 
   a {
     text-decoration: none;
-    color: #ff6600;
-  }
-  a:visited {
-    color: gray;
+    color: mat-color($app-primary, 800);
   }
 
   %flex-column {
@@ -61,7 +58,14 @@ body {
     margin: 10vw;
     text-align: justify;
     z-index: 28;
-    @include responsive-font(2.5vw, 10px, 18px);
+    @include responsive-font(1rem, 10px, 18px);
+  }
+
+  .box {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
   }
 
   .mouse-container {
