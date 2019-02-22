@@ -13,7 +13,7 @@
   background: $background-3;
 }
 
-.content-container {
+.contact-content-container {
   z-index: 20;
   min-height: calc(50vh - #{$slope-offset});
   margin: auto;
@@ -38,4 +38,14 @@
 .mouse-container {
   height: 100px;
   z-index: 10;
+}
+
+.mat-form-field-underline {
+  background-color: mat-color($app-primary, 200) !important;
+}
+.mat-form-field-label {
+  color: mat-color($app-primary, 200) !important;
+}
+.mat-focused .mat-form-field-label {
+  color: mat-color($app-primary, 500) !important;
 }

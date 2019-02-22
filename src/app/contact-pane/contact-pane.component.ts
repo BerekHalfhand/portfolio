@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { ScrollService } from 'app/scroll.service';
 import { trigger, style, animate, transition } from '@angular/animations';
 
@@ -57,7 +57,8 @@ declare var particlesJS: any;
         }))
       ])
     ])
-  ]
+  ],
+  encapsulation: ViewEncapsulation.None
 })
 export class ContactPaneComponent implements OnInit {
   showContent: boolean;
