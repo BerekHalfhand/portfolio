@@ -9,7 +9,8 @@
   //http://vignette3.wikia.nocookie.net/animal-jam-clans-1/images/b/b7/Dark-Misty-Forest-beautiful-landscapes-37729157-1920-1080.jpg
   //https://i.imgur.com/4hsa8DJ.jpg
   // background: url(http://getbiggies.com/wp-content/uploads/2008/10/WM-MFT.jpg);
-  background: url('assets/pics/xl/header.jpg') center center;
+  background: url('assets/pics/xs/header.jpg') no-repeat center;
+  background-size: cover;
 }
 
 .rain {
@@ -58,26 +59,31 @@ h2 {
 
 }
 
-// @media screen and (min-width: 992px) {
-//   .rainy-day-container {
-//     background: url('assets/pics/md/header.jpg') !important;
-//   }
-// }
-//
-// @media screen and (min-width: 1200px) {
-//   .rainy-day-container {
-//     background: url('assets/pics/lg/header.jpg') !important;
-//   }
-// }
-//
-// @media screen and (min-width: 1900px) {
-//   .rainy-day-container {
-//     background: url('assets/pics/xl/header.jpg') !important;
-//   }
-// }
-//
-// @media screen and (min-width: 2560px) {
-//   .rainy-day-container {
-//     background: url('assets/pics/header.jpg') !important;
-//   }
-// }
+@media screen and (min-width: 600px) {
+  .rainy-day-container {
+    background-image: url('assets/pics/sm/header.jpg') !important;
+  }
+}
+@media screen and (min-width: 992px) {
+  .rainy-day-container {
+    background-image: url('assets/pics/md/header.jpg') !important;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .rainy-day-container {
+    background-image: url('assets/pics/lg/header.jpg') !important;
+  }
+}
+
+@media screen and (min-width: 1900px) {
+  .rainy-day-container {
+    background-image: url('assets/pics/xl/header.jpg') !important;
+  }
+}
+
+@media screen and (min-width: 2560px) {
+  .rainy-day-container {
+    background-image: url('assets/pics/header.jpg') !important;
+  }
+}

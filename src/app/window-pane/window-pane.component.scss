@@ -1,10 +1,41 @@
 @import 'src/styles/variables';
 @import 'src/styles/mixins';
-$image: 'https://oregonag.org/wp-content/uploads/2017/08/stained-glass-background.png';
 
-.window-pane-container{
+$image: 'assets/pics/xs/stained-glass-background.jpg';
+
+@media screen and (min-width: 600px) {
+  $image: 'assets/pics/sm/stained-glass-background.jpg';
+}
+@media screen and (min-width: 992px) {
+  $image: 'assets/pics/md/stained-glass-background.jpg';
+}
+
+@media screen and (min-width: 1200px) {
+  $image: 'assets/pics/lg/stained-glass-background.jpg';
+}
+
+@media screen and (min-width: 1900px) {
+  $image: 'assets/pics/xl/stained-glass-background.jpg';
+}
+
+@media screen and (min-width: 2560px) {
+  $image: 'assets/pics/stained-glass-background.jpg';
+}
+
+.window-pane-container {
   padding-bottom: $slope-offset;
   min-height: calc(100vh + #{$slope-offset});
+}
+
+.window {
+  position: absolute;
+  width: calc(#{$width} + 4*#{$blur});
+  height: calc(100% + 4*#{$blur});
+  background-image: url($image);
+  background-size: cover;
+  background-position: top;
+  filter: blur($blur);
+  margin: calc(-2*#{$blur});
 }
 
 .content-container {
@@ -36,17 +67,6 @@ $image: 'https://oregonag.org/wp-content/uploads/2017/08/stained-glass-backgroun
   transform: translateX(20%) translateY(5%) rotate(-5deg);
 }
 
-.window{
-  position:absolute;
-  width: calc(#{$width} + 4*#{$blur});
-  height: calc(100% + 4*#{$blur});
-  background:url($image);
-  background-size:cover;
-  background-position:top;
-  filter:blur($blur);
-  margin: calc(-2*#{$blur});
-}
-
 // RAINDROPS
 
 //number of raindrops
@@ -72,20 +92,20 @@ $raindrops:75;
 // general settings for all the
 // raindrops and borders
 .raindrop{
-	position:absolute;
-  border-radius:100%;
-	background-image:url($image);
-	background-size:$width*0.05 $height*0.05;
-  background-position:50%;
-	transform:rotate(180deg) rotateY(0);
+	position: absolute;
+  border-radius: 100%;
+	background-image: url($image);
+	background-size: $width*0.05 $height*0.05;
+  background-position: 50%;
+	transform: rotate(180deg) rotateY(0);
 }
 .border{
-	position:absolute;
-	margin-left:2px;
-	margin-top:1px;
-	border-radius:100%;
-	box-shadow:0 0 0 2px rgba(0,0,0,0.5);
-  transform:rotateY(0);
+	position: absolute;
+	margin-left: 2px;
+	margin-top: 1px;
+	border-radius: 100%;
+	box-shadow: 0 0 0 2px rgba(0,0,0,0.5);
+  transform: rotateY(0);
 }
 
 // looping through each one of them

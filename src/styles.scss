@@ -1,23 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~normalize-scss/sass/normalize";
 @import 'src/styles/variables';
-@import "~normalize.css/normalize.css";
-// @import "~@angular/material/prebuilt-themes/deeppurple-amber.css";
-
 @import 'src/styles/reset';
 @import 'src/styles/mixins';
 
+@include normalize();
 
 @font-face {
   font-family: 'Raleway';
   src: url("assets/fonts/Raleway/Raleway-Regular.ttf");
-}
-@font-face {
-  font-family: 'Raleway-semibold';
-  src: url("assets/fonts/Raleway/Raleway-SemiBold.ttf");
-}
-@font-face {
-  font-family: 'Raleway-bold';
-  src: url("assets/fonts/Raleway/Raleway-Bold.ttf");
 }
 @font-face {
   font-family: 'Cedarville';
