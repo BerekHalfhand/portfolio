@@ -3,14 +3,17 @@
 
 $raindrop-bkg: 'assets/pics/xs/stained-glass-background-clear.jpg';
 
-@mixin styling($image) {
+@mixin styling($image, $noBorder: false) {
   .window {
     background-image: url($image);
+  }
+  @if $noBorder == true {
+    .border { box-shadow: 0 0 0 2px rgba(0,0,0,0.5); }
   }
 }
 
 @media screen and (max-width: $menu-breakpoint - 1) {
-  @include styling($image: 'assets/pics/xs/stained-glass-background.jpg');
+  @include styling($image: 'assets/pics/xs/stained-glass-background.jpg', $noBorder: true);
 }
 @media screen and (min-width: $menu-breakpoint) {
   @include styling($image: 'assets/pics/sm/stained-glass-background.jpg');
@@ -95,7 +98,7 @@ $raindrops:75;
 
 // general settings for all the
 // raindrops and borders
-.raindrop{
+.raindrop {
 	position: absolute;
   border-radius: 100%;
 	background-image: url($raindrop-bkg);
@@ -103,12 +106,11 @@ $raindrops:75;
   background-position: 50%;
 	transform: rotate(180deg) rotateY(0);
 }
-.border{
+.border {
 	position: absolute;
 	margin-left: 2px;
 	margin-top: 1px;
 	border-radius: 100%;
-	box-shadow: 0 0 0 2px rgba(0,0,0,0.5);
   transform: rotateY(0);
 }
 

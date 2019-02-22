@@ -1,9 +1,10 @@
+@import 'src/styles/variables';
+
 .polaroid {
 	position: relative;
 	background: #dbdbdb;
 	padding: 1vmin;
 	text-align: center;
-	box-shadow: 1px 1px 3px #222;
 
   span {
     font-family: Cedarville,Yorkten,Arial,sans-serif;
@@ -18,4 +19,10 @@
   background-position: 50% 50%;
   width: 30vmin;
   height: 30vmin;
+}
+
+@media screen and (min-width: $menu-breakpoint) {
+  .polaroid {
+		box-shadow: 1px 1px 3px #222;
+  }
 }

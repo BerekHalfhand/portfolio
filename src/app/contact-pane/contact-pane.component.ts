@@ -1,6 +1,7 @@
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component, OnInit, Inject, ViewEncapsulation } from '@angular/core';
 import { ScrollService } from 'app/scroll.service';
 import { trigger, style, animate, transition } from '@angular/animations';
+import { WINDOW } from 'helpers/windowRef';
 
 declare var require: any;
 declare var particlesJS: any;
@@ -62,19 +63,29 @@ declare var particlesJS: any;
 })
 export class ContactPaneComponent implements OnInit {
   showContent: boolean;
+  showParticles: boolean = false;
 
-  constructor(private scrollService: ScrollService) {
+  constructor(
+    private scrollService: ScrollService,
+    @Inject(WINDOW) private window: Window
+  ) {
     this.scrollService.dataChange.subscribe((data) => {
       this.showContent = data.showContent.pane5;
     });
+
+    if (window.innerWidth > 600) {
+      this.showParticles = true;
+    }
   }
 
   ngOnInit() {
-    require('particles.js');
-    /* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
-    particlesJS.load('particles', 'assets/particles.json', () => {
-      console.log('callback - particles.js config loaded');
-    });
+    if (this.showParticles) {
+      require('particles.js');
+      /* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
+      particlesJS.load('particles', 'assets/particles.json', () => {
+        // console.log('callback - particles.js config loaded');
+      });
+    }
   }
 
 }

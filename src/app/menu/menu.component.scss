@@ -17,7 +17,6 @@ header {
   max-height: calc(#{$max-menu-size} - 2*#{$margin});
   margin: $margin;
   opacity: 0.5;
-  box-shadow: 0 0 $margin gray;
   border-radius: $menu-size / 2;
 
   img { width: 100%; }
@@ -59,6 +58,10 @@ nav {
 
 
 @media screen and (min-width: $menu-breakpoint) {
+  #logo {
+    box-shadow: 0 0 $margin gray;
+  }
+
   header {
     position: fixed;
     width: $menu-size;
