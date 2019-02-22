@@ -13,7 +13,7 @@ import { trigger, style, animate, transition } from '@angular/animations';
           transform: 'translateX(-100%)',
           opacity: 0
         }),
-        animate('600ms 1ms ease-in', style({
+        animate('1000ms 25ms ease-in', style({
           transform: 'translateX(0%)',
           opacity: 1
         }))
@@ -52,7 +52,7 @@ add, modify and filter a table of custom data with custom typed columns.'
 
   constructor(private scrollService: ScrollService) {
     this.scrollService.dataChange.subscribe((data) => {
-      this.showContent = data.showContent['pane4'];
+      this.showContent = data.showContent.pane4;
     });
   }
 

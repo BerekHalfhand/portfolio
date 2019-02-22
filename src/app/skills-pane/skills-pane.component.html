@@ -4,7 +4,7 @@
       <article fxLayout="column wrap" fxLayout.gt-md="row wrap" fxFlexFill>
         <div fxFlex="50%" fxLayout="column" class="bars-container">
           <div *ngIf="showContent">
-            <app-skill-bar *ngFor="let skill of skillset; let i=index" [delay]="i*50"
+            <app-skill-bar *ngFor="let skill of skillset; let i=index" [delay]="i*100"
             [skill]="skill.name" [percentage]="skill.proficiency"></app-skill-bar>
           </div>
         </div>
@@ -17,6 +17,7 @@
                 <ul>
                   <li>Javascript (ES6)</li>
                   <li>Typescript</li>
+                  <li>PHP</li>
                   <li>Ruby</li>
                   <li>C (C++, C#)</li>
                   <li>Python</li>
@@ -32,7 +33,6 @@
                   <li>Heroku</li>
                   <li>Redux</li>
                   <li>SASS</li>
-                  <li>Adaptive Design</li>
                   <li>Webpack</li>
                   <li>Grunt</li>
                 </ul>
@@ -47,7 +47,6 @@
                   <li>Ruby on Rails</li>
                   <li>NodeJS</li>
                   <li>ExpressJS</li>
-                  <li>Meteor</li>
                 </ul>
               </div>
               <div fxFlex="45%">

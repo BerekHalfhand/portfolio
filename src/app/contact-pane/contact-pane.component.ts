@@ -27,7 +27,7 @@ declare var particlesJS: any;
           transform: 'scale(0.5)',
           opacity: 0
         }),
-        animate('500ms ease-in', style({
+        animate('500ms 75ms ease-in', style({
           transform: 'scale(1)',
           opacity: 1
         }))
@@ -39,7 +39,7 @@ declare var particlesJS: any;
           transform: 'translateY(-50%) scale(0.5)',
           opacity: 0
         }),
-        animate('500ms ease-in', style({
+        animate('500ms 25ms ease-in', style({
           transform: 'translateY(0) scale(1)',
           opacity: 1
         }))
@@ -51,7 +51,7 @@ declare var particlesJS: any;
           transform: 'translateY(50%) scale(0.5)',
           opacity: 0
         }),
-        animate('500ms ease-in', style({
+        animate('500ms 125ms ease-in', style({
           transform: 'translateY(0) scale(1)',
           opacity: 1
         }))
@@ -64,7 +64,7 @@ export class ContactPaneComponent implements OnInit {
 
   constructor(private scrollService: ScrollService) {
     this.scrollService.dataChange.subscribe((data) => {
-      this.showContent = data.showContent['pane5'];
+      this.showContent = data.showContent.pane5;
     });
   }
 

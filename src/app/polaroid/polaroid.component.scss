@@ -1,7 +1,4 @@
-@import 'src/styles/variables';
-
 .polaroid {
-	@extend %hardware;
 	position: relative;
 	background: #dbdbdb;
 	padding: 1vmin;
