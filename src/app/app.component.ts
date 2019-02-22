@@ -6,7 +6,9 @@ import {  Component,
           Input,
           QueryList,
           ViewChildren,
-          ElementRef } from '@angular/core';
+          ElementRef,
+          ChangeDetectionStrategy,
+          ChangeDetectorRef } from '@angular/core';
 
 import { WINDOW } from "helpers/windowRef";
 
@@ -23,7 +25,8 @@ export class Pane {
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 
 export class AppComponent implements OnInit {

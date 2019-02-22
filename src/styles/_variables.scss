@@ -2,6 +2,7 @@
 
 $menu-size: 12vmin;
 $max-menu-size: 50px;
+
 $menu-color: #181818;
 $background-1: #222;
 $background-2: #333;
@@ -15,7 +16,7 @@ $width:100vw;
 $height:100vh;
 $blur: 10px;
 
-$slope-offset: 15vh;
+$slope-offset: 15vmax;
 $pane-border: 4px;
 
 $mouse-width: 2.5rem;
@@ -24,3 +25,8 @@ $project-img-size: 15vmin;
 $max-project-img-size: 200px;
 
 $title-font: Raleway,Yorkten,Arial,sans-serif;
+
+%hardware {
+  backface-visibility: hidden;
+  perspective: 1000;
+}

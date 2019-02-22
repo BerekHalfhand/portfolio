@@ -13,7 +13,7 @@ import { trigger, style, animate, transition } from '@angular/animations';
           transform: 'translateX(-100%)',
           opacity: 0
         }),
-        animate('600ms ease-in', style({
+        animate('600ms 1ms ease-in', style({
           transform: 'translateX(0%)',
           opacity: 1
         }))

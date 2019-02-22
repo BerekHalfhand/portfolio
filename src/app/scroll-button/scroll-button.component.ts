@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { ScrollService } from 'app/scroll.service';
-import { trigger, state, style, animate, transition, group } from '@angular/animations';
+import { trigger, style, animate, transition } from '@angular/animations';
 
 @Component({
   selector: 'app-scroll-button',

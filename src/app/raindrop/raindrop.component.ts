@@ -1,9 +1,15 @@
-import { Component, OnInit, Input } from '@angular/core';
+import {
+  Component,
+  OnInit,
+  Input,
+  ChangeDetectionStrategy,
+  ChangeDetectorRef } from '@angular/core';
 
 @Component({
   selector: 'app-raindrop',
   templateUrl: './raindrop.component.html',
-  styleUrls: ['./raindrop.component.scss']
+  styleUrls: ['./raindrop.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class RaindropComponent implements OnInit {
   @Input() dropStyle: string;

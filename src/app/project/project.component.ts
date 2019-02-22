@@ -1,10 +1,16 @@
-import { Component, OnInit, Input } from '@angular/core';
-import { trigger, state, style, animate, transition, group, query, animateChild } from '@angular/animations';
+import {
+  Component,
+  OnInit,
+  Input,
+  ChangeDetectionStrategy,
+  ChangeDetectorRef } from '@angular/core';
+import { trigger, style, animate, transition } from '@angular/animations';
 
 @Component({
   selector: 'app-project',
   templateUrl: './project.component.html',
   styleUrls: ['./project.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
   animations: [
     trigger('flyIn', [
       transition(':enter', [

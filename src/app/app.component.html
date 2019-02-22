@@ -1,6 +1,7 @@
-<section id="app-container">
+<section id="app-container" fxLayout="row">
   <app-menu></app-menu>
-  <section id="content-container">
+  <div id="left-offset"></div>
+  <section id="content-container" fxLayoutFill>
     <pane id="pane1">
       <app-rainy-day [frontRaindrops]="frontRaindrops" [backRaindrops]="backRaindrops"></app-rainy-day>
     </pane>

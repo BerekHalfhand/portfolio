@@ -50,6 +50,7 @@ body {
     text-align: justify;
     z-index: 28;
     @include responsive-font(1rem, 10px, 18px);
+    @extend %hardware;
   }
 
   .box {
@@ -64,6 +65,20 @@ body {
     height: 75px;
     width: 100%;
     position: relative;
+  }
+
+  .angle--top-right {
+    position: relative;
+    overflow: hidden;
+    -webkit-clip-path: polygon(0 0, 100% calc(0% + 7vw), 100% 100%, 0 100%);
+    clip-path: polygon(0 0, 100% calc(0% + 7vw), 100% 100%, 0 100%);
+  }
+
+  .angle--top-left {
+    position: relative;
+    overflow: hidden;
+    -webkit-clip-path: polygon(0 calc(0% + 7vw), 100% 0, 100% 100%, 0 100%);
+    clip-path: polygon(0 calc(0% + 7vw), 100% 0, 100% 100%, 0 100%);
   }
 
   .slope-background-container {

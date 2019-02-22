@@ -1,5 +1,9 @@
 @import 'src/styles/variables';
 
+.container {
+  @extend %hardware;
+}
+
 .mouse {
   max-width: $mouse-width;
   width: 100%;

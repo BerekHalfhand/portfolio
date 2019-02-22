@@ -1,4 +1,9 @@
-import { Component, Input, OnInit, ViewChild, ComponentFactoryResolver } from '@angular/core';
+import {
+  Component,
+  Input,
+  OnInit,
+  ViewChild,
+  ComponentFactoryResolver } from '@angular/core';
 
 import { FrontRainDirective } from '../directives/front-rain.directive';
 import { BackRainDirective } from '../directives/back-rain.directive';

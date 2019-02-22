@@ -12,7 +12,7 @@ import { ScrollService } from 'app/scroll.service';
     trigger('one', [
       transition(':enter', [
         style({transform: 'translateY(50%) translateX(200%)'}),
-        animate('500ms ease-in', style({transform: 'translateX(-60%) translateY(-25%) rotate(5deg)'}))
+        animate('500ms 50ms ease-in', style({transform: 'translateX(-60%) translateY(-25%) rotate(5deg)'}))
       ])
       // transition(':leave', [
       //   animate('200ms ease-in', style({transform: 'translateY(-30%)'}))
@@ -21,7 +21,7 @@ import { ScrollService } from 'app/scroll.service';
     trigger('two', [
       transition(':enter', [
         style({transform: 'translateY(25%) translateX(200%)'}),
-        animate('500ms ease-in', style({transform: 'translateX(20%) translateY(5%) rotate(-5deg)'}))
+        animate('500ms 100ms ease-in', style({transform: 'translateX(20%) translateY(5%) rotate(-5deg)'}))
       ])
     ]),
     trigger('textbox', [
@@ -30,7 +30,7 @@ import { ScrollService } from 'app/scroll.service';
           transform: 'translateX(-100%)',
           opacity: 0
         }),
-        animate('600ms ease-in', style({
+        animate('600ms 1ms ease-in', style({
           transform: 'translateX(0%)',
           opacity: 1
         }))
