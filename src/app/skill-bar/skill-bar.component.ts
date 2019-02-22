@@ -14,9 +14,9 @@ import { trigger, style, animate, transition, group, query, animateChild } from 
   animations: [
     trigger('widen', [
       transition(':enter', [
-        style({width: 0}),
-          animate('0.75s {{delay}}ms ease-in', style({width: '{{percentage}}%'}))
-      ], {params : { percentage: '50', delay: 0 }})
+        style({transform: 'translateX(-100%)'}),
+          animate('0.75s {{delay}}ms ease-in', style({transform: 'translateX(0)'}))
+      ], {params : { delay: 0 }})
     ]),
     trigger('flyIn', [
       transition(':enter', [
