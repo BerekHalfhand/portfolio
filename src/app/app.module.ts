@@ -34,6 +34,8 @@ import { TeximateModule } from 'ngx-teximate';
 import { ProjectsPaneComponent } from './projects-pane/projects-pane.component';
 import { ProjectComponent } from './project/project.component';
 import { SkillBarComponent } from './skill-bar/skill-bar.component';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -65,7 +67,8 @@ import { SkillBarComponent } from './skill-bar/skill-bar.component';
     MatFormFieldModule,
     MatInputModule,
     FlexLayoutModule,
-    TeximateModule
+    TeximateModule,
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [RainyDayService, WINDOW_PROVIDERS],
   entryComponents: [RaindropComponent],
