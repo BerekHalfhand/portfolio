@@ -1,34 +1,39 @@
 @import 'src/styles/variables';
 @import 'src/styles/mixins';
-
-$raindrop-bkg: 'assets/pics/xs/stained-glass-background-clear.jpg';
+@import 'src/styles/window-raindrops';
 
 @mixin styling($image, $noBorder: false) {
   .window {
     background-image: url($image);
   }
-  @if $noBorder == true {
+  @if $noBorder == false {
     .border { box-shadow: 0 0 0 2px rgba(0,0,0,0.5); }
   }
 }
 
 @media screen and (max-width: $menu-breakpoint - 1) {
   @include styling($image: 'assets/pics/xs/stained-glass-background.jpg', $noBorder: true);
+  @include raindrops($quantity: 20);
 }
 @media screen and (min-width: $menu-breakpoint) {
   @include styling($image: 'assets/pics/sm/stained-glass-background.jpg');
+  @include raindrops($quantity: 30);
 }
 @media screen and (min-width: 992px) {
   @include styling($image: 'assets/pics/md/stained-glass-background.jpg');
+  @include raindrops($quantity: 40);
 }
 @media screen and (min-width: $flex-breakpoint) {
   @include styling($image: 'assets/pics/lg/stained-glass-background.jpg');
+  @include raindrops($quantity: 50);
 }
 @media screen and (min-width: 1900px) {
   @include styling($image: 'assets/pics/xl/stained-glass-background.jpg');
+  @include raindrops($quantity: 60);
 }
 @media screen and (min-width: 2560px) {
   @include styling($image: 'assets/pics/stained-glass-background.jpg');
+  @include raindrops($quantity: 75);
 }
 
 .window-pane-container {
@@ -72,76 +77,4 @@ $raindrop-bkg: 'assets/pics/xs/stained-glass-background-clear.jpg';
 
 #photo2 {
   transform: translateX(20%) translateY(5%) rotate(-5deg);
-}
-
-// RAINDROPS
-
-//number of raindrops
-$raindrops:75;
-// set all the containers to
-// position:absolute, since
-// they will overlap
-.raindrops,
-.borders,
-.drops{
-  position:absolute;
-}
-
-.raindrops {
-  top: 0;
-}
-
-// little brightness filter so our raindrops look shiny
-.drops{
-  filter:brightness(1.2);
-}
-
-// general settings for all the
-// raindrops and borders
-.raindrop {
-	position: absolute;
-  border-radius: 100%;
-	background-image: url($raindrop-bkg);
-	background-size: $width*0.05 $height*0.05;
-  background-position: 50%;
-	transform: rotate(180deg) rotateY(0);
-}
-.border {
-	position: absolute;
-	margin-left: 2px;
-	margin-top: 1px;
-	border-radius: 100%;
-  transform: rotateY(0);
-}
-
-// looping through each one of them
-@for $i from 1 through $raindrops{
-
-  // generates a random number from 0 to 1, for the positioning
-  $x:random();
-  $y:random();
-
-  // Random raindrop size and stretching.
-  // Since each raindrop has different sizes, we'll do our sizing calculations here instead of on the main .raindrop selector
- 	$drop-width:5px+random(11);
- 	$drop-stretch:0.7+(random()*0.5);
-	$drop-height:$drop-width*$drop-stretch;
-	.raindrop:nth-child(#{$i}){
-		// multiply the random position value by the container's size
-		left:$x * $width;
-		top:$y * $height;
-
-		width:$drop-width;
-		height:$drop-height;
-    background-position:percentage($x) percentage($y);
-	}
-
-	.border:nth-child(#{$i}){
-		// we'll do the same positioning for the drop's border
-		left:$x * $width;
-		top:$y * $height;
-
-		width:$drop-width - 4;
-		height:$drop-height;
-	}
 }
