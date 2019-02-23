@@ -1,8 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { trigger, state, style, animate, transition, group } from '@angular/animations';
 import { ScrollService } from 'app/scroll.service';
-// import { TextAnimation } from 'ngx-teximate';
-// import { fadeInDown } from 'ng-animate';
 
 @Component({
   selector: 'app-window-pane',

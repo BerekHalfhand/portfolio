@@ -9,7 +9,6 @@ import {  MatButtonModule,
           MatFormFieldModule,
           MatInputModule
       } from '@angular/material';
-// import { ParallaxScrollModule } from 'ng2-parallaxscroll';
 import { FlexLayoutModule } from '@angular/flex-layout';
 
 import { WINDOW_PROVIDERS } from 'helpers/windowRef';
@@ -30,7 +29,6 @@ import { PolaroidComponent } from './polaroid/polaroid.component';
 import { MenuComponent } from './menu/menu.component';
 import { ContactPaneComponent } from './contact-pane/contact-pane.component';
 import { ScrollButtonComponent } from './scroll-button/scroll-button.component';
-import { TeximateModule } from 'ngx-teximate';
 import { ProjectsPaneComponent } from './projects-pane/projects-pane.component';
 import { ProjectComponent } from './project/project.component';
 import { SkillBarComponent } from './skill-bar/skill-bar.component';
@@ -60,14 +58,12 @@ import { environment } from '../environments/environment';
     BrowserAnimationsModule,
     MatButtonModule,
     MatCheckboxModule,
-    // ParallaxScrollModule,
     MatCardModule,
     MatGridListModule,
     MatIconModule,
     MatFormFieldModule,
     MatInputModule,
     FlexLayoutModule,
-    TeximateModule,
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [RainyDayService, WINDOW_PROVIDERS],
