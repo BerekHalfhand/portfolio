@@ -4,7 +4,7 @@
       <article fxLayout="column wrap" fxLayout.gt-md="row wrap" fxFlexFill>
         <div fxFlex="50%" fxLayout="column" class="bars-container">
           <div *ngIf="showContent">
-            <app-skill-bar *ngFor="let skill of skillset; let i=index" [delay]="i*100"
+            <app-skill-bar *ngFor="let skill of skillset; let i=index" [delay]="300+i*100"
             [skill]="skill.name" [percentage]="skill.proficiency"></app-skill-bar>
           </div>
         </div>
@@ -34,7 +34,6 @@
                   <li>Redux</li>
                   <li>SASS</li>
                   <li>Webpack</li>
-                  <li>Grunt</li>
                 </ul>
               </div>
               <div fxFlex="45%">

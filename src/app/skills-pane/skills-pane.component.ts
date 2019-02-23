@@ -10,10 +10,10 @@ import { trigger, style, animate, transition } from '@angular/animations';
     trigger('textbox', [
       transition(':enter', [
         style({
-          transform: 'translateX(100%)',
+          transform: 'translateX(30%)',
           opacity: 0
         }),
-        animate('1000ms 25ms ease-in', style({
+        animate('300ms 1ms ease-in', style({
           transform: 'translateX(0%)',
           opacity: 1
         }))

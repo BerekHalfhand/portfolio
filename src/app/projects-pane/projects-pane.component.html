@@ -3,7 +3,7 @@
     <div class="slope-pane-container" fxLayout="column" fxLayoutAlign="space-between">
       <article fxLayout="column wrap" fxLayout.gt-md="row wrap" fxFlexFill>
         <div fxFlex="50%" class="text-box-container">
-          <mat-card *ngIf="showContent" class="text-box">
+          <mat-card *ngIf="showContent" @textbox class="text-box">
             <mat-card-title class="pane-title">Projects</mat-card-title>
             <mat-card-content fxLayout="row wrap" fxLayoutAlign="space-between">
               <p>
@@ -32,7 +32,7 @@
           <div *ngIf="showContent">
             <app-project *ngFor="let project of projects; let i=index"
             [img]="project.img" [name]="project.name" [url]="project.url" [stack]="project.stack"
-            [description]="project.description" [delay]="i*150"></app-project>
+            [description]="project.description" [delay]="300+i*250"></app-project>
           </div>
         </div>
 

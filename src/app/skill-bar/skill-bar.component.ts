@@ -15,17 +15,17 @@ import { trigger, style, animate, transition, group, query, animateChild } from 
     trigger('widen', [
       transition(':enter', [
         style({transform: 'translateX(-100%)'}),
-          animate('0.75s {{delay}}ms ease-in', style({transform: 'translateX(0)'}))
+          animate('0.5s {{delay}}ms ease-in', style({transform: 'translateX(0)'}))
       ], {params : { delay: 0 }})
     ]),
     trigger('flyIn', [
       transition(':enter', [
         style({
-          transform: 'translateX(-100%)',
+          transform: 'translateX(-30%)',
           opacity: 0
         }),
         group([
-          animate('0.5s {{delay}}ms ease-in', style({
+          animate('0.25s {{delay}}ms ease-in', style({
             transform: 'translateX(0%)',
             opacity: 1
           })),

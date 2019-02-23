@@ -11,23 +11,23 @@ import { ScrollService } from 'app/scroll.service';
   animations: [
     trigger('one', [
       transition(':enter', [
-        style({transform: 'translateY(50%) translateX(250%)'}),
-        animate('500ms 750ms ease-in', style({transform: 'translateX(-60%) translateY(-25%) rotate(5deg)'}))
+        style({transform: 'translateY(50%) translateX(400%) scale(1.5)'}),
+        animate('500ms 300ms ease-in', style({transform: 'translateX(-60%) translateY(-25%) rotate(5deg) scale(1)'}))
       ])
     ]),
     trigger('two', [
       transition(':enter', [
-        style({transform: 'translateY(25%) translateX(250%)'}),
-        animate('500ms 1000ms ease-in', style({transform: 'translateX(20%) translateY(5%) rotate(-5deg)'}))
+        style({transform: 'translateY(25%) translateX(400%) scale(1.5)'}),
+        animate('500ms 500ms ease-in', style({transform: 'translateX(20%) translateY(5%) rotate(-5deg) scale(1)'}))
       ])
     ]),
     trigger('textbox', [
       transition(':enter', [
         style({
-          transform: 'translateX(-100%)',
+          transform: 'translateX(-40%)',
           opacity: 0
         }),
-        animate('1000ms 50ms ease-in', style({
+        animate('300ms ease-in', style({
           transform: 'translateX(0%)',
           opacity: 1
         }))
