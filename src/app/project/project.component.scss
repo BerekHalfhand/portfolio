@@ -13,14 +13,12 @@ h4 {
   font-family: $title-font;
 }
 
-.cover {
+.picture {
   width: $project-img-size;
   height: $project-img-size;
   max-width: $max-project-img-size;
   max-height: $max-project-img-size;
-  background-position: center;
-  background-size: cover;
-
+  @extend %image-wrap;
 }
 
 .stack {

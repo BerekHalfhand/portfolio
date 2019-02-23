@@ -28,7 +28,7 @@ export class ProjectsPaneComponent implements OnInit {
       name: 'Tile.Expert Portal',
       stack: 'AngularJS, Symfony2, MongoDB',
       url: 'https://te.remote.team/#/',
-      img: 'assets/pics/projects/tile_expert.jpg',
+      img: 'assets/pics/projects/tile_expert',
       description: 'The internal web-portal for Tile.Expert employees, \
 combining many features from a rich forum functionality to the complex task scheduling \
 system, as well as cross-site data flow, statistics, notifications and much more.'
@@ -37,7 +37,7 @@ system, as well as cross-site data flow, statistics, notifications and much more
       name: 'Ruby on Rails + React',
       stack: 'Ruby on Rails, MongoDB, React, Redux, Bootstrap 4',
       url: 'https://safe-lowlands-72747.herokuapp.com/spreadsheet',
-      img: 'assets/pics/projects/ror_react.jpg',
+      img: 'assets/pics/projects/ror_react',
       description: 'Test project, a single-page app able to store, dinamically \
 add, modify and filter a table of custom data with custom typed columns.'
     },
@@ -45,7 +45,7 @@ add, modify and filter a table of custom data with custom typed columns.'
       name: 'Web Store on NuxtJS',
       stack: 'Vue, NodeJS, Bootstrap 4',
       url: 'http://vue-store.com.s3-website.us-east-2.amazonaws.com/',
-      img: 'assets/pics/projects/vue_store.jpg',
+      img: 'assets/pics/projects/vue_store',
       description: 'Test project, a single-page app imitating an online store.'
     }
   ];

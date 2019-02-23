@@ -15,10 +15,9 @@
   }
 }
 .photo {
-  background-size: cover;
-  background-position: 50% 50%;
   width: 30vmin;
   height: 30vmin;
+  @extend %image-wrap;
 }
 
 @media screen and (min-width: $menu-breakpoint) {
