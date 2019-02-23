@@ -6,22 +6,22 @@
   }
 }
 
-@media screen and (max-width: $menu-breakpoint - 1) {
+@media screen and (max-width: $menu-breakpoint - 1) and (max-height: 528px - 1) {
   @include styling($image: 'assets/pics/xs/header.jpg');
 }
-@media screen and (min-width: $menu-breakpoint) {
+@media screen and (min-width: $menu-breakpoint), screen and (min-height: 528px) {
   @include styling($image: 'assets/pics/sm/header.jpg');
 }
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 992px), screen and (min-height: 682px) {
   @include styling($image: 'assets/pics/md/header.jpg');
 }
-@media screen and (min-width: $flex-breakpoint) {
+@media screen and (min-width: $flex-breakpoint), screen and (min-height: 825px) {
   @include styling($image: 'assets/pics/lg/header.jpg');
 }
-@media screen and (min-width: 1900px) {
+@media screen and (min-width: 1900px), screen and (min-height: 1300px) {
   @include styling($image: 'assets/pics/xl/header.jpg');
 }
-@media screen and (min-width: 2560px) {
+@media screen and (min-width: 2560px), screen and (min-height: 1760px) {
   @include styling($image: 'assets/pics/header.jpg');
 }
 

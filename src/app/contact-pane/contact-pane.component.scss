@@ -17,8 +17,30 @@
   z-index: 20;
   min-height: calc(50vh - #{$slope-offset});
   margin: auto;
-  min-width: 33vw;
+  min-width: 80%;
   color: mat-color($app-primary, 400);
+}
+
+.form-container {
+  width: 100%;
+  margin: 1vmin;
+}
+
+@media screen and (min-width: $menu-breakpoint) {
+  .contact-content-container {
+    min-width: 50vw;
+  }
+  .form-container {
+    max-width: 50vw !important;
+  }
+}
+@media screen and (min-width: $flex-breakpoint) {
+  .contact-content-container {
+    min-width: 33vw;
+  }
+  .form-container {
+    max-width: 33vw !important;
+  }
 }
 
 .social {
@@ -27,12 +49,6 @@
   a {
     margin: 1vmin;
   }
-}
-
-.form-container {
-  max-width: 33vw !important;
-  width: 100%;
-  margin: 1vmin;
 }
 
 .mouse-container {
