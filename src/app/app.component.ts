@@ -9,10 +9,6 @@ import {  Component,
           ElementRef,
           ChangeDetectionStrategy,
           ChangeDetectorRef } from '@angular/core';
-
-import { WINDOW } from "helpers/windowRef";
-import { DOCUMENT } from '@angular/platform-browser';
-
 import { RainyDayService } from './rainy-day/rainy-day.service';
 import { ViewportService } from 'app/viewport.service';
 import { RaindropItem } from './raindrop/raindrop.item';
@@ -27,19 +23,18 @@ export class Pane {
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush
+  // changeDetection: ChangeDetectionStrategy.OnPush
 })
 
 export class AppComponent implements OnInit {
   frontRaindrops: RaindropItem[];
   backRaindrops: RaindropItem[];
+
   @ViewChildren(Pane, {read: ElementRef}) panes: QueryList<Pane>;
 
   constructor(
     private rainyDayService: RainyDayService,
-    private viewportService: ViewportService,
-    @Inject(DOCUMENT) private document: Document,
-    @Inject(WINDOW) private window: Window
+    private viewportService: ViewportService
   ) {}
 
   ngOnInit() {
@@ -49,11 +44,11 @@ export class AppComponent implements OnInit {
 
   @HostListener("window:scroll", [])
   onWindowScroll() {
-    this.viewportService.getActivePane(this.panes);
+    this.viewportService.throttledScroll(this.panes);
   }
 
   @HostListener("window:resize", [])
   onWindowResize() {
-    this.viewportService.handleResize();
+    this.viewportService.debouncedResize();
   }
 }
