@@ -20,6 +20,11 @@
 }
 
 body {
+  [hidden] {
+    opacity: 0 !important;
+    pointer-events: none !important;
+  }
+
   @media screen and (max-width: $menu-breakpoint - 1) {
     .text-box {
   		box-shadow: none !important;

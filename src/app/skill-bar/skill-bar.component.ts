@@ -4,7 +4,7 @@ import {
   Input,
   ChangeDetectionStrategy,
   ChangeDetectorRef } from '@angular/core';
-import { trigger, style, animate, transition, group, query, animateChild } from '@angular/animations';
+import { trigger, style, state, animate, transition, group, query, animateChild } from '@angular/animations';
 
 @Component({
   selector: 'app-skill-bar',
@@ -13,34 +13,30 @@ import { trigger, style, animate, transition, group, query, animateChild } from 
   changeDetection: ChangeDetectionStrategy.OnPush,
   animations: [
     trigger('widen', [
-      transition(':enter', [
-        style({transform: 'translateX(-100%)'}),
-          animate('0.5s {{delay}}ms ease-in', style({transform: 'translateX(0)'}))
-      ], {params : { delay: 0 }})
+      state('initial', style({transform: 'translateX(-100%)'})),
+      state('final', style({transform: 'translateX(0)'})),
+      transition('initial=>final', animate('0.5s {{delay}}ms ease-in'))
     ]),
     trigger('flyIn', [
-      transition(':enter', [
-        style({
-          transform: 'translateX(-30%)',
-          opacity: 0
-        }),
+      state('initial', style({transform: 'translateX(-150%)'})),
+      state('final', style({transform: 'translateX(0%)'})),
+      transition('initial=>final',
         group([
-          animate('0.25s {{delay}}ms ease-in', style({
-            transform: 'translateX(0%)',
-            opacity: 1
-          })),
+          animate('0.25s {{delay}}ms ease-in'),
           query('@widen', [
             animateChild()
           ])
-        ])
-      ], {params : { delay: 0 }})
+        ]),
+        {params : { delay: 0 }}
+      )
     ])
   ]
 })
 export class SkillBarComponent implements OnInit {
   @Input() skill: string;
-  @Input() percentage: number = 0;
-  @Input() delay: number = 0;
+  @Input() parentState: string;
+  @Input() percentage = 0;
+  @Input() delay = 0;
 
   constructor() { }
 

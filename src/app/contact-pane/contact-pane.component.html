@@ -2,12 +2,13 @@
   <div class="slope-background angle--top-right">
     <div id="particles"></div>
     <div fxLayout="column" fxLayoutAlign="space-between" class="slope-pane-container">
-      <article fxLayout="column" fxLayoutAlign="space-between center" fxLayoutGap="5vh" class="contact-content-container" >
+      <article fxLayout="column" fxLayoutAlign="space-between center" fxLayoutGap="5vh"
+                [hidden]="!showContent" class="contact-content-container" >
 
-        <div *ngIf="showContent" @fadeInDown>
+        <div [@fadeInDown]=state>
           <h1>Contact me</h1>
         </div>
-        <div *ngIf="showContent" @fadeIn class="form-container">
+        <div [@fadeIn] class="form-container">
           <form action="https://formspree.io/moorindal@ymail.com" method="POST"
                 fxLayout="column" fxLayoutAlign="start stretch">
             <mat-form-field>
@@ -22,7 +23,7 @@
             <button type="submit" fxFlexAlign="center" mat-stroked-button color="primary">Send</button>
           </form>
         </div>
-        <div *ngIf="showContent" @fadeInUp class="social">
+        <div [@fadeInUp]=state class="social">
           <a href="https://www.linkedin.com/in/yuri-drobkov-4219b1167/" title="LinkedIn">
             <i class="fab fa-linkedin"></i>
           </a>
@@ -36,7 +37,7 @@
 
       </article>
       <div class="mouse-container flex-center">
-        <app-scroll-button *ngIf="showContent" @arrow targetPane='pane1' [isArrow]="true"></app-scroll-button>
+        <app-scroll-button [hidden]="!showContent" [@arrow]=state targetPane='pane1' [isArrow]="true"></app-scroll-button>
       </div>
     </div>
   </div>

@@ -4,7 +4,7 @@ import {
   Input,
   ChangeDetectionStrategy,
   ChangeDetectorRef } from '@angular/core';
-import { trigger, style, animate, transition } from '@angular/animations';
+import { trigger, style, state, animate, transition } from '@angular/animations';
 
 @Component({
   selector: 'app-project',
@@ -13,16 +13,15 @@ import { trigger, style, animate, transition } from '@angular/animations';
   changeDetection: ChangeDetectionStrategy.OnPush,
   animations: [
     trigger('flyIn', [
-      transition(':enter', [
-        style({
-          transform: 'translateX(100%)',
-          opacity: 0
-        }),
-        animate('0.5s {{delay}}ms ease-in', style({
-          transform: 'translateX(0%)',
-          opacity: 1
-        }))
-      ], {params : { delay: 0 }})
+      state('initial', style({
+        transform: 'translateX(100%)',
+        // opacity: 0
+      })),
+      state('final', style({
+        transform: 'translateX(0%)',
+        // opacity: 1
+      })),
+      transition('initial=>final', animate('0.5s {{delay}}ms ease-in'), {params : { delay: 0 }})
     ])
   ]
 })
@@ -32,7 +31,8 @@ export class ProjectComponent implements OnInit {
   @Input() name: string;
   @Input() stack: string;
   @Input() description: string;
-  @Input() delay: number = 0;
+  @Input() delay = 0;
+  @Input() parentState: string;
 
   constructor() { }
 

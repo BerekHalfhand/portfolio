@@ -13,7 +13,7 @@
     </div>
     <article fxLayout="column wrap" fxLayout.gt-md="row wrap" class="window-content-container">
       <div fxFlex="50%" class="text-box-container">
-        <mat-card *ngIf="showContent" @textbox class="text-box">
+        <mat-card [hidden]="!showContent" [@textbox]=state class="text-box">
           <mat-card-title class="pane-title">About</mat-card-title>
           <mat-card-content>
             <p>
@@ -35,11 +35,11 @@
         </mat-card>
       </div>
       <div fxFlex="50%">
-        <div *ngIf="showContent" class="pics-container">
-          <div id="photo1" @one class="photo-container">
+        <div [hidden]="!showContent" class="pics-container">
+          <div id="photo1" [@one]=state class="photo-container">
             <app-polaroid caption="Tajikistan ’17" url="assets/pics/Photo_tajikistan"></app-polaroid>
           </div>
-          <div id="photo2" @two class="photo-container">
+          <div id="photo2" [@two]=state class="photo-container">
           <app-polaroid caption="Haiti ’18" url="assets/pics/Photo_haiti"></app-polaroid>
           </div>
         </div>

@@ -1,6 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { ScrollService } from 'app/scroll.service';
-import { trigger, style, animate, transition } from '@angular/animations';
+import { trigger, state, style, animate, transition } from '@angular/animations';
+import { Subject } from 'rxjs';
+import { filter, startWith, takeUntil } from 'rxjs/operators';
 
 @Component({
   selector: 'app-skills-pane',
@@ -8,20 +10,19 @@ import { trigger, style, animate, transition } from '@angular/animations';
   styleUrls: ['./skills-pane.component.scss'],
   animations: [
     trigger('textbox', [
-      transition(':enter', [
-        style({
-          transform: 'translateX(30%)',
-          opacity: 0
-        }),
-        animate('300ms 1ms ease-in', style({
-          transform: 'translateX(0%)',
-          opacity: 1
-        }))
-      ])
+      state('initial', style({
+        transform: 'translateX(40%)',
+        opacity: 0
+      })),
+      state('final', style({
+        transform: 'translateX(0%)',
+        opacity: 1
+      })),
+      transition('initial=>final', animate('300ms 1ms ease-in'))
     ])
   ]
 })
-export class SkillsPaneComponent implements OnInit {
+export class SkillsPaneComponent implements OnInit, OnDestroy {
   skillset: object[] = [
     {name: 'JavaScript', proficiency: 75},
     {name: 'Angular', proficiency: 60},
@@ -35,15 +36,35 @@ export class SkillsPaneComponent implements OnInit {
     {name: 'MySQL', proficiency: 45},
     {name: 'Unit Testing', proficiency: 35}
   ];
-  showContent: boolean;
+  showContent = false;
+  state = 'initial';
+  private ngUnsubscribe = new Subject();
 
-  constructor(private scrollService: ScrollService) {
-    this.scrollService.dataChange.subscribe((data) => {
-      this.showContent = data.showContent.pane3;
-    });
+  constructor(private scrollService: ScrollService) { }
+
+  unsubscribe() {
+    this.ngUnsubscribe.next();
+    this.ngUnsubscribe.complete();
+  }
+
+  toggleShow() {
+    this.showContent = true;
+    this.state = 'final';
+    this.unsubscribe();
   }
 
   ngOnInit() {
+    this.scrollService.dataChange
+    .pipe(takeUntil(this.ngUnsubscribe))
+    .subscribe((data) => {
+      if (data.showContent.pane3 === true) {
+        this.toggleShow();
+      }
+    });
+  }
+
+  ngOnDestroy() {
+    this.unsubscribe();
   }
 
 }

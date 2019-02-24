@@ -1,6 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { ScrollService } from 'app/scroll.service';
-import { trigger, style, animate, transition } from '@angular/animations';
+import { trigger, style, state, animate, transition } from '@angular/animations';
+import { Subject } from 'rxjs';
+import { filter, startWith, takeUntil } from 'rxjs/operators';
 
 @Component({
   selector: 'app-projects-pane',
@@ -8,21 +10,23 @@ import { trigger, style, animate, transition } from '@angular/animations';
   styleUrls: ['./projects-pane.component.scss'],
   animations: [
     trigger('textbox', [
-      transition(':enter', [
-        style({
-          transform: 'translateX(-40%)',
-          opacity: 0
-        }),
-        animate('300ms ease-in', style({
-          transform: 'translateX(0%)',
-          opacity: 1
-        }))
-      ])
+      state('initial', style({
+        transform: 'translateX(-40%)',
+        opacity: 0
+      })),
+      state('final', style({
+        transform: 'translateX(0%)',
+        opacity: 1
+      })),
+      transition('initial=>final', animate('300ms 1ms ease-in'))
     ])
   ]
 })
-export class ProjectsPaneComponent implements OnInit {
-  showContent: boolean;
+export class ProjectsPaneComponent implements OnInit, OnDestroy {
+  showContent = false;
+  state = 'initial';
+  private ngUnsubscribe = new Subject();
+
   projects: object[] = [
     {
       name: 'Tile.Expert Portal',
@@ -50,13 +54,31 @@ add, modify and filter a table of custom data with custom typed columns.'
     }
   ];
 
-  constructor(private scrollService: ScrollService) {
-    this.scrollService.dataChange.subscribe((data) => {
-      this.showContent = data.showContent.pane4;
-    });
+  constructor(private scrollService: ScrollService) { }
+
+  unsubscribe() {
+    this.ngUnsubscribe.next();
+    this.ngUnsubscribe.complete();
+  }
+
+  toggleShow() {
+    this.showContent = true;
+    this.state = 'final';
+    this.unsubscribe();
   }
 
   ngOnInit() {
+    this.scrollService.dataChange
+    .pipe(takeUntil(this.ngUnsubscribe))
+    .subscribe((data) => {
+      if (data.showContent.pane4 === true) {
+        this.toggleShow();
+      }
+    });
+  }
+
+  ngOnDestroy() {
+    this.unsubscribe();
   }
 
 }
