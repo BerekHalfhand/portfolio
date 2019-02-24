@@ -1,28 +1,11 @@
 @import 'src/styles/variables';
 
-@mixin styling($image) {
-  .rainy-day-container {
-    background-image: url($image);
-  }
-}
-
-@media screen and (max-width: $menu-breakpoint - 1) and (max-height: 528px - 1) {
-  @include styling($image: 'assets/pics/xs/header.jpg');
-}
-@media screen and (min-width: $menu-breakpoint), screen and (min-height: 528px) {
-  @include styling($image: 'assets/pics/sm/header.jpg');
-}
-@media screen and (min-width: 992px), screen and (min-height: 682px) {
-  @include styling($image: 'assets/pics/md/header.jpg');
-}
-@media screen and (min-width: $flex-breakpoint), screen and (min-height: 825px) {
-  @include styling($image: 'assets/pics/lg/header.jpg');
-}
-@media screen and (min-width: 1900px), screen and (min-height: 1300px) {
-  @include styling($image: 'assets/pics/xl/header.jpg');
-}
-@media screen and (min-width: 2560px), screen and (min-height: 1760px) {
-  @include styling($image: 'assets/pics/header.jpg');
+.image-wrap {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  @extend %image-wrap;
+  z-index: 1;
 }
 
 .rainy-day-container {
@@ -30,8 +13,6 @@
   height: $height;
   margin: 0;
   overflow: hidden;
-  background-position: center;
-  background-size: cover;
 }
 
 .rain {
@@ -53,6 +34,7 @@ h1, h2 {
   color: #e7e6e6;
   font-family: $title-font;
   margin: 5px;
+  z-index: 9;
 }
 
 h1 {

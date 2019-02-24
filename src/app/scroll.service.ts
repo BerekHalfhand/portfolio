@@ -32,7 +32,7 @@ export class ScrollService {
 
     // TODO: sync offset w/ sass variable
 
-    let offset = window.innerHeight / 100 * 15;
+    let offset = window.innerWidth / 100 * 8;
 
     panes.map(p => {
       if (p && p.nativeElement) {

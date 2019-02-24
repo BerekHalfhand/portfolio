@@ -1,6 +1,6 @@
 @mixin raindrops($quantity: 75, $width: 100vw, $height: 100vh) {
 
-  $raindrop-bkg: 'assets/pics/xs/stained-glass-background-clear.jpg';
+  $raindrop-bkg: 'assets/pics/sm/stained-glass-background-clear.jpg';
 
   // set all the containers to
   // position:absolute, since
@@ -17,7 +17,7 @@
 
   // little brightness filter so our raindrops look shiny
   .drops{
-    filter:brightness(1.2);
+    filter: brightness(1.2);
   }
 
   // general settings for all the
