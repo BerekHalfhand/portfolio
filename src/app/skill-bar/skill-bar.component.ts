@@ -12,21 +12,21 @@ import { trigger, style, state, animate, transition, group, query, animateChild 
   styleUrls: ['./skill-bar.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
   animations: [
-    trigger('widen', [
-      state('initial', style({transform: 'translateX(-100%)'})),
-      state('final', style({transform: 'translateX(0)'})),
-      transition('initial=>final', animate('0.5s {{delay}}ms ease-in'))
-    ]),
+    // trigger('widen', [
+    //   state('initial', style({transform: 'translateX(-100%)'})),
+    //   state('final', style({transform: 'translateX(0)'})),
+    //   transition('initial=>final', animate('0.5s {{delay}}ms ease-in'))
+    // ]),
     trigger('flyIn', [
       state('initial', style({transform: 'translateX(-150%)'})),
       state('final', style({transform: 'translateX(0%)'})),
       transition('initial=>final',
-        group([
+        // group([
           animate('0.25s {{delay}}ms ease-in'),
-          query('@widen', [
-            animateChild()
-          ])
-        ]),
+          // query('@widen', [
+            // animateChild()
+          // ])
+        // ]),
         {params : { delay: 0 }}
       )
     ])

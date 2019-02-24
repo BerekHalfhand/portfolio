@@ -1,10 +1,26 @@
 @import 'src/styles/variables';
 
+@mixin styling($size) {
+  .stem {
+    width: $size;
+    border-radius: $size;
+  }
+}
+
+@media screen and (max-width: $menu-breakpoint - 1) {
+  @include styling($size: 1px);
+}
+@media screen and (min-width: $menu-breakpoint) {
+  @include styling($size: 2px);
+}
+@media screen and (min-width: $flex-breakpoint) {
+  @include styling($size: 3px);
+}
+
 .drop {
   position: absolute;
   display: block;
   bottom: 100%;
-  width: 15px;
   height: 60px;
   pointer-events: none;
   animation: drop 0.5s linear infinite;
@@ -12,38 +28,28 @@
 }
 
 @keyframes drop {
-  0% {
+  from {
     transform: translateY(0vh);
   }
-  75% {
-    transform: translateY(125vh);
-  }
-  100% {
+  to {
     transform: translateY(125vh);
   }
 }
 
 .stem {
-  width: 3px;
-  border-radius: 3px;
+  // width: 3px;
+  // border-radius: 3px;
   height: 100%;
-  margin-left: 7px;
   background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.25));
   animation: stem 0.5s linear infinite;
   @extend %hardware;
 }
 
 @keyframes stem {
-  0% {
+  from {
     opacity: 1;
   }
-  65% {
-    opacity: 1;
-  }
-  75% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 0;
+  to {
+    opacity: 0.3;
   }
 }
