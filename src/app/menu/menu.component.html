@@ -1,5 +1,5 @@
 <header fxLayout="row" fxLayout.gt-xs="column" fxLayoutAlign="space-between center">
-  <a (click)="scrollService.scrollToElement($event, '#pane1')" href="#pane1">
+  <a (click)="viewportService.scrollToElement($event, '#pane1')" href="#pane1">
     <div id="logo">
       <img src="assets/pics/logo.svg"/>
     </div>
@@ -9,27 +9,27 @@
         fxLayoutAlign="space-between center"
         fxLayoutGap="2vmin">
     <a [class]="activePane == 'pane1' ? 'active' : ''"
-        (click)="scrollService.scrollToElement($event, '#pane1')"
+        (click)="viewportService.scrollToElement($event, '#pane1')"
         href="#pane1" title="Home">
       <mat-icon>home</mat-icon>
     </a>
     <a [class]="activePane == 'pane2' ? 'active' : ''"
-        (click)="scrollService.scrollToElement($event, '#pane2')"
+        (click)="viewportService.scrollToElement($event, '#pane2')"
         href="#pane2" title="About">
       <mat-icon>person</mat-icon>
     </a>
     <a [class]="activePane == 'pane3' ? 'active' : ''"
-        (click)="scrollService.scrollToElement($event, '#pane3')"
+        (click)="viewportService.scrollToElement($event, '#pane3')"
         href="#pane3" title="Skills">
       <mat-icon>settings</mat-icon>
     </a>
     <a [class]="activePane == 'pane4' ? 'active' : ''"
-        (click)="scrollService.scrollToElement($event, '#pane4')"
+        (click)="viewportService.scrollToElement($event, '#pane4')"
         href="#pane4" title="Projects">
       <mat-icon>work</mat-icon>
     </a>
     <a [class]="activePane == 'pane5' ? 'active' : ''"
-        (click)="scrollService.scrollToElement($event, '#pane5')"
+        (click)="viewportService.scrollToElement($event, '#pane5')"
         href="#pane5" title="Contact">
       <mat-icon>email</mat-icon>
     </a>

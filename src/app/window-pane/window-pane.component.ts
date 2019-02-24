@@ -1,6 +1,6 @@
 import { Component, OnInit, OnDestroy, Input } from '@angular/core';
 import { trigger, state, style, animate, transition, group } from '@angular/animations';
-import { ScrollService } from 'app/scroll.service';
+import { ViewportService } from 'app/viewport.service';
 import { Subject } from 'rxjs';
 import { filter, startWith, takeUntil } from 'rxjs/operators';
 
@@ -37,7 +37,7 @@ export class WindowPaneComponent implements OnInit, OnDestroy {
   state = 'initial';
   private ngUnsubscribe = new Subject();
 
-  constructor(private scrollService: ScrollService) { }
+  constructor(private viewportService: ViewportService) { }
 
   unsubscribe() {
     this.ngUnsubscribe.next();
@@ -51,7 +51,7 @@ export class WindowPaneComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit() {
-    this.scrollService.dataChange
+    this.viewportService.dataChange
     .pipe(takeUntil(this.ngUnsubscribe))
     .subscribe((data) => {
       if (data.showContent.pane2 === true) {

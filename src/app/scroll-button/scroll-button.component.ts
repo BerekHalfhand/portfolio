@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { ScrollService } from 'app/scroll.service';
+import { ViewportService } from 'app/viewport.service';
 import { trigger, style, animate, transition } from '@angular/animations';
 
 @Component({
@@ -23,8 +23,8 @@ export class ScrollButtonComponent implements OnInit {
   @Input() isArrow: boolean = false;
   activePane: string = 'pane1';
 
-  constructor(public scrollService: ScrollService) {
-    this.scrollService.dataChange.subscribe((data) => {
+  constructor(public viewportService: ViewportService) {
+    this.viewportService.dataChange.subscribe((data) => {
       this.activePane = data.activePane;
     });
   }

@@ -1,7 +1,6 @@
 import { Component, OnInit, OnDestroy, Inject, ViewEncapsulation } from '@angular/core';
-import { ScrollService } from 'app/scroll.service';
+import { ViewportService } from 'app/viewport.service';
 import { trigger, style, state, animate, transition } from '@angular/animations';
-import { WINDOW } from 'helpers/windowRef';
 import { Subject } from 'rxjs';
 import { filter, startWith, takeUntil } from 'rxjs/operators';
 
@@ -65,11 +64,8 @@ export class ContactPaneComponent implements OnInit, OnDestroy {
   state = 'initial';
   private ngUnsubscribe = new Subject();
 
-  constructor(
-    private scrollService: ScrollService,
-    @Inject(WINDOW) private window: Window
-  ) {
-    if (window.innerWidth > 600) {
+  constructor(private viewportService: ViewportService) {
+    if (this.viewportService.viewport.width > 600) {
       this.showParticles = true;
     }
   }
@@ -94,7 +90,7 @@ export class ContactPaneComponent implements OnInit, OnDestroy {
       });
     }
 
-    this.scrollService.dataChange
+    this.viewportService.dataChange
     .pipe(takeUntil(this.ngUnsubscribe))
     .subscribe((data) => {
       if (data.showContent.pane5 === true) {

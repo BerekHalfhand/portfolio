@@ -4,7 +4,7 @@ pane {
   display: block;
   position:relative;
   width: 100%;
-  min-height: $height;
+  min-height: calc(#{$height} - #{$max-menu-size});
 }
 
 // q {
@@ -23,18 +23,35 @@ pane {
 #pane1, #pane2, #pane5 {
   overflow:hidden;
 }
+#pane1 {
+  // height: calc(#{$height} - #{$max-menu-size});
+  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
+}
 #pane2 {
   border-top: solid $pane-border mat-color($app-primary, 500);
 }
 
-#left-offset {
-  max-width: $max-menu-size;
-  height: 100vh;
-  width: 0;
+#offset {
+  position: fixed;
+  width: 100%;
+  max-height: $max-menu-size;
+  height: $menu-size;
 }
 
+
 @media screen and (min-width: $menu-breakpoint) {
-  #left-offset {
+  #pane1 {
+    height: initial;
+  }
+
+  #offset {
+    height: 100%;
+    max-width: $max-menu-size;
     width: $menu-size;
+  }
+
+  pane {
+    min-height: $height;
   }
 }

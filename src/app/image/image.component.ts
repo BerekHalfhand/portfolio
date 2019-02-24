@@ -1,6 +1,5 @@
 import { Component, OnInit, Input, Inject } from '@angular/core';
-import { ScrollService } from 'app/scroll.service';
-import { WINDOW } from 'helpers/windowRef';
+import { ViewportService } from 'app/viewport.service';
 
 enum Resolution {
   Xs = 'xs/',
@@ -30,7 +29,7 @@ enum Breakpoint {
 })
 export class ImageComponent implements OnInit {
   @Input() path: string;
-  @Input() alt? = '';
+  @Input() alt = '';
 
   //in fullscreen mode holds image proportion (width * fullscreen = height)
   @Input() fullscreen = 0;
@@ -44,9 +43,8 @@ export class ImageComponent implements OnInit {
   Resolution: typeof Resolution = Resolution;
   size: string;
 
-  constructor(@Inject(WINDOW) private window: Window) {
-    this.viewport.width = window.innerWidth;
-    this.viewport.height = window.innerHeight;
+  constructor(private viewportService: ViewportService) {
+    this.viewport = viewportService.viewport;
   }
 
   getFittingImage(path: string, proportion: number) {

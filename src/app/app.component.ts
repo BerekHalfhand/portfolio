@@ -11,9 +11,10 @@ import {  Component,
           ChangeDetectorRef } from '@angular/core';
 
 import { WINDOW } from "helpers/windowRef";
+import { DOCUMENT } from '@angular/platform-browser';
 
 import { RainyDayService } from './rainy-day/rainy-day.service';
-import { ScrollService } from 'app/scroll.service';
+import { ViewportService } from 'app/viewport.service';
 import { RaindropItem } from './raindrop/raindrop.item';
 
 @Directive({selector: 'pane'})
@@ -35,18 +36,24 @@ export class AppComponent implements OnInit {
   @ViewChildren(Pane, {read: ElementRef}) panes: QueryList<Pane>;
 
   constructor(
-    private RainyDayService: RainyDayService,
-    private scrollService: ScrollService,
+    private rainyDayService: RainyDayService,
+    private viewportService: ViewportService,
+    @Inject(DOCUMENT) private document: Document,
     @Inject(WINDOW) private window: Window
   ) {}
 
   ngOnInit() {
-    this.frontRaindrops = this.RainyDayService.getRaindrops('left');
-    this.backRaindrops = this.RainyDayService.getRaindrops('right');
+    this.frontRaindrops = this.rainyDayService.getRaindrops('left');
+    this.backRaindrops = this.rainyDayService.getRaindrops('right');
   }
 
   @HostListener("window:scroll", [])
   onWindowScroll() {
-    this.scrollService.getActivePane(this.panes);
+    this.viewportService.getActivePane(this.panes);
+  }
+
+  @HostListener("window:resize", [])
+  onWindowResize() {
+    this.viewportService.handleResize();
   }
 }

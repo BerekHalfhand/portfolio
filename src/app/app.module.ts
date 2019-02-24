@@ -19,7 +19,7 @@ import { RaindropComponent } from './raindrop/raindrop.component';
 import { WindowPaneComponent } from './window-pane/window-pane.component';
 
 import { RainyDayService } from './rainy-day/rainy-day.service';
-import { ScrollService } from 'app/scroll.service';
+import { ViewportService } from 'app/viewport.service';
 
 import { FrontRainDirective } from 'app/directives/front-rain.directive';
 import { BackRainDirective } from 'app/directives/back-rain.directive';

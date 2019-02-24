@@ -1,5 +1,5 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
-import { ScrollService } from 'app/scroll.service';
+import { ViewportService } from 'app/viewport.service';
 import { trigger, style, state, animate, transition } from '@angular/animations';
 import { Subject } from 'rxjs';
 import { filter, startWith, takeUntil } from 'rxjs/operators';
@@ -54,7 +54,7 @@ add, modify and filter a table of custom data with custom typed columns.'
     }
   ];
 
-  constructor(private scrollService: ScrollService) { }
+  constructor(private viewportService: ViewportService) { }
 
   unsubscribe() {
     this.ngUnsubscribe.next();
@@ -68,7 +68,7 @@ add, modify and filter a table of custom data with custom typed columns.'
   }
 
   ngOnInit() {
-    this.scrollService.dataChange
+    this.viewportService.dataChange
     .pipe(takeUntil(this.ngUnsubscribe))
     .subscribe((data) => {
       if (data.showContent.pane4 === true) {
