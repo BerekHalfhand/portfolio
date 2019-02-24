@@ -2,37 +2,24 @@
 @import 'src/styles/mixins';
 @import 'src/styles/window-raindrops';
 
-@mixin styling($image, $noBorder: false) {
-  .window {
-    background-image: url($image);
-  }
-  @if $noBorder == false {
-    .border { box-shadow: 0 0 0 2px rgba(0,0,0,0.5); }
-  }
-}
 
 @media screen and (max-width: $menu-breakpoint - 1) {
-  @include styling($image: 'assets/pics/xs/stained-glass-background.jpg', $noBorder: true);
+  border { box-shadow: 0 0 0 2px rgba(0,0,0,0.5); }
   @include raindrops($quantity: 20);
 }
 @media screen and (min-width: $menu-breakpoint) {
-  @include styling($image: 'assets/pics/sm/stained-glass-background.jpg');
   @include raindrops($quantity: 30);
 }
 @media screen and (min-width: 992px) {
-  @include styling($image: 'assets/pics/md/stained-glass-background.jpg');
   @include raindrops($quantity: 40);
 }
 @media screen and (min-width: $flex-breakpoint) {
-  @include styling($image: 'assets/pics/lg/stained-glass-background.jpg');
   @include raindrops($quantity: 50);
 }
 @media screen and (min-width: 1900px) {
-  @include styling($image: 'assets/pics/xl/stained-glass-background.jpg');
   @include raindrops($quantity: 60);
 }
 @media screen and (min-width: 2560px) {
-  @include styling($image: 'assets/pics/stained-glass-background.jpg');
   @include raindrops($quantity: 75);
 }
 
@@ -46,8 +33,7 @@
   width: calc(100% + 10px);
   height: calc(100% + 10px);
   margin: -5px;
-  background-size: cover;
-  background-position: top;
+  @extend %image-wrap;
 }
 
 .window-content-container {

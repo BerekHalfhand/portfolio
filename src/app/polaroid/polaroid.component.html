@@ -1,4 +1,6 @@
 <div class="polaroid">
-  <div class="photo" [style.background-image]="'url(' + url + ')'"></div>
+  <div class="photo">
+    <app-image [path]="url" [alt]="caption"></app-image>
+  </div>
   <span>{{caption}}</span>
 </div>

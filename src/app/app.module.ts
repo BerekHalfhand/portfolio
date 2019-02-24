@@ -34,6 +34,7 @@ import { ProjectComponent } from './project/project.component';
 import { SkillBarComponent } from './skill-bar/skill-bar.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
+import { ImageComponent } from './image/image.component';
 
 @NgModule({
   declarations: [
@@ -51,7 +52,8 @@ import { environment } from '../environments/environment';
     ScrollButtonComponent,
     ProjectsPaneComponent,
     ProjectComponent,
-    SkillBarComponent
+    SkillBarComponent,
+    ImageComponent
   ],
   imports: [
     BrowserModule,
