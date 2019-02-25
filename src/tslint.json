@@ -12,6 +12,11 @@
             "element",
             "app",
             "kebab-case"
-        ]
+        ],
+        "prefer-const": {
+          "severity": "warning"
+        },
+        "curly": false,
+        "radix": false
     }
 }

@@ -7,7 +7,6 @@
 
   span {
     font-family: Cedarville,Yorkten,Arial,sans-serif;
-    font-size: 2vmin;
 		margin: 1vmin 0;
 		display: block;
 		cursor: default;
@@ -17,23 +16,26 @@
   @extend %image-wrap;
 }
 
-@mixin styling($size, $padding) {
+@mixin styling($size, $padding, $font) {
 	.photo {
 	  width: $size;
 	  height: $size;
 	}
 	.polaroid {
 		padding: $padding;
+		span {
+			font-size: $font;
+		}
 	}
 }
 
 @media screen and (max-width: $menu-breakpoint - 1) {
-  @include styling($size: 40vmin, $padding: 2vmin);
+  @include styling($size: 40vmin, $padding: 2vmin, $font: 3vmin);
 }
 
 @media screen and (min-width: $menu-breakpoint) {
   .polaroid {
 		box-shadow: 1px 1px 3px #222;
   }
-	@include styling($size: 30vmin, $padding: 1vmin);
+	@include styling($size: 30vmin, $padding: 1vmin, $font: 2vmin);
 }

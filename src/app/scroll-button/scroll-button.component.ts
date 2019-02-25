@@ -20,8 +20,8 @@ import { trigger, style, animate, transition } from '@angular/animations';
 })
 export class ScrollButtonComponent implements OnInit {
   @Input() targetPane: string;
-  @Input() isArrow: boolean = false;
-  activePane: string = 'pane1';
+  @Input() isArrow = false;
+  activePane = 'pane1';
 
   constructor(public viewportService: ViewportService) {
     this.viewportService.dataChange.subscribe((data) => {
