@@ -42,12 +42,12 @@ export class AppComponent implements OnInit {
     this.backRaindrops = this.rainyDayService.getRaindrops('right');
   }
 
-  @HostListener("window:scroll", [])
+  @HostListener('window:scroll', [])
   onWindowScroll() {
     this.viewportService.throttledScroll(this.panes);
   }
 
-  @HostListener("window:resize", [])
+  @HostListener('window:resize', [])
   onWindowResize() {
     this.viewportService.debouncedResize();
   }

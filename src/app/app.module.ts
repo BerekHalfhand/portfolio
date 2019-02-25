@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import {  MatButtonModule,
           MatCheckboxModule,
           MatCardModule,
@@ -70,6 +70,7 @@ import { ImageComponent } from './image/image.component';
   ],
   providers: [RainyDayService, WINDOW_PROVIDERS],
   entryComponents: [RaindropComponent],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
 })
 export class AppModule { }

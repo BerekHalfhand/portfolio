@@ -56,7 +56,7 @@ export class ViewportService {
 
     // TODO: sync offset w/ sass variable
 
-    let offset = this.viewport.width * 0.08; //8vw
+    let offset = this.viewport.width * 0.08; // 8vw
 
     panes.map(p => {
       if (p && p.nativeElement) {
@@ -79,6 +79,6 @@ export class ViewportService {
     e.preventDefault();
     const element = document.querySelector(selector);
     if (element)
-      element.scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
+      element.scrollIntoView({behavior: 'smooth', block: 'start', inline: 'nearest'});
   }
 }
