@@ -61,8 +61,10 @@ body {
     margin: 5vw;
     text-align: justify;
     z-index: 28;
-    @include responsive-font(1rem, 10px, 18px);
     @extend %hardware;
+    p, li {
+      @include responsive-font(1.2rem, 12px, 20px);
+    }
   }
 
   .box {

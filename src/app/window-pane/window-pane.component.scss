@@ -53,10 +53,6 @@
   position: absolute;
 }
 
-.text-box p{
-  @include responsive-font(1rem, 10px, 16px);
-}
-
 #photo1 {
   transform: translateX(-35%) translateY(-20%) rotate(5deg);
 }

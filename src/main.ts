@@ -9,4 +9,9 @@ if (environment.production) {
 }
 
 platformBrowserDynamic().bootstrapModule(AppModule)
-  .catch(err => console.error(err));
+.then(() => {
+  const splashScreen = document.getElementById('my-splash-screen');
+  splashScreen.setAttribute('class', 'loaded');
+  setTimeout(() => splashScreen.remove(), 500); // change the timeout to be almost the same as the transition animation.
+})
+.catch(err => console.error(err));
