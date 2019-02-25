@@ -47,6 +47,7 @@ import { ImageComponent } from './image/image.component';
     SkillsPaneComponent,
     PolaroidComponent,
     Pane,
+    MenuComponent,
     ContactPaneComponent,
     ScrollButtonComponent,
     ProjectsPaneComponent,
