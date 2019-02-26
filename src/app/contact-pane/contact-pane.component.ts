@@ -4,7 +4,6 @@ import { trigger, style, state, animate, transition } from '@angular/animations'
 import { Subject } from 'rxjs';
 import { filter, startWith, takeUntil } from 'rxjs/operators';
 
-declare var require: any;
 declare var particlesJS: any;
 @Component({
   selector: 'app-contact-pane',
@@ -83,7 +82,6 @@ export class ContactPaneComponent implements OnInit, OnDestroy {
 
   ngOnInit() {
     if (this.showParticles) {
-      require('particles.js');
       /* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
       particlesJS.load('particles', 'assets/particles.json', () => {
         // console.log('callback - particles.js config loaded');
