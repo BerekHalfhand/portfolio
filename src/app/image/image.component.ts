@@ -50,12 +50,12 @@ export class ImageComponent implements OnInit {
   getFittingImage(path: string, proportion: number) {
     for (let item in Breakpoint) {
       if (isNaN(Number(item))) {
-        let minWidth = parseInt(Breakpoint[item]);
-        let minHeight = minWidth * proportion;
-        // console.log(minWidth, minHeight);
+        let maxWidth = parseInt(Breakpoint[item]);
+        let maxHeight = maxWidth * proportion;
+        // console.log(maxWidth, maxHeight);
 
-        if ( this.viewport.width < minWidth
-          && this.viewport.height < minHeight ) {
+        if ( this.viewport.width < maxWidth
+          && this.viewport.height < maxHeight ) {
             this.size = Resolution[item];
             // console.log(`Chosen size: ${this.size}, ${minWidth}x${minHeight}`);
 
