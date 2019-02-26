@@ -21,7 +21,7 @@ import { trigger, style, state, animate, transition } from '@angular/animations'
         transform: 'translateX(0%)',
         // opacity: 1
       })),
-      transition('initial=>final', animate('0.5s {{delay}}ms ease-in'), {params : { delay: 0 }})
+      transition('initial=>final', animate('0.5s ease-in'))
     ])
   ]
 })
@@ -32,7 +32,7 @@ export class ProjectComponent implements OnInit {
   @Input() stack: string;
   @Input() description: string;
   @Input() delay = 0;
-  @Input() parentState: string;
+  @Input() state: string;
 
   constructor() { }
 

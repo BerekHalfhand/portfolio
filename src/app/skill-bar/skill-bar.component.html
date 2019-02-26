@@ -1,5 +1,4 @@
-<div [@flyIn]="{value: parentState, params: {delay: delay}}"
-  class="bar" fxLayout="row" fxLayoutAlign="space-between">
+<div [@flyIn]=state class="bar" fxLayout="row" fxLayoutAlign="space-between">
   <div class="caption flex-center">{{skill}}</div>
   <div class="fill-wrap">
     <div id="skill-js" class="bar fill" [style.width]="percentage+'%'"></div>

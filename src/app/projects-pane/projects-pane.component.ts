@@ -3,6 +3,7 @@ import { ViewportService } from 'app/viewport.service';
 import { trigger, style, state, animate, transition } from '@angular/animations';
 import { Subject } from 'rxjs';
 import { filter, startWith, takeUntil } from 'rxjs/operators';
+import cascadeAnimation from 'helpers/cascadeAnimation';
 
 @Component({
   selector: 'app-projects-pane',
@@ -35,7 +36,8 @@ export class ProjectsPaneComponent implements OnInit, OnDestroy {
       img: 'assets/pics/projects/tile_expert',
       description: 'The internal web-portal for Tile.Expert employees, \
 combining many features from a rich forum functionality to the complex task scheduling \
-system, as well as cross-site data flow, statistics, notifications and much more.'
+system, as well as cross-site data flow, statistics, notifications and much more.',
+      state: 'initial'
     },
     {
       name: 'Ruby on Rails + React',
@@ -43,14 +45,16 @@ system, as well as cross-site data flow, statistics, notifications and much more
       url: 'https://safe-lowlands-72747.herokuapp.com/spreadsheet',
       img: 'assets/pics/projects/ror_react',
       description: 'Test project, a single-page app able to store, dinamically \
-add, modify and filter a table of custom data with custom typed columns.'
+add, modify and filter a table of custom data with custom typed columns.',
+      state: 'initial'
     },
     {
       name: 'Web Store on NuxtJS',
       stack: 'Vue, NodeJS, Bootstrap 4',
       url: 'http://vue-store.com.s3-website.us-east-2.amazonaws.com/',
       img: 'assets/pics/projects/vue_store',
-      description: 'Test project, a single-page app imitating an online store.'
+      description: 'Test project, a single-page app imitating an online store.',
+      state: 'initial'
     }
   ];
 
@@ -65,6 +69,7 @@ add, modify and filter a table of custom data with custom typed columns.'
     this.showContent = true;
     this.state = 'final';
     this.unsubscribe();
+    cascadeAnimation(this.projects, 0, 300, 250);
   }
 
   ngOnInit() {

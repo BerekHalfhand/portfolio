@@ -3,6 +3,7 @@ import { ViewportService } from 'app/viewport.service';
 import { trigger, state, style, animate, transition } from '@angular/animations';
 import { Subject } from 'rxjs';
 import { filter, startWith, takeUntil } from 'rxjs/operators';
+import cascadeAnimation from 'helpers/cascadeAnimation';
 
 @Component({
   selector: 'app-skills-pane',
@@ -24,17 +25,17 @@ import { filter, startWith, takeUntil } from 'rxjs/operators';
 })
 export class SkillsPaneComponent implements OnInit, OnDestroy {
   skillset: object[] = [
-    {name: 'JavaScript', proficiency: 75},
-    {name: 'Angular', proficiency: 60},
-    {name: 'React', proficiency: 50},
-    {name: 'Vue', proficiency: 25},
-    {name: 'Typescript', proficiency: 40},
-    {name: 'NodeJS', proficiency: 25},
-    {name: 'PHP', proficiency: 70},
-    {name: 'Rails', proficiency: 35},
-    {name: 'MongoDB', proficiency: 60},
-    {name: 'MySQL', proficiency: 45},
-    {name: 'Unit Testing', proficiency: 35}
+    {name: 'JavaScript', proficiency: 75, state: 'initial'},
+    {name: 'Angular', proficiency: 60, state: 'initial'},
+    {name: 'React', proficiency: 50, state: 'initial'},
+    {name: 'Vue', proficiency: 25, state: 'initial'},
+    {name: 'Typescript', proficiency: 40, state: 'initial'},
+    {name: 'NodeJS', proficiency: 25, state: 'initial'},
+    {name: 'PHP', proficiency: 70, state: 'initial'},
+    {name: 'Rails', proficiency: 35, state: 'initial'},
+    {name: 'MongoDB', proficiency: 60, state: 'initial'},
+    {name: 'MySQL', proficiency: 45, state: 'initial'},
+    {name: 'Unit Testing', proficiency: 35, state: 'initial'}
   ];
   showContent = false;
   state = 'initial';
@@ -51,6 +52,7 @@ export class SkillsPaneComponent implements OnInit, OnDestroy {
     this.showContent = true;
     this.state = 'final';
     this.unsubscribe();
+    cascadeAnimation(this.skillset, 0, 150, 150);
   }
 
   ngOnInit() {
