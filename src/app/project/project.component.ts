@@ -14,11 +14,11 @@ import { trigger, style, state, animate, transition } from '@angular/animations'
   animations: [
     trigger('flyIn', [
       state('initial', style({
-        transform: 'translateX(100%)',
+        transform: 'translateX(100%) translateZ(0)',
         // opacity: 0
       })),
       state('final', style({
-        transform: 'translateX(0%)',
+        transform: 'translateX(0%) translateZ(0)',
         // opacity: 1
       })),
       transition('initial=>final', animate('0.5s ease-in'))
@@ -31,7 +31,7 @@ export class ProjectComponent implements OnInit {
   @Input() name: string;
   @Input() stack: string;
   @Input() description: string;
-  @Input() delay = 0;
+  @Input() willChange = false;
   @Input() state: string;
 
   constructor() { }

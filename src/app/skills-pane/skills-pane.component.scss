@@ -13,6 +13,8 @@
 .bars-container {
   z-index: 24;
   padding: 5vw;
+  -webkit-perspective: 1000px;
+  perspective: 1000px;
 }
 
 .text-box {

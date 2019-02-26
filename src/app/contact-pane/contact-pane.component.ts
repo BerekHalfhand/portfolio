@@ -12,44 +12,44 @@ declare var particlesJS: any;
   animations: [
     trigger('arrow', [
       state('initial', style({
-        transform: 'translateY(50%)',
+        transform: 'translateY(50%) translateZ(0)',
         opacity: 0
       })),
       state('final', style({
-        transform: 'translateY(0%)',
+        transform: 'translateY(0%) translateZ(0)',
         opacity: 1
       })),
       transition('initial=>final', animate('500ms .6s ease-in'))
     ]),
     trigger('fadeIn', [
       state('initial', style({
-        transform: 'scale(0.5)',
+        transform: 'scale(0.5) translateZ(0)',
         opacity: 0
       })),
       state('final', style({
-        transform: 'scale(1)',
+        transform: 'scale(1) translateZ(0)',
         opacity: 1
       })),
       transition('initial=>final', animate('490ms 10ms ease-in'))
     ]),
     trigger('fadeInDown', [
       state('initial', style({
-        transform: 'translateY(-50%) scale(0.5)',
+        transform: 'translateY(-50%) scale(0.5) translateZ(0)',
         opacity: 0
       })),
       state('final', style({
-        transform: 'translateY(0) scale(1)',
+        transform: 'translateY(0) scale(1) translateZ(0)',
         opacity: 1
       })),
       transition('initial=>final', animate('500ms ease-in'))
     ]),
     trigger('fadeInUp', [
       state('initial', style({
-        transform: 'translateY(50%) scale(0.5)',
+        transform: 'translateY(50%) scale(0.5) translateZ(0)',
         opacity: 0
       })),
       state('final', style({
-        transform: 'translateY(0) scale(1)',
+        transform: 'translateY(0) scale(1) translateZ(0)',
         opacity: 1
       })),
       transition('initial=>final', animate('480ms ease-in'))

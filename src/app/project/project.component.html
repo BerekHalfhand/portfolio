@@ -1,4 +1,5 @@
-<article  [@flyIn]=state fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="1vw">
+<article  [@flyIn]=state [ngClass]="{ 'will-change': willChange }"
+          fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="1vw">
   <a href="{{url}}">
     <div class="picture">
       <app-image [path]="img" [alt]="name"></app-image>

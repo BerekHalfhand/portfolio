@@ -12,11 +12,11 @@ import cascadeAnimation from 'helpers/cascadeAnimation';
   animations: [
     trigger('textbox', [
       state('initial', style({
-        transform: 'translateX(-40%)',
+        transform: 'translateX(-40%) translateZ(0)',
         opacity: 0
       })),
       state('final', style({
-        transform: 'translateX(0%)',
+        transform: 'translateX(0%) translateZ(0)',
         opacity: 1
       })),
       transition('initial=>final', animate('300ms 1ms ease-in'))
@@ -26,6 +26,7 @@ import cascadeAnimation from 'helpers/cascadeAnimation';
 export class ProjectsPaneComponent implements OnInit, OnDestroy {
   showContent = false;
   state = 'initial';
+  willChange = true;
   private ngUnsubscribe = new Subject();
 
   projects: object[] = [
@@ -69,7 +70,9 @@ add, modify and filter a table of custom data with custom typed columns.',
     this.showContent = true;
     this.state = 'final';
     this.unsubscribe();
-    cascadeAnimation(this.projects, 0, 300, 250);
+    cascadeAnimation(this.projects, 0, 300, 250)
+    .then((result) => this.willChange = false )
+    .catch((err) => {console.log('oops:' + err); });
   }
 
   ngOnInit() {

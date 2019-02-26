@@ -36,7 +36,7 @@
         <div fxFlex="50%" fxLayout="column" fxLayoutAlign="center" class="projects-container">
           <app-project *ngFor="let project of projects; let i=index"
           [img]="project.img" [name]="project.name" [url]="project.url" [stack]="project.stack"
-          [description]="project.description" [state]="project.state"></app-project>
+          [description]="project.description" [state]="project.state" [willChange]="willChange"></app-project>
         </div>
 
       </article>

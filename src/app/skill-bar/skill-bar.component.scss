@@ -28,7 +28,10 @@
   width: 100%;
   background-color: $background-3;
   cursor: default;
-  // @extend %hardware;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
 }
 
 .percentage {
@@ -37,12 +40,6 @@
   clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
   @include responsive-font(0.8rem, 9px, 14px);
 }
-
-.bars-container {
-  z-index: 24;
-  padding: 10vw 10vw 0 10vw;
-}
-
 
 .fill-wrap {
   width: 100%;

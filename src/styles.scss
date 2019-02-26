@@ -25,6 +25,10 @@ body {
     pointer-events: none !important;
   }
 
+  .will-change {
+    will-change: transform;
+  }
+
   @media screen and (max-width: $menu-breakpoint - 1) {
     .text-box {
   		box-shadow: none !important;
@@ -61,7 +65,6 @@ body {
     margin: 5vw;
     text-align: justify;
     z-index: 28;
-    @extend %hardware;
     p, li {
       @include responsive-font(1.2rem, 12px, 18px);
     }

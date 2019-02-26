@@ -12,11 +12,11 @@ import cascadeAnimation from 'helpers/cascadeAnimation';
   animations: [
     trigger('textbox', [
       state('initial', style({
-        transform: 'translateX(40%)',
+        transform: 'translateX(40%) translateZ(0)',
         opacity: 0
       })),
       state('final', style({
-        transform: 'translateX(0%)',
+        transform: 'translateX(0%) translateZ(0)',
         opacity: 1
       })),
       transition('initial=>final', animate('300ms 1ms ease-in'))
@@ -39,6 +39,7 @@ export class SkillsPaneComponent implements OnInit, OnDestroy {
   ];
   showContent = false;
   state = 'initial';
+  willChange = true;
   private ngUnsubscribe = new Subject();
 
   constructor(private viewportService: ViewportService) { }
@@ -52,7 +53,10 @@ export class SkillsPaneComponent implements OnInit, OnDestroy {
     this.showContent = true;
     this.state = 'final';
     this.unsubscribe();
-    cascadeAnimation(this.skillset, 0, 150, 150);
+
+    cascadeAnimation(this.skillset, 0, 150, 150)
+    .then((result) => this.willChange = false )
+    .catch((err) => {console.log('oops:' + err); });
   }
 
   ngOnInit() {

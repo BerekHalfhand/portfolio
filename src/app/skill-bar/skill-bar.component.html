@@ -1,4 +1,4 @@
-<div [@flyIn]=state class="bar" fxLayout="row" fxLayoutAlign="space-between">
+<div [@flyIn]=state class="bar" fxLayout="row" fxLayoutAlign="space-between" [ngClass]="{ 'will-change': willChange }">
   <div class="caption flex-center">{{skill}}</div>
   <div class="fill-wrap">
     <div id="skill-js" class="bar fill" [style.width]="percentage+'%'"></div>

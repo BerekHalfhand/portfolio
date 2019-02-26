@@ -3,7 +3,7 @@
     <div class="slope-pane-container" fxLayout="column" fxLayoutAlign="space-between">
       <article fxLayout="column wrap" fxLayout.gt-md="row wrap" fxFlexFill>
         <div fxFlex="50%" fxFlexOrder.lt-lg="2" fxLayout="column" class="bars-container">
-          <app-skill-bar *ngFor="let skill of skillset; let i=index"
+          <app-skill-bar *ngFor="let skill of skillset; let i=index" [willChange]="willChange"
           [skill]="skill.name" [percentage]="skill.proficiency" [state]="skill.state"></app-skill-bar>
         </div>
         <div fxFlex="50%" fxFlexOrder.lt-lg="1" class="text-box-container">

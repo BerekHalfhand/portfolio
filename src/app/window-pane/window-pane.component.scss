@@ -54,9 +54,9 @@
 }
 
 #photo1 {
-  transform: translateX(-35%) translateY(-20%) rotate(5deg);
+  transform: translateX(-35%) translateY(-20%) rotate(5deg) translateZ(0);
 }
 
 #photo2 {
-  transform: translateX(35%) translateY(20%) rotate(-5deg);
+  transform: translateX(35%) translateY(20%) rotate(-5deg) translateZ(0);
 }
