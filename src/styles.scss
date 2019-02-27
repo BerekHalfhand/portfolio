@@ -42,6 +42,9 @@ body {
     text-decoration: none;
     color: mat-color($app-primary, 800);
   }
+  a:active {
+    outline: none;
+  }
 
   %flex-column {
     display: flex;
