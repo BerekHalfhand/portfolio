@@ -1,11 +1,16 @@
 @import 'src/styles/variables';
 @import 'src/styles/mixins';
 
-article {
+.project-wrap {
   margin: 0 -3% 1% 0;
   padding: 1%;
   background: rgba(0,0,0, .5);
   color: white;
+  -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  -o-transform: translateZ(0);
+  transform: translateZ(0);
 }
 
 h4 {

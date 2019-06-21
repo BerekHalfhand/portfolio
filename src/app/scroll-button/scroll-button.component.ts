@@ -9,11 +9,20 @@ import { trigger, style, animate, transition } from '@angular/animations';
   animations: [
     trigger('fade', [
       transition(':enter', [
-        style({opacity: 0}),
-        animate('500ms ease-in', style({opacity: 1}))
+        style({
+          opacity: 0,
+          transform: 'translate3d(0, 0, 0)'
+        }),
+        animate('500ms ease-in', style({
+          opacity: 1,
+          transform: 'translate3d(0, 0, 0)'
+        }))
       ]),
       transition(':leave', [
-        animate('500ms ease-in', style({opacity: 0}))
+        animate('500ms ease-in', style({
+          opacity: 0,
+          transform: 'translate3d(0, 0, 0)'
+        }))
       ])
     ])
   ]

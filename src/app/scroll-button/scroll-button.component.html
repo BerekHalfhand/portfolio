@@ -5,8 +5,8 @@
     <polygon class="arrow-middle" points="37.6,45.8 0.8,18.7 4.4,16.4 37.6,41.2 71.2,16.4 74.5,18.7 "/>
     <polygon class="arrow-bottom" points="37.6,64 0,36.1 5.1,32.8 37.6,56.8 70.4,32.8 75.5,36.1 "/>
   </svg>
-  <ng-container *ngSwitchDefault>
-    <a  @fade *ngIf="isVisible()" class="scroll-link" [href]="'#'+targetPane">
+  <div *ngSwitchDefault class="flex-center">
+    <a @fade *ngIf="isVisible()" class="scroll-link" [href]="'#'+targetPane">
       <svg class="mouse" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 76 130" preserveAspectRatio="xMidYMid meet">
         <g fill="none" fill-rule="evenodd">
           <rect width="70" height="118" x="1.5" y="1.5" stroke="#FFF" stroke-width="3" rx="36"/>
@@ -14,5 +14,5 @@
         </g>
       </svg>
     </a>
-  </ng-container>
+  </div>
 </article>

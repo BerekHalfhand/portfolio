@@ -12,11 +12,11 @@ import cascadeAnimation from 'helpers/cascadeAnimation';
   animations: [
     trigger('textbox', [
       state('initial', style({
-        transform: 'translateX(40%) translateZ(0)',
+        transform: 'translate3d(40%, 0, 0)',
         opacity: 0
       })),
       state('final', style({
-        transform: 'translateX(0%) translateZ(0)',
+        transform: 'translate3d(0, 0, 0)',
         opacity: 1
       })),
       transition('initial=>final', animate('300ms 1ms ease-in'))
@@ -27,7 +27,7 @@ export class SkillsPaneComponent implements OnInit, OnDestroy {
   skillset: object[] = [
     {name: 'JavaScript', proficiency: 75, state: 'initial'},
     {name: 'Angular', proficiency: 60, state: 'initial'},
-    {name: 'React', proficiency: 50, state: 'initial'},
+    {name: 'React Native', proficiency: 75, state: 'initial'},
     {name: 'Vue', proficiency: 25, state: 'initial'},
     {name: 'Typescript', proficiency: 40, state: 'initial'},
     {name: 'NodeJS', proficiency: 25, state: 'initial'},

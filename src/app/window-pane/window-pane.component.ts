@@ -10,22 +10,30 @@ import { filter, startWith, takeUntil } from 'rxjs/operators';
   styleUrls: ['./window-pane.component.scss'],
   animations: [
     trigger('one', [
-      state('initial', style({transform: 'translateY(50%) translateX(400%) scale(1.5) translateZ(0)'})),
-      state('final', style({transform: 'translateX(-35%) translateY(-20%) rotate(5deg) scale(1) translateZ(0)'})),
+      state('initial', style({
+        transform: 'translate3d(400%, 50%, 0) scale(1.5)'
+      })),
+      state('final', style({
+        transform: 'translate3d(-35%, -20%, 0) rotate(5deg) scale(1)'
+      })),
       transition('initial=>final', animate('500ms 300ms ease-in'))
     ]),
     trigger('two', [
-      state('initial', style({transform: 'translateY(25%) translateX(400%) scale(1.5) translateZ(0)'})),
-      state('final', style({transform: 'translateX(35%) translateY(20%) rotate(-5deg) scale(1) translateZ(0)'})),
+      state('initial', style({
+        transform: 'translate3d(400%, 25%, 0) scale(1.5)'
+      })),
+      state('final', style({
+        transform: 'translate3d(35%, 20%, 0) rotate(-5deg) scale(1)'
+      })),
       transition('initial=>final', animate('500ms 500ms ease-in'))
     ]),
     trigger('textbox', [
       state('initial', style({
-        transform: 'translateX(-40%) translateZ(0)',
+        transform: 'translate3d(-40%, 0, 0)',
         opacity: 0
       })),
       state('final', style({
-        transform: 'translateX(0%) translateZ(0)',
+        transform: 'translate3d(0, 0, 0)',
         opacity: 1
       })),
       transition('initial=>final', animate('300ms ease-in'))

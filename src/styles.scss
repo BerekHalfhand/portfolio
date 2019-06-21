@@ -42,9 +42,6 @@ body {
     text-decoration: none;
     color: mat-color($app-primary, 800);
   }
-  a:active {
-    outline: none;
-  }
 
   %flex-column {
     display: flex;
@@ -68,6 +65,12 @@ body {
     margin: 5vw;
     text-align: justify;
     z-index: 28;
+    -webkit-transform: translateZ(0);
+    -moz-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    -o-transform: translateZ(0);
+    transform: translateZ(0);
+
     p, li {
       @include responsive-font(1.2rem, 12px, 18px);
     }

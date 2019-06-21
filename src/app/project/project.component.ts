@@ -14,11 +14,11 @@ import { trigger, style, state, animate, transition } from '@angular/animations'
   animations: [
     trigger('flyIn', [
       state('initial', style({
-        transform: 'translateX(100%) translateZ(0)',
+        transform: 'translate3d(100%, 0, 0)',
         // opacity: 0
       })),
       state('final', style({
-        transform: 'translateX(0%) translateZ(0)',
+        transform: 'translate3d(0, 0, 0)',
         // opacity: 1
       })),
       transition('initial=>final', animate('0.5s ease-in'))

@@ -21,9 +21,22 @@
   color: mat-color($app-primary, 400);
 }
 
+.title-wrap {
+  -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  -o-transform: translateZ(0);
+  transform: translateZ(0);
+}
+
 .form-container {
   width: 100%;
   margin: 1vmin;
+  -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  -o-transform: translateZ(0);
+  transform: translateZ(0);
 }
 
 @media screen and (min-width: $menu-breakpoint) {
@@ -45,6 +58,11 @@
 
 .social {
   font-size: 3rem;
+  -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  -o-transform: translateZ(0);
+  transform: translateZ(0);
 
   a {
     margin: 1vmin;

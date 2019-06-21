@@ -54,9 +54,17 @@
 }
 
 #photo1 {
-  transform: translateX(-35%) translateY(-20%) rotate(5deg) translateZ(0);
+  -webkit-transform: translate3d(-35%, -20%, 0) rotate(5deg);
+  -moz-transform: translate3d(-35%, -20%, 0) rotate(5deg);
+  -ms-transform: translate3d(-35%, -20%, 0) rotate(5deg);
+  -o-transform: translate3d(-35%, -20%, 0) rotate(5deg);
+  transform: translate3d(-35%, -20%, 0) rotate(5deg);
 }
 
 #photo2 {
-  transform: translateX(35%) translateY(20%) rotate(-5deg) translateZ(0);
+  -webkit-transform: translate3d(35%, 20%, 0) rotate(-5deg);
+  -moz-transform: translate3d(35%, 20%, 0) rotate(-5deg);
+  -ms-transform: translate3d(35%, 20%, 0) rotate(-5deg);
+  -o-transform: translate3d(35%, 20%, 0) rotate(-5deg);
+  transform: translate3d(35%, 20%, 0) rotate(-5deg);
 }

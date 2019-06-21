@@ -32,10 +32,10 @@ header a:active {
 
 nav {
   a {
-    height: $menu-size;
-    width: $menu-size;
-    max-height: $max-menu-size;
-    max-width: $max-menu-size;
+    height: calc(#{$menu-size} - 6px);
+    width: calc(#{$menu-size} - 6px);
+    max-height: calc(#{$max-menu-size} - 6px);
+    max-width: calc(#{$max-menu-size} - 6px);
     display: flex;
     align-items: center;
     justify-content: center;

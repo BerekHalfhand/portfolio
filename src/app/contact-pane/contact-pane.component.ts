@@ -12,11 +12,11 @@ declare var particlesJS: any;
   animations: [
     trigger('arrow', [
       state('initial', style({
-        transform: 'translateY(50%) translateZ(0)',
+        transform: 'translate3d(0, 50%, 0)',
         opacity: 0
       })),
       state('final', style({
-        transform: 'translateY(0%) translateZ(0)',
+        transform: 'translate3d(0, 0, 0)',
         opacity: 1
       })),
       transition('initial=>final', animate('500ms .6s ease-in'))
@@ -34,22 +34,22 @@ declare var particlesJS: any;
     ]),
     trigger('fadeInDown', [
       state('initial', style({
-        transform: 'translateY(-50%) scale(0.5) translateZ(0)',
+        transform: 'translate3d(0, -50%, 0) scale(0.5)',
         opacity: 0
       })),
       state('final', style({
-        transform: 'translateY(0) scale(1) translateZ(0)',
+        transform: 'translate3d(0, 0, 0) scale(1)',
         opacity: 1
       })),
       transition('initial=>final', animate('500ms ease-in'))
     ]),
     trigger('fadeInUp', [
       state('initial', style({
-        transform: 'translateY(50%) scale(0.5) translateZ(0)',
+        transform: 'translate3d(0, 50%, 0) scale(0.5)',
         opacity: 0
       })),
       state('final', style({
-        transform: 'translateY(0) scale(1) translateZ(0)',
+        transform: 'translate3d(0, 0, 0) scale(1)',
         opacity: 1
       })),
       transition('initial=>final', animate('480ms ease-in'))

@@ -12,16 +12,22 @@
   animation-timing-function: cubic-bezier(0.650, -0.550, 0.250, 1.500);
   animation-iteration-count: infinite;
   transform-origin: 50% 20.5px;
-  will-change: transform, opacity;
+  // will-change: transform, opacity;
   opacity: 1;
+
+  -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  -o-transform: translateZ(0);
+  transform: translateZ(0);
 }
 
 .scroll-link {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 9;
+  -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  -o-transform: translateZ(0);
+  transform: translateZ(0);
 
   circle {
     fill: mat-color($app-primary, 200);
@@ -34,11 +40,19 @@
 @keyframes scroll {
 
   0%, 20% {
-    transform: translateY(0) scaleY(1);
+    -webkit-transform: translateY(0) scaleY(1) translateZ(0);
+    -moz-transform: translateY(0) scaleY(1) translateZ(0);
+    -ms-transform: translateY(0) scaleY(1) translateZ(0);
+    -o-transform: translateY(0) scaleY(1) translateZ(0);
+    transform: translateY(0) scaleY(1) translateZ(0);
   }
 
   100% {
-    transform: translateY(36px) scaleY(2);
+    -webkit-transform: translateY(36px) scaleY(2) translateZ(0);
+    -moz-transform: translateY(36px) scaleY(2) translateZ(0);
+    -ms-transform: translateY(36px) scaleY(2) translateZ(0);
+    -o-transform: translateY(36px) scaleY(2) translateZ(0);
+    transform: translateY(36px) scaleY(2) translateZ(0);
     opacity: 0;
   }
 
@@ -47,7 +61,14 @@
 #more-arrows {
 	width: 75px;
   height: 65px;
-  transform: rotate(180deg);
+  -webkit-transform: rotate(180deg) translateZ(0);
+  -moz-transform: rotate(180deg) translateZ(0);
+  -ms-transform: rotate(180deg) translateZ(0);
+  -o-transform: rotate(180deg) translateZ(0);
+  transform: rotate(180deg) translateZ(0);
+  // outline: none;
+  // -webkit-tap-highlight-color: rgba(0,0,0,0);
+  // -webkit-tap-highlight-color: transparent;
   margin: 1vmin;
   cursor: pointer;
 
@@ -58,11 +79,19 @@
       transition: all .2s ease-out;
 
       &.arrow-bottom {
-        transform: translateY(-18px);
+        -webkit-transform: translateY(-18px) translateZ(0);
+        -moz-transform: translateY(-18px) translateZ(0);
+        -ms-transform: translateY(-18px) translateZ(0);
+        -o-transform: translateY(-18px) translateZ(0);
+        transform: translateY(-18px) translateZ(0);
       }
 
       &.arrow-top {
-        transform: translateY(18px);
+        -webkit-transform: translateY(18px) translateZ(0);
+        -moz-transform: translateY(18px) translateZ(0);
+        -ms-transform: translateY(18px) translateZ(0);
+        -o-transform: translateY(18px) translateZ(0);
+        transform: translateY(18px) translateZ(0);
       }
 
     }
@@ -74,6 +103,12 @@
 polygon {
   fill: mat-color($app-primary, 200);
   transition: all .2s ease-out;
+
+  -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  -o-transform: translateZ(0);
+  transform: translateZ(0);
 
   &.arrow-middle {
 	  opacity: 0.75;

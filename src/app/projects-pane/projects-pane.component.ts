@@ -12,11 +12,11 @@ import cascadeAnimation from 'helpers/cascadeAnimation';
   animations: [
     trigger('textbox', [
       state('initial', style({
-        transform: 'translateX(-40%) translateZ(0)',
+        transform: 'translate3d(-40%, 0, 0)',
         opacity: 0
       })),
       state('final', style({
-        transform: 'translateX(0%) translateZ(0)',
+        transform: 'translate3d(0, 0, 0)',
         opacity: 1
       })),
       transition('initial=>final', animate('300ms 1ms ease-in'))
@@ -55,6 +55,15 @@ add, modify and filter a table of custom data with custom typed columns.',
       url: 'http://vue-store.com.s3-website.us-east-2.amazonaws.com/',
       img: 'assets/pics/projects/vue_store',
       description: 'Test project, a single-page app imitating an online store.',
+      state: 'initial'
+    },
+    {
+      name: 'Easy4',
+      stack: 'React Native, Redux, Expo',
+      url: 'https://play.google.com/store/apps/details?id=com.sonet.easy4',
+      img: 'assets/pics/projects/easy4',
+      description: 'Mobile application for personal account management for Easy4 clients. \
+Features biometry authentication and online payments.',
       state: 'initial'
     }
   ];

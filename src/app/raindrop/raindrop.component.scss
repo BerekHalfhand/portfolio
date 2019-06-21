@@ -28,10 +28,18 @@
 
 @keyframes drop {
   from {
-    transform: translateY(0vh);
+    -webkit-transform: translateY(0vh) translateZ(0);
+    -moz-transform: translateY(0vh) translateZ(0);
+    -ms-transform: translateY(0vh) translateZ(0);
+    -o-transform: translateY(0vh) translateZ(0);
+    transform: translateY(0vh) translateZ(0);
   }
   to {
-    transform: translateY(125vh);
+    -webkit-transform: translateY(125vh) translateZ(0);
+    -moz-transform: translateY(125vh) translateZ(0);
+    -ms-transform: translateY(125vh) translateZ(0);
+    -o-transform: translateY(125vh) translateZ(0);
+    transform: translateY(125vh) translateZ(0);
   }
 }
 

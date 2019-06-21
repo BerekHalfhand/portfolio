@@ -13,8 +13,8 @@ import { trigger, style, state, animate, transition, group, query, animateChild 
   changeDetection: ChangeDetectionStrategy.OnPush,
   animations: [
     trigger('flyIn', [
-      state('initial', style({transform: 'translateX(-150%) translateZ(0)'})),
-      state('final', style({transform: 'translateX(0%) translateZ(0)'})),
+      state('initial', style({transform: 'translate3d(-150%, 0, 0)'})),
+      state('final', style({transform: 'translate3d(0, 0, 0)'})),
       transition('initial=>final', animate('0.3s ease-in'))
     ])
   ]
