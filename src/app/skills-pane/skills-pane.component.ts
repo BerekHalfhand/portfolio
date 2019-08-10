@@ -35,7 +35,7 @@ export class SkillsPaneComponent implements OnInit, OnDestroy {
     {name: 'Rails', proficiency: 65, state: 'initial'},
     {name: 'MongoDB', proficiency: 60, state: 'initial'},
     {name: 'MySQL', proficiency: 45, state: 'initial'},
-    {name: 'Unit Testing', proficiency: 35, state: 'initial'}
+    {name: 'Unit Testing', proficiency: 55, state: 'initial'}
   ];
   showContent = false;
   state = 'initial';

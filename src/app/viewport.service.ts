@@ -37,7 +37,7 @@ export class ViewportService {
     this.getViewport();
     console.log(this.viewport);
     let vh = this.viewport.height * 0.01;
-    this.document.documentElement.style.setProperty('--vh', `${vh}px`);
+    this.document.documentElement.style.setProperty('--vh', `${vh - (vh / 10)}px`);
     // console.log(vh);
     return null;
   }

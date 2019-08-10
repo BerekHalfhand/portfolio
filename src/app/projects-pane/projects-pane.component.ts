@@ -31,6 +31,16 @@ export class ProjectsPaneComponent implements OnInit, OnDestroy {
 
   projects: object[] = [
     {
+      name: 'Easy4',
+      stack: 'React Native, Redux, Expo',
+      url: 'https://play.google.com/store/apps/details?id=com.sonet.easy4',
+      img: 'assets/pics/projects/easy4',
+      description: 'A mobile application for personal account management for Easy4 clients. \
+In just 3 weeks I developed and released it using React Native \
+for both Android and iOS with features like biometry login and web payments.',
+      state: 'initial'
+    },
+    {
       name: 'Tile.Expert Portal',
       stack: 'AngularJS, Symfony2, MongoDB',
       url: 'https://te.remote.team/#/',
@@ -55,15 +65,6 @@ add, modify and filter a table of custom data with custom typed columns.',
       url: 'http://vue-store.com.s3-website.us-east-2.amazonaws.com/',
       img: 'assets/pics/projects/vue_store',
       description: 'Test project, a single-page app imitating an online store.',
-      state: 'initial'
-    },
-    {
-      name: 'Easy4',
-      stack: 'React Native, Redux, Expo',
-      url: 'https://play.google.com/store/apps/details?id=com.sonet.easy4',
-      img: 'assets/pics/projects/easy4',
-      description: 'Mobile application for personal account management for Easy4 clients. \
-Features biometry authentication and online payments.',
       state: 'initial'
     }
   ];
